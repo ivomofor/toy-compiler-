@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.o" "CMakeFiles/toy-lex.dir/lib/Lexer.cpp.o" -o toy-lex 
