@@ -25,20 +25,9 @@ namespace toy {
     }
 
     void Parser::parseStatement() {
-        if (currentToken.kind == TokenKind::Return) {
-            advance();
-
-            int value = std::stoi(currentToken.text);
-
-            match(TokenKind::Integer);
-            match(TokenKind::Semicolon);
-
-            ReturnStmt stmt(value);
-
-            return;
-        }
-
-        throw std::runtime_error("Unknown statement.");
+        match(TokenKind::Return);
+        match(TokenKind::Integer);
+        match(TokenKind::Semicolon);
     }
 
     void Parser::parseFunction() {
