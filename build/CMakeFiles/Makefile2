@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/shevo/project/toy-compiler-/build
 
 # The main recursive "all" target.
 all: CMakeFiles/toy-lex.dir/all
+all: CMakeFiles/toy-parse.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/toy-lex.dir/clean
+clean: CMakeFiles/toy-parse.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ toy-lex: CMakeFiles/toy-lex.dir/rule
 CMakeFiles/toy-lex.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/clean
 .PHONY : CMakeFiles/toy-lex.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/toy-parse.dir
+
+# All Build rule for target.
+CMakeFiles/toy-parse.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target toy-parse"
+.PHONY : CMakeFiles/toy-parse.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/toy-parse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/toy-parse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+.PHONY : CMakeFiles/toy-parse.dir/rule
+
+# Convenience name for target.
+toy-parse: CMakeFiles/toy-parse.dir/rule
+.PHONY : toy-parse
+
+# clean rule for target.
+CMakeFiles/toy-parse.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/clean
+.PHONY : CMakeFiles/toy-parse.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

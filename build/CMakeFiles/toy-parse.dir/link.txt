@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o" "CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o" "CMakeFiles/toy-parse.dir/lib/Parser.cpp.o" "CMakeFiles/toy-parse.dir/lib/AST.cpp.o" "CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o" -o toy-parse 

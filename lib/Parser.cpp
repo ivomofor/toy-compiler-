@@ -19,39 +19,57 @@ namespace toy {
         advance();  
     }
 
-    void Parser::parseProgram() {
-        while (currentToken.kind != TokenKind::Eof) 
-            parseFunction();
-    }
+    std::unique_ptr<Program> Parser::parseProgram() {
 
-    void Parser::parseStatement() {
-        if (currentToken.kind == TokenKind::Return) {
-            advance();
+        auto program = std::make_unique<Program>();
 
-            int value = std::stoi(currentToken.text);
-
-            match(TokenKind::Integer);
-            match(TokenKind::Semicolon);
-
-            ReturnStmt stmt(value);
-
-            return;
+        while (currentToken.kind != TokenKind::Eof) {
+            program->declarations.push_back(parseFunction());
         }
 
-        throw std::runtime_error("Unknown statement.");
+        return program;
     }
 
-    void Parser::parseFunction() {
+    std::unique_ptr<Expression> Parser::parseExpression() {
+        int value = std::stoi(currentToken.text);
+
+        match(TokenKind::Integer);
+
+        return std::make_unique<IntegerLiteral>(value);
+    }
+
+    std::unique_ptr<Statement> Parser::parseStatement() {
+
+        match(TokenKind::Return);
+
+        auto value = parseExpression();
+
+        match(TokenKind::Semicolon);
+
+        return std::make_unique<ReturnStmt>(std::move(value));
+    }
+
+    std::unique_ptr<FunctionDecl> Parser::parseFunction() {
+
         match(TokenKind::Fun);
+
+        std::string name = currentToken.text;
         match(TokenKind::Identifier);
+
         match(TokenKind::LParen);
         match(TokenKind::RParen);
+
         match(TokenKind::LBrace);
 
-        while (currentToken.kind != TokenKind::RBrace) 
-            parseStatement();
+        auto function = std::make_unique<FunctionDecl>(name);
+
+        while (currentToken.kind != TokenKind::RBrace) {
+            function->body.push_back(parseStatement());
+        }
 
         match(TokenKind::RBrace);
+
+        return function;
     }
 
 } 

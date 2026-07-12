@@ -129,12 +129,74 @@ toy-lex/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/build
 .PHONY : toy-lex/fast
 
+#=============================================================================
+# Target rules for targets named toy-parse
+
+# Build rule for target.
+toy-parse: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 toy-parse
+.PHONY : toy-parse
+
+# fast build rule for target.
+toy-parse/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/build
+.PHONY : toy-parse/fast
+
+lib/AST.o: lib/AST.cpp.o
+.PHONY : lib/AST.o
+
+# target to build an object file
+lib/AST.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.o
+.PHONY : lib/AST.cpp.o
+
+lib/AST.i: lib/AST.cpp.i
+.PHONY : lib/AST.i
+
+# target to preprocess a source file
+lib/AST.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.i
+.PHONY : lib/AST.cpp.i
+
+lib/AST.s: lib/AST.cpp.s
+.PHONY : lib/AST.s
+
+# target to generate assembly for a file
+lib/AST.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.s
+.PHONY : lib/AST.cpp.s
+
+lib/ASTPrinter.o: lib/ASTPrinter.cpp.o
+.PHONY : lib/ASTPrinter.o
+
+# target to build an object file
+lib/ASTPrinter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o
+.PHONY : lib/ASTPrinter.cpp.o
+
+lib/ASTPrinter.i: lib/ASTPrinter.cpp.i
+.PHONY : lib/ASTPrinter.i
+
+# target to preprocess a source file
+lib/ASTPrinter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.i
+.PHONY : lib/ASTPrinter.cpp.i
+
+lib/ASTPrinter.s: lib/ASTPrinter.cpp.s
+.PHONY : lib/ASTPrinter.s
+
+# target to generate assembly for a file
+lib/ASTPrinter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.s
+.PHONY : lib/ASTPrinter.cpp.s
+
 lib/Lexer.o: lib/Lexer.cpp.o
 .PHONY : lib/Lexer.o
 
 # target to build an object file
 lib/Lexer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o
 .PHONY : lib/Lexer.cpp.o
 
 lib/Lexer.i: lib/Lexer.cpp.i
@@ -143,6 +205,7 @@ lib/Lexer.i: lib/Lexer.cpp.i
 # target to preprocess a source file
 lib/Lexer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.i
 .PHONY : lib/Lexer.cpp.i
 
 lib/Lexer.s: lib/Lexer.cpp.s
@@ -151,7 +214,32 @@ lib/Lexer.s: lib/Lexer.cpp.s
 # target to generate assembly for a file
 lib/Lexer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.s
 .PHONY : lib/Lexer.cpp.s
+
+lib/Parser.o: lib/Parser.cpp.o
+.PHONY : lib/Parser.o
+
+# target to build an object file
+lib/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.o
+.PHONY : lib/Parser.cpp.o
+
+lib/Parser.i: lib/Parser.cpp.i
+.PHONY : lib/Parser.i
+
+# target to preprocess a source file
+lib/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.i
+.PHONY : lib/Parser.cpp.i
+
+lib/Parser.s: lib/Parser.cpp.s
+.PHONY : lib/Parser.s
+
+# target to generate assembly for a file
+lib/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.s
+.PHONY : lib/Parser.cpp.s
 
 tools/toy-lex.o: tools/toy-lex.cpp.o
 .PHONY : tools/toy-lex.o
@@ -177,6 +265,30 @@ tools/toy-lex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.s
 .PHONY : tools/toy-lex.cpp.s
 
+tools/toy-parse.o: tools/toy-parse.cpp.o
+.PHONY : tools/toy-parse.o
+
+# target to build an object file
+tools/toy-parse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
+.PHONY : tools/toy-parse.cpp.o
+
+tools/toy-parse.i: tools/toy-parse.cpp.i
+.PHONY : tools/toy-parse.i
+
+# target to preprocess a source file
+tools/toy-parse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.i
+.PHONY : tools/toy-parse.cpp.i
+
+tools/toy-parse.s: tools/toy-parse.cpp.s
+.PHONY : tools/toy-parse.s
+
+# target to generate assembly for a file
+tools/toy-parse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.s
+.PHONY : tools/toy-parse.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +298,25 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... toy-lex"
+	@echo "... toy-parse"
+	@echo "... lib/AST.o"
+	@echo "... lib/AST.i"
+	@echo "... lib/AST.s"
+	@echo "... lib/ASTPrinter.o"
+	@echo "... lib/ASTPrinter.i"
+	@echo "... lib/ASTPrinter.s"
 	@echo "... lib/Lexer.o"
 	@echo "... lib/Lexer.i"
 	@echo "... lib/Lexer.s"
+	@echo "... lib/Parser.o"
+	@echo "... lib/Parser.i"
+	@echo "... lib/Parser.s"
 	@echo "... tools/toy-lex.o"
 	@echo "... tools/toy-lex.i"
 	@echo "... tools/toy-lex.s"
+	@echo "... tools/toy-parse.o"
+	@echo "... tools/toy-parse.i"
+	@echo "... tools/toy-parse.s"
 .PHONY : help
 
 
