@@ -5,19 +5,14 @@
 
 namespace toy {
 
-    class Parser {
-        public:
-            explicit Parser(Lexer &lexer);
-            void parseProgram();
+class Parser {
+public:
+    explicit Parser(Lexer &lexer);
 
-        private:
-            void advance();
-            Lexer &lexer;
-            Token currentToken;
-            void match(TokenKind expected);
-            void parseFunction();
-            void parseStatement();
-    };
+private:
+    Lexer &lexer;
+    Token currentToken;
+};
 
 } 
 
