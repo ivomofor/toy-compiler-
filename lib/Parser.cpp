@@ -19,17 +19,6 @@ namespace toy {
         advance();  
     }
 
-    std::unique_ptr<Program> Parser::parseProgram() {
-
-        auto program = std::make_unique<Program>();
-
-        while (currentToken.kind != TokenKind::Eof) {
-            program->declarations.push_back(parseFunction());
-        }
-
-        return program;
-    }
-
     std::unique_ptr<Expression> Parser::parseExpression() {
         int value = std::stoi(currentToken.text);
 
@@ -70,6 +59,17 @@ namespace toy {
         match(TokenKind::RBrace);
 
         return function;
+    }
+
+    std::unique_ptr<Program> Parser::parseProgram() {
+
+        auto program = std::make_unique<Program>();
+
+        while (currentToken.kind != TokenKind::Eof) {
+            program->declarations.push_back(parseFunction());
+        }
+
+        return program;
     }
 
 } 
