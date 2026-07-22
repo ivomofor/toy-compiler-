@@ -17,11 +17,8 @@ namespace toy {
             auto *function = dynamic_cast<FunctionDecl *>(decl.get());
 
         if (function) {
-            lowerFunction(
-                module,
-                *function
-            );
-        }
+                lowerFunction(module,*function);
+            }
         }
 
         return module;
@@ -33,6 +30,8 @@ namespace toy {
 
         auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name, funcType);
 
+        auto *entryBlock = func.addEntryBlock();
+        
         module.push_back(func);
     }
 }
