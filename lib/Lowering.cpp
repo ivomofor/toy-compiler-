@@ -31,7 +31,11 @@ namespace toy {
         auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name, funcType);
 
         auto *entryBlock = func.addEntryBlock();
-        
+
+        mlir::OpBuilder builder(&context);
+
+        builder.setInsertionPointToEnd(entryBlock);
+
         module.push_back(func);
     }
 }

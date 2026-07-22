@@ -4,6 +4,7 @@
 #include "toy/AST.h"
 
 #include "mlir/IR/BuiltinOps.h"
+#include "mlir/IR/Builders.h"
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
 
@@ -17,6 +18,7 @@ namespace toy {
 
         private:
             mlir::MLIRContext &context;
+            mlir::OpBuilder builder;
             void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);
     };
 
