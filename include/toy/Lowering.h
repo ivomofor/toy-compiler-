@@ -5,6 +5,7 @@
 
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/MLIRContext.h"
+#include "mlir/Dialect/Func/IR/FuncOps.h"
 
 namespace toy {
 
@@ -16,6 +17,7 @@ namespace toy {
 
         private:
             mlir::MLIRContext &context;
+            void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);
     };
 
 }
