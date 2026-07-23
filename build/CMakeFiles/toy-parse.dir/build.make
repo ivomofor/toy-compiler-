@@ -83,81 +83,40 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/tools/toy-parse.cpp -o CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.s
 
-CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o: CMakeFiles/toy-parse.dir/flags.make
-CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o: /home/shevo/project/toy-compiler-/lib/Lexer.cpp
-CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o: CMakeFiles/toy-parse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o -MF CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o.d -o CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o -c /home/shevo/project/toy-compiler-/lib/Lexer.cpp
-
-CMakeFiles/toy-parse.dir/lib/Lexer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/toy-parse.dir/lib/Lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/Lexer.cpp > CMakeFiles/toy-parse.dir/lib/Lexer.cpp.i
-
-CMakeFiles/toy-parse.dir/lib/Lexer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/toy-parse.dir/lib/Lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/Lexer.cpp -o CMakeFiles/toy-parse.dir/lib/Lexer.cpp.s
-
-CMakeFiles/toy-parse.dir/lib/Parser.cpp.o: CMakeFiles/toy-parse.dir/flags.make
-CMakeFiles/toy-parse.dir/lib/Parser.cpp.o: /home/shevo/project/toy-compiler-/lib/Parser.cpp
-CMakeFiles/toy-parse.dir/lib/Parser.cpp.o: CMakeFiles/toy-parse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/toy-parse.dir/lib/Parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/toy-parse.dir/lib/Parser.cpp.o -MF CMakeFiles/toy-parse.dir/lib/Parser.cpp.o.d -o CMakeFiles/toy-parse.dir/lib/Parser.cpp.o -c /home/shevo/project/toy-compiler-/lib/Parser.cpp
-
-CMakeFiles/toy-parse.dir/lib/Parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/toy-parse.dir/lib/Parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/Parser.cpp > CMakeFiles/toy-parse.dir/lib/Parser.cpp.i
-
-CMakeFiles/toy-parse.dir/lib/Parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/toy-parse.dir/lib/Parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/Parser.cpp -o CMakeFiles/toy-parse.dir/lib/Parser.cpp.s
-
-CMakeFiles/toy-parse.dir/lib/AST.cpp.o: CMakeFiles/toy-parse.dir/flags.make
-CMakeFiles/toy-parse.dir/lib/AST.cpp.o: /home/shevo/project/toy-compiler-/lib/AST.cpp
-CMakeFiles/toy-parse.dir/lib/AST.cpp.o: CMakeFiles/toy-parse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/toy-parse.dir/lib/AST.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/toy-parse.dir/lib/AST.cpp.o -MF CMakeFiles/toy-parse.dir/lib/AST.cpp.o.d -o CMakeFiles/toy-parse.dir/lib/AST.cpp.o -c /home/shevo/project/toy-compiler-/lib/AST.cpp
-
-CMakeFiles/toy-parse.dir/lib/AST.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/toy-parse.dir/lib/AST.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/AST.cpp > CMakeFiles/toy-parse.dir/lib/AST.cpp.i
-
-CMakeFiles/toy-parse.dir/lib/AST.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/toy-parse.dir/lib/AST.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/AST.cpp -o CMakeFiles/toy-parse.dir/lib/AST.cpp.s
-
-CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o: CMakeFiles/toy-parse.dir/flags.make
-CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o: /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp
-CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o: CMakeFiles/toy-parse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o -MF CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o.d -o CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o -c /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp
-
-CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp > CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.i
-
-CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp -o CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.s
-
 # Object files for target toy-parse
 toy__parse_OBJECTS = \
-"CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o" \
-"CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o" \
-"CMakeFiles/toy-parse.dir/lib/Parser.cpp.o" \
-"CMakeFiles/toy-parse.dir/lib/AST.cpp.o" \
-"CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o"
+"CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o"
 
 # External object files for target toy-parse
 toy__parse_EXTERNAL_OBJECTS =
 
 toy-parse: CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
-toy-parse: CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o
-toy-parse: CMakeFiles/toy-parse.dir/lib/Parser.cpp.o
-toy-parse: CMakeFiles/toy-parse.dir/lib/AST.cpp.o
-toy-parse: CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o
 toy-parse: CMakeFiles/toy-parse.dir/build.make
+toy-parse: libToyCompiler.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRParser.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRBytecodeReader.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRAsmParser.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFuncDialect.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRControlFlowInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFunctionInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRCallInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRSideEffectInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRArithDialect.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRInferTypeOpInterface.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRCastInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRDialect.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRInferIntRangeCommon.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRShapedOpInterfaces.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRInferIntRangeInterface.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRUBDialect.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRIR.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRSupport.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMSupport.a
+toy-parse: /usr/lib/x86_64-linux-gnu/libz.so
+toy-parse: /usr/lib/x86_64-linux-gnu/libzstd.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMDemangle.a
 toy-parse: CMakeFiles/toy-parse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable toy-parse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable toy-parse"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/toy-parse.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

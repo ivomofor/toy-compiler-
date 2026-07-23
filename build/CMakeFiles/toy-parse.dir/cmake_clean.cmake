@@ -1,12 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/toy-parse.dir/lib/AST.cpp.o"
-  "CMakeFiles/toy-parse.dir/lib/AST.cpp.o.d"
-  "CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o"
-  "CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o.d"
-  "CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o"
-  "CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o.d"
-  "CMakeFiles/toy-parse.dir/lib/Parser.cpp.o"
-  "CMakeFiles/toy-parse.dir/lib/Parser.cpp.o.d"
   "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o"
   "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o.d"
   "toy-parse"

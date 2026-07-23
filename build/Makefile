@@ -117,6 +117,136 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named intrinsics_gen
+
+# Build rule for target.
+intrinsics_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 intrinsics_gen
+.PHONY : intrinsics_gen
+
+# fast build rule for target.
+intrinsics_gen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
+.PHONY : intrinsics_gen/fast
+
+#=============================================================================
+# Target rules for targets named vt_gen
+
+# Build rule for target.
+vt_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vt_gen
+.PHONY : vt_gen
+
+# fast build rule for target.
+vt_gen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vt_gen.dir/build.make CMakeFiles/vt_gen.dir/build
+.PHONY : vt_gen/fast
+
+#=============================================================================
+# Target rules for targets named omp_gen
+
+# Build rule for target.
+omp_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omp_gen
+.PHONY : omp_gen
+
+# fast build rule for target.
+omp_gen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/build
+.PHONY : omp_gen/fast
+
+#=============================================================================
+# Target rules for targets named acc_gen
+
+# Build rule for target.
+acc_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acc_gen
+.PHONY : acc_gen
+
+# fast build rule for target.
+acc_gen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/build
+.PHONY : acc_gen/fast
+
+#=============================================================================
+# Target rules for targets named target_parser_gen
+
+# Build rule for target.
+target_parser_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 target_parser_gen
+.PHONY : target_parser_gen
+
+# fast build rule for target.
+target_parser_gen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/target_parser_gen.dir/build.make CMakeFiles/target_parser_gen.dir/build
+.PHONY : target_parser_gen/fast
+
+#=============================================================================
+# Target rules for targets named mlir-tablegen-targets
+
+# Build rule for target.
+mlir-tablegen-targets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mlir-tablegen-targets
+.PHONY : mlir-tablegen-targets
+
+# fast build rule for target.
+mlir-tablegen-targets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-tablegen-targets.dir/build.make CMakeFiles/mlir-tablegen-targets.dir/build
+.PHONY : mlir-tablegen-targets/fast
+
+#=============================================================================
+# Target rules for targets named mlir-headers
+
+# Build rule for target.
+mlir-headers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mlir-headers
+.PHONY : mlir-headers
+
+# fast build rule for target.
+mlir-headers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-headers.dir/build.make CMakeFiles/mlir-headers.dir/build
+.PHONY : mlir-headers/fast
+
+#=============================================================================
+# Target rules for targets named mlir-generic-headers
+
+# Build rule for target.
+mlir-generic-headers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mlir-generic-headers
+.PHONY : mlir-generic-headers
+
+# fast build rule for target.
+mlir-generic-headers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-generic-headers.dir/build.make CMakeFiles/mlir-generic-headers.dir/build
+.PHONY : mlir-generic-headers/fast
+
+#=============================================================================
+# Target rules for targets named mlir-doc
+
+# Build rule for target.
+mlir-doc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mlir-doc
+.PHONY : mlir-doc
+
+# fast build rule for target.
+mlir-doc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-doc.dir/build.make CMakeFiles/mlir-doc.dir/build
+.PHONY : mlir-doc/fast
+
+#=============================================================================
+# Target rules for targets named ToyCompiler
+
+# Build rule for target.
+ToyCompiler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ToyCompiler
+.PHONY : ToyCompiler
+
+# fast build rule for target.
+ToyCompiler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/build
+.PHONY : ToyCompiler/fast
+
+#=============================================================================
 # Target rules for targets named toy-lex
 
 # Build rule for target.
@@ -147,7 +277,7 @@ lib/AST.o: lib/AST.cpp.o
 
 # target to build an object file
 lib/AST.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o
 .PHONY : lib/AST.cpp.o
 
 lib/AST.i: lib/AST.cpp.i
@@ -155,7 +285,7 @@ lib/AST.i: lib/AST.cpp.i
 
 # target to preprocess a source file
 lib/AST.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/AST.cpp.i
 .PHONY : lib/AST.cpp.i
 
 lib/AST.s: lib/AST.cpp.s
@@ -163,7 +293,7 @@ lib/AST.s: lib/AST.cpp.s
 
 # target to generate assembly for a file
 lib/AST.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/AST.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/AST.cpp.s
 .PHONY : lib/AST.cpp.s
 
 lib/ASTPrinter.o: lib/ASTPrinter.cpp.o
@@ -171,7 +301,7 @@ lib/ASTPrinter.o: lib/ASTPrinter.cpp.o
 
 # target to build an object file
 lib/ASTPrinter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o
 .PHONY : lib/ASTPrinter.cpp.o
 
 lib/ASTPrinter.i: lib/ASTPrinter.cpp.i
@@ -179,7 +309,7 @@ lib/ASTPrinter.i: lib/ASTPrinter.cpp.i
 
 # target to preprocess a source file
 lib/ASTPrinter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.i
 .PHONY : lib/ASTPrinter.cpp.i
 
 lib/ASTPrinter.s: lib/ASTPrinter.cpp.s
@@ -187,7 +317,7 @@ lib/ASTPrinter.s: lib/ASTPrinter.cpp.s
 
 # target to generate assembly for a file
 lib/ASTPrinter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s
 .PHONY : lib/ASTPrinter.cpp.s
 
 lib/Lexer.o: lib/Lexer.cpp.o
@@ -195,8 +325,7 @@ lib/Lexer.o: lib/Lexer.cpp.o
 
 # target to build an object file
 lib/Lexer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o
 .PHONY : lib/Lexer.cpp.o
 
 lib/Lexer.i: lib/Lexer.cpp.i
@@ -204,8 +333,7 @@ lib/Lexer.i: lib/Lexer.cpp.i
 
 # target to preprocess a source file
 lib/Lexer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.i
 .PHONY : lib/Lexer.cpp.i
 
 lib/Lexer.s: lib/Lexer.cpp.s
@@ -213,16 +341,39 @@ lib/Lexer.s: lib/Lexer.cpp.s
 
 # target to generate assembly for a file
 lib/Lexer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/lib/Lexer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Lexer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.s
 .PHONY : lib/Lexer.cpp.s
+
+lib/Lowering.o: lib/Lowering.cpp.o
+.PHONY : lib/Lowering.o
+
+# target to build an object file
+lib/Lowering.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o
+.PHONY : lib/Lowering.cpp.o
+
+lib/Lowering.i: lib/Lowering.cpp.i
+.PHONY : lib/Lowering.i
+
+# target to preprocess a source file
+lib/Lowering.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.i
+.PHONY : lib/Lowering.cpp.i
+
+lib/Lowering.s: lib/Lowering.cpp.s
+.PHONY : lib/Lowering.s
+
+# target to generate assembly for a file
+lib/Lowering.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.s
+.PHONY : lib/Lowering.cpp.s
 
 lib/Parser.o: lib/Parser.cpp.o
 .PHONY : lib/Parser.o
 
 # target to build an object file
 lib/Parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o
 .PHONY : lib/Parser.cpp.o
 
 lib/Parser.i: lib/Parser.cpp.i
@@ -230,7 +381,7 @@ lib/Parser.i: lib/Parser.cpp.i
 
 # target to preprocess a source file
 lib/Parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.i
 .PHONY : lib/Parser.cpp.i
 
 lib/Parser.s: lib/Parser.cpp.s
@@ -238,7 +389,7 @@ lib/Parser.s: lib/Parser.cpp.s
 
 # target to generate assembly for a file
 lib/Parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/lib/Parser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
 .PHONY : lib/Parser.cpp.s
 
 tools/toy-lex.o: tools/toy-lex.cpp.o
@@ -297,6 +448,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... acc_gen"
+	@echo "... intrinsics_gen"
+	@echo "... mlir-doc"
+	@echo "... mlir-generic-headers"
+	@echo "... mlir-headers"
+	@echo "... mlir-tablegen-targets"
+	@echo "... omp_gen"
+	@echo "... target_parser_gen"
+	@echo "... vt_gen"
+	@echo "... ToyCompiler"
 	@echo "... toy-lex"
 	@echo "... toy-parse"
 	@echo "... lib/AST.o"
@@ -308,6 +469,9 @@ help:
 	@echo "... lib/Lexer.o"
 	@echo "... lib/Lexer.i"
 	@echo "... lib/Lexer.s"
+	@echo "... lib/Lowering.o"
+	@echo "... lib/Lowering.i"
+	@echo "... lib/Lowering.s"
 	@echo "... lib/Parser.o"
 	@echo "... lib/Parser.i"
 	@echo "... lib/Parser.s"

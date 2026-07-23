@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shevo/project/toy-compiler-/include
+CXX_INCLUDES = -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/project/toy-compiler-/include
 
 CXX_FLAGS = -std=gnu++17
 

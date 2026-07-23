@@ -8,10 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/shevo/project/toy-compiler-/lib/AST.cpp" "CMakeFiles/toy-parse.dir/lib/AST.cpp.o" "gcc" "CMakeFiles/toy-parse.dir/lib/AST.cpp.o.d"
-  "/home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp" "CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o" "gcc" "CMakeFiles/toy-parse.dir/lib/ASTPrinter.cpp.o.d"
-  "/home/shevo/project/toy-compiler-/lib/Lexer.cpp" "CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o" "gcc" "CMakeFiles/toy-parse.dir/lib/Lexer.cpp.o.d"
-  "/home/shevo/project/toy-compiler-/lib/Parser.cpp" "CMakeFiles/toy-parse.dir/lib/Parser.cpp.o" "gcc" "CMakeFiles/toy-parse.dir/lib/Parser.cpp.o.d"
   "/home/shevo/project/toy-compiler-/tools/toy-parse.cpp" "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o" "gcc" "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o.d"
   )
 

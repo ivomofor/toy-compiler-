@@ -21,6 +21,8 @@ namespace toy {
             mlir::MLIRContext &context;
             mlir::OpBuilder builder;
             void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);
+            void lowerStatement(const Statement &statement);
+            mlir::Value lowerExpression(const Expression &expression);
     };
 
 }

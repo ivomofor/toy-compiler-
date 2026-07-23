@@ -1,3 +1,13 @@
+/home/shevo/project/toy-compiler-/build/CMakeFiles/intrinsics_gen.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/vt_gen.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/omp_gen.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/acc_gen.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/target_parser_gen.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/mlir-tablegen-targets.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/mlir-headers.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/mlir-generic-headers.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/mlir-doc.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/ToyCompiler.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/toy-lex.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/toy-parse.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/edit_cache.dir
