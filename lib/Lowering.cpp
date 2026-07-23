@@ -26,6 +26,9 @@ namespace toy {
         auto *entryBlock = func.addEntryBlock();
         mlir::OpBuilder builder(&context);
         builder.setInsertionPointToEnd(entryBlock);
+        for (const auto &statement :function.body) {
+            lowerStatement(*statement);
+        }
         module.push_back(func);
     }
 
@@ -37,5 +40,13 @@ namespace toy {
             return builder.create<mlir::arith::ConstantOp>(mlir::UnknownLoc::get(&context),type,value);
         }
         return {};
+    }
+
+    void Lowering::lowerStatement(const Statement &statement) {
+        auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
+        if (returnStmt) {
+            mlir::Value value = lowerExpression(*returnStmt->expression);
+            builder.create<mlir::func::ReturnOp>(mlir::UnknownLoc::get(&context),value);
+        }
     }
 }
