@@ -38,7 +38,7 @@ namespace toy {
         if (integer) {
             auto type = mlir::IntegerType::get(&context,32);
             auto value = mlir::IntegerAttr::get(type,integer->value);
-            return builder.create<mlir::arith::ConstantOp>(mlir::UnknownLoc::get(&context),type,value);
+            return mlir::arith::ConstantOp::create( builder, mlir::UnknownLoc::get(&context), type, value );
         }
         return {};
     }
@@ -47,7 +47,7 @@ namespace toy {
         auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
         if (returnStmt) {
             mlir::Value value = lowerExpression(*returnStmt->value);
-            builder.create<mlir::func::ReturnOp>(mlir::UnknownLoc::get(&context),value);
+            mlir::func::ReturnOp::create( builder, mlir::UnknownLoc::get(&context), value );
         }
     }
 }
