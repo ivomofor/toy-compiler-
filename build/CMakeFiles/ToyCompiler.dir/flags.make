@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/project/toy-compiler-/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 

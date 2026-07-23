@@ -93,9 +93,6 @@ toy__parse_EXTERNAL_OBJECTS =
 toy-parse: CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
 toy-parse: CMakeFiles/toy-parse.dir/build.make
 toy-parse: libToyCompiler.a
-toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRParser.a
-toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRBytecodeReader.a
-toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRAsmParser.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFuncDialect.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRControlFlowInterfaces.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFunctionInterfaces.a

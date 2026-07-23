@@ -46,7 +46,7 @@ namespace toy {
     void Lowering::lowerStatement(const Statement &statement) {
         auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
         if (returnStmt) {
-            mlir::Value value = lowerExpression(*returnStmt->expression);
+            mlir::Value value = lowerExpression(*returnStmt->value);
             builder.create<mlir::func::ReturnOp>(mlir::UnknownLoc::get(&context),value);
         }
     }

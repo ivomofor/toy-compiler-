@@ -198,6 +198,12 @@ LIBXML2_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libxml2.so
 //Path to a program.
 LIBXML2_XMLLINT_EXECUTABLE:FILEPATH=LIBXML2_XMLLINT_EXECUTABLE-NOTFOUND
 
+//The directory containing a CMake configuration file for LLVM.
+LLVM_DIR:PATH=/home/shevo/LLVM-22.1.0-Linux-X64/lib/cmake/llvm
+
+//The directory containing a CMake configuration file for MLIR.
+MLIR_DIR:PATH=/home/shevo/LLVM-22.1.0-Linux-X64/lib/cmake/mlir
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 

@@ -93,9 +93,6 @@ toy__lex_EXTERNAL_OBJECTS =
 toy-lex: CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.o
 toy-lex: CMakeFiles/toy-lex.dir/build.make
 toy-lex: libToyCompiler.a
-toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRParser.a
-toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRBytecodeReader.a
-toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRAsmParser.a
 toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFuncDialect.a
 toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRControlFlowInterfaces.a
 toy-lex: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRFunctionInterfaces.a

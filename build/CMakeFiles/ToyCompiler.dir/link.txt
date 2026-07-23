@@ -1,2 +1,2 @@
-/usr/bin/ar qc libToyCompiler.a CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o
+/usr/bin/ar qc libToyCompiler.a CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o
 /usr/bin/ranlib libToyCompiler.a
