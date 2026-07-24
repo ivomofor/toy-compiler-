@@ -38,6 +38,8 @@ target_link_libraries(ToyCompiler
         MLIRIR
         MLIRFuncDialect
         MLIRArithDialect
+        MLIRPass
+        MLIRTransforms
 )
 
 add_executable(toy-lex

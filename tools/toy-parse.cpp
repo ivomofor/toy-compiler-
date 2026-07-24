@@ -6,6 +6,8 @@
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Pass/PassManager.h"
+#include "mlir/Transforms/Passes.h"
 #include "mlir/Support/LogicalResult.h"
 
 #include <fstream>
@@ -53,6 +55,20 @@ int main(int argc, char **argv) {
 
     if (mlir::failed(module.verify())) {
         std::cerr << "Error: Generated MLIR failed verification\n";
+        return 1;
+    }
+
+    mlir::PassManager pm(&context);
+
+    pm.addPass(mlir::createCanonicalizerPass());
+
+    if (mlir::failed(pm.run(module))) {
+        std::cerr << "Error: MLIR pass pipeline failed\n";
+        return 1;
+    }
+
+    if (mlir::failed(module.verify())) {
+        std::cerr << "Error: MLIR failed verification after passes\n";
         return 1;
     }
 

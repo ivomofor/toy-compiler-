@@ -25,7 +25,6 @@ namespace toy {
         auto funcType = mlir::FunctionType::get(&context, {}, i32Type );
         auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name, funcType);
         auto *entryBlock = func.addEntryBlock();
-        mlir::OpBuilder builder(&context);
         builder.setInsertionPointToEnd(entryBlock);
         for (const auto &statement :function.body) {
             lowerStatement(*statement);
