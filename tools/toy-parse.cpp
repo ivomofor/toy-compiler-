@@ -16,6 +16,8 @@
 #include "mlir/Conversion/FuncToLLVM/ConvertFuncToLLVM.h"
 #include "mlir/Conversion/LLVMCommon/ConversionTarget.h"
 
+#include "mlir/Target/LLVMIR/Export.h"
+
 #include "mlir/Support/LogicalResult.h"
 
 #include <fstream>
@@ -100,6 +102,8 @@ int main(int argc, char **argv) {
         std::cerr << "Error: MLIR failed verification after passes\n";
         return 1;
     }
+
+    auto llvmModule = mlir::translateModuleToLLVMIR(module,llvmContext);
 
     module.dump();
 
