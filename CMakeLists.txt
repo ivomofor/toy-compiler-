@@ -62,4 +62,7 @@ add_executable(toy-parse
 target_link_libraries(toy-parse
     PRIVATE
         ToyCompiler
+        MLIRTargetLLVMIRExport
+        MLIRLLVMToLLVMIRTranslation
+        MLIRToLLVMIRTranslationRegistration
 )

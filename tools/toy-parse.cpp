@@ -15,8 +15,16 @@
 #include "mlir/Conversion/ArithToLLVM/ArithToLLVM.h"
 #include "mlir/Conversion/FuncToLLVM/ConvertFuncToLLVM.h"
 #include "mlir/Conversion/LLVMCommon/ConversionTarget.h"
+#include "mlir/Conversion/LLVMCommon/TypeConverter.h"
 
 #include "mlir/Target/LLVMIR/Export.h"
+#include "mlir/Target/LLVMIR/Dialect/Builtin/BuiltinToLLVMIRTranslation.h"
+#include "mlir/Target/LLVMIR/Dialect/LLVMIR/LLVMToLLVMIRTranslation.h"
+
+#include "llvm/IR/Module.h"
+#include "llvm/IR/LLVMContext.h"
+#include "llvm/Support/raw_ostream.h"
+
 
 #include "mlir/Support/LogicalResult.h"
 
@@ -58,6 +66,9 @@ int main(int argc, char **argv) {
     context.getOrLoadDialect<mlir::func::FuncDialect>();
     context.getOrLoadDialect<mlir::arith::ArithDialect>();
     context.getOrLoadDialect<mlir::LLVM::LLVMDialect>();
+
+    mlir::registerBuiltinDialectTranslation(context);
+    mlir::registerLLVMDialectTranslation(context);
 
     toy::Lowering lowering(context);
 
@@ -103,7 +114,18 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    auto llvmModule = mlir::translateModuleToLLVMIR(module,llvmContext);
+    llvm::LLVMContext llvmContext;
+    //mlir::registerBuiltinDialectTranslation(context);
+    //mlir::registerLLVMDialectTranslation(context);
+
+    std::unique_ptr<llvm::Module> llvmModule = mlir::translateModuleToLLVMIR(module,llvmContext);
+
+    if (!llvmModule) {
+        std::cerr << "Error: Failed to translate MLIR to LLVM IR\n";
+        return 1;
+    }
+
+    llvmModule->print(llvm::outs(),nullptr);
 
     module.dump();
 
