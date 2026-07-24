@@ -6,6 +6,7 @@
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Support/LogicalResult.h"
 
 #include <fstream>
 #include <iostream>
@@ -49,6 +50,11 @@ int main(int argc, char **argv) {
     toy::Lowering lowering(context);
 
     mlir::ModuleOp module = lowering.lower(*program);
+
+    if (mlir::failed(module.verify())) {
+        std::cerr << "Error: Generated MLIR failed verification\n";
+        return 1;
+    }
 
     module.dump();
 
