@@ -44,6 +44,15 @@ namespace toy {
         std::unique_ptr<Expression> value;
     };
 
+    class VariableDecl : public Statement {
+        public:
+            VariableDecl(std::string name, std::unique_ptr<Expression> initializer)
+                : name(std::move(name)), initializer(std::move(initializer)) {}
+
+            std::string name;
+            std::unique_ptr<Expression> initializer;
+    };
+
     class IntegerLiteral : public Expression {
         public:
             explicit IntegerLiteral(int value)
