@@ -27,18 +27,23 @@ namespace toy {
             printStatement(*stmt, indent + 2);
     }
 
-    void ASTPrinter::printStatement(const Statement &statement,int indent) {
-
-        auto returnStmt = dynamic_cast<const ReturnStmt*>(&statement);
-
-        if (!returnStmt)
+   void ASTPrinter::printStatement( const Statement &statement, int indent) { 
+    // Handle variable declarations. 
+        auto variableDecl = dynamic_cast<const VariableDecl *>(&statement); 
+        if (variableDecl) { 
+            printIndent(indent); 
+            std::cout << "Variable: " << variableDecl->name << '\n'; 
+            printExpression( *variableDecl->initializer, indent + 2 ); 
             return;
-
-        printIndent(indent);
-        std::cout << "Return\n";
-
-        printExpression( *returnStmt->value,indent + 2);
+     } // Handle return statements. 
+     auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement); 
+     if (returnStmt) { 
+        printIndent(indent); std::cout << "Return\n"; printExpression( *returnStmt->value, indent + 2 ); 
+        return;
+     } 
     }
+
+   
 
     void ASTPrinter::printExpression( const Expression &expression,int indent) {
 

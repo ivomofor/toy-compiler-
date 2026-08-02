@@ -21,9 +21,11 @@ class Parser {
 
         std::unique_ptr<FunctionDecl> parseFunction();
         std::unique_ptr<Statement> parseStatement();
+	std::unique_ptr<VariableDecl> parseVariableDecl();
         std::unique_ptr<Expression> parseExpression();
     };
 
 } 
 
 #endif
+

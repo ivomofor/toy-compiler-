@@ -27,15 +27,36 @@ namespace toy {
         return std::make_unique<IntegerLiteral>(value);
     }
 
-    std::unique_ptr<Statement> Parser::parseStatement() {
+    std::unique_ptr<VariableDecl> Parser::parseVariableDecl() {
 
-        match(TokenKind::Return);
+        advance();
 
-        auto value = parseExpression();
+        std::string name = currentToken.text;
+        advance();
+
+        match(TokenKind::Equal);
+
+        auto initializer = parseExpression();
 
         match(TokenKind::Semicolon);
 
-        return std::make_unique<ReturnStmt>(std::move(value));
+        return std::make_unique<VariableDecl>(std::move(name),std::move(initializer));
+    }
+    
+    std::unique_ptr<Statement> Parser::parseStatement() {
+
+        if (currentToken.kind == TokenKind::Var) {
+            return parseVariableDecl();
+        }
+
+        if (currentToken.kind == TokenKind::Return) {
+            match(TokenKind::Return);
+            auto value = parseExpression();
+            match(TokenKind::Semicolon);
+            return std::make_unique<ReturnStmt>(std::move(value));
+        }
+
+        return nullptr;
     }
 
     std::unique_ptr<FunctionDecl> Parser::parseFunction() {
