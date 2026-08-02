@@ -22,6 +22,9 @@ static const char *tokenKindToString(TokenKind kind) {
 
         case TokenKind::Return:
             return "Return";
+        
+        case TokenKind::Var:
+            return "Var";
 
         case TokenKind::LParen:
             return "LParen";
@@ -34,6 +37,9 @@ static const char *tokenKindToString(TokenKind kind) {
 
         case TokenKind::RBrace:
             return "RBrace";
+        
+        case TokenKind::Equal:
+            return "Equal";
 
         case TokenKind::Semicolon:
             return "Semicolon";

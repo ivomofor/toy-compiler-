@@ -31,6 +31,8 @@ Token Lexer::identifier() {
         return {TokenKind::Return, text};
     if (text == "fun")
         return {TokenKind::Fun, text};
+    if (text == "var") 
+        return {TokenKind::Var, text};
     return {TokenKind::Identifier, text};
 }
 
@@ -72,6 +74,10 @@ Token Lexer::nextToken() {
         case '}':
         advance();
         return {TokenKind::RBrace, "}"};
+
+        case '=':
+        advance();
+        return Token{TokenKind::Equal, "="};
 
         case ';':
         advance();

@@ -14,6 +14,7 @@ enum class TokenKind {
 
     Fun,
     Return,
+    Var,
 
     LParen,
     RParen,
@@ -21,6 +22,7 @@ enum class TokenKind {
     LBrace,
     RBrace,
 
+    Equal,
     Semicolon,
 
     Unknown
