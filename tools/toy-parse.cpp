@@ -1,6 +1,7 @@
 #include "toy/Lexer.h"
 #include "toy/Parser.h"
 #include "toy/Lowering.h"
+#include "toy/ASTPrinter.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -61,6 +62,9 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    toy::ASTPrinter printer;
+    printer.print(*program);
+
     mlir::MLIRContext context;
 
     context.getOrLoadDialect<mlir::func::FuncDialect>();
@@ -72,7 +76,13 @@ int main(int argc, char **argv) {
 
     toy::Lowering lowering(context);
 
-    mlir::ModuleOp module = lowering.lower(*program);
+    mlir::ModuleOp module;
+    try {
+        module = lowering.lower(*program);
+    } catch (const std::exception &e) {
+        std::cerr << "Error during lowering: " << e.what() << '\n';
+        return 1;
+    }
 
     if (mlir::failed(module.verify())) {
         std::cerr << "Error: Generated MLIR failed verification\n";

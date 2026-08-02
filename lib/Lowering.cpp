@@ -4,6 +4,8 @@
 #include "mlir/IR/Location.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
 
+#include <stdexcept>
+
 namespace toy {
 
     Lowering::Lowering(mlir::MLIRContext &context)
@@ -33,20 +35,43 @@ namespace toy {
     }
 
     mlir::Value Lowering::lowerExpression(const Expression &expression) {
+
         auto *integer = dynamic_cast<const IntegerLiteral *>(&expression);
+
         if (integer) {
-            auto type = mlir::IntegerType::get(&context,32);
-            auto value = mlir::IntegerAttr::get(type,integer->value);
-            return mlir::arith::ConstantOp::create( builder, mlir::UnknownLoc::get(&context), type, value );
+
+            auto type = mlir::IntegerType::get(&context, 32);
+            auto value = mlir::IntegerAttr::get(type, integer->value);
+
+            return mlir::arith::ConstantOp::create(builder,mlir::UnknownLoc::get(&context), type, value);
         }
-        return {};
+
+        auto *variable = dynamic_cast<const VariableReference *>(&expression);
+
+        if (variable) {
+            throw std::runtime_error( "Variable references are not supported in lowering yet: " +variable->name );
+        }
+
+        throw std::runtime_error("Unsupported expression in lowering");
     }
 
     void Lowering::lowerStatement(const Statement &statement) {
-        auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
-        if (returnStmt) {
-            mlir::Value value = lowerExpression(*returnStmt->value);
-            mlir::func::ReturnOp::create( builder, mlir::UnknownLoc::get(&context), value );
+
+        auto *variableDecl = dynamic_cast<const VariableDecl *>(&statement);
+
+        if (variableDecl) {
+            throw std::runtime_error("Variable declarations are not supported in lowering yet: " + variableDecl->name);
         }
+
+        auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
+
+        if (returnStmt) {
+
+            mlir::Value value =  lowerExpression(*returnStmt->value);
+            mlir::func::ReturnOp::create(builder, mlir::UnknownLoc::get(&context),value );
+            return;
+        }
+
+        throw std::runtime_error("Unsupported statement in lowering");
     }
 }

@@ -28,19 +28,28 @@ namespace toy {
     }
 
    void ASTPrinter::printStatement( const Statement &statement, int indent) { 
-    // Handle variable declarations. 
+    
         auto variableDecl = dynamic_cast<const VariableDecl *>(&statement); 
+
         if (variableDecl) { 
+
             printIndent(indent); 
+
             std::cout << "Variable: " << variableDecl->name << '\n'; 
+
             printExpression( *variableDecl->initializer, indent + 2 ); 
+
             return;
-     } // Handle return statements. 
-     auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement); 
-     if (returnStmt) { 
-        printIndent(indent); std::cout << "Return\n"; printExpression( *returnStmt->value, indent + 2 ); 
-        return;
      } 
+
+     auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement); 
+
+     if (returnStmt) { 
+
+            printIndent(indent); std::cout << "Return\n"; printExpression( *returnStmt->value, indent + 2 ); 
+
+            return;
+        } 
     }
 
    
@@ -49,12 +58,19 @@ namespace toy {
 
         auto integer = dynamic_cast<const IntegerLiteral*>(&expression);
 
-        if (!integer)
+        if (integer) {
+            printIndent(indent);
+            std::cout << "Integer: " << integer->value << '\n';
             return;
+        }
 
-        printIndent(indent);
+        auto variable = dynamic_cast<const VariableReference *>(&expression);
 
-        std::cout << "Integer: " << integer->value << '\n';
+        if (variable) {
+            printIndent(indent);
+            std::cout << "VariableReference: " << variable->name << '\n';
+            return;
+        }
     }
 
 }

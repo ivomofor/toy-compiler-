@@ -270,6 +270,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/Passes.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/ViewOpGraph.h \
   /home/shevo/project/toy-compiler-/include/toy/AST.h \
+  /home/shevo/project/toy-compiler-/include/toy/ASTPrinter.h \
   /home/shevo/project/toy-compiler-/include/toy/Lexer.h \
   /home/shevo/project/toy-compiler-/include/toy/Lowering.h \
   /home/shevo/project/toy-compiler-/include/toy/Parser.h \
@@ -627,6 +628,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
 /usr/include/c++/13/pstl/pstl_config.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h:
+
+/home/shevo/project/toy-compiler-/include/toy/ASTPrinter.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h:
 
@@ -1051,6 +1054,10 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/LLVMIR/LLVMTypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc:
 
 /usr/include/c++/13/tr1/special_function_util.h:
 
@@ -1717,7 +1724,3 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:

@@ -61,6 +61,14 @@ namespace toy {
         int value;
     };
 
+    class VariableReference : public Expression {
+        public:
+            explicit VariableReference(std::string name)
+                : name(std::move(name)) {}
+
+            std::string name;
+    };
+
 }
 
 #endif

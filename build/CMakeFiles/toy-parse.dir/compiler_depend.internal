@@ -271,6 +271,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/Passes.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/ViewOpGraph.h
  /home/shevo/project/toy-compiler-/include/toy/AST.h
+ /home/shevo/project/toy-compiler-/include/toy/ASTPrinter.h
  /home/shevo/project/toy-compiler-/include/toy/Lexer.h
  /home/shevo/project/toy-compiler-/include/toy/Lowering.h
  /home/shevo/project/toy-compiler-/include/toy/Parser.h
