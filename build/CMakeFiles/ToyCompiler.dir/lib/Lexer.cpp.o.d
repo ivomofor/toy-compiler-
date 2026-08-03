@@ -1,7 +1,7 @@
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: \
- /home/shevo/project/toy-compiler-/lib/Lexer.cpp \
+ /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp \
  /usr/include/stdc-predef.h \
- /home/shevo/project/toy-compiler-/include/toy/Lexer.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
  /usr/include/c++/13/cctype \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

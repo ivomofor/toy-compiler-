@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shevo/project/toy-compiler-
+CMAKE_SOURCE_DIR = /home/shevo/CLionProjects/toy-compiler-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shevo/project/toy-compiler-/build
+CMAKE_BINARY_DIR = /home/shevo/CLionProjects/toy-compiler-/build
 
 # Utility rule file for acc_gen.
 
@@ -78,6 +78,6 @@ CMakeFiles/acc_gen.dir/clean:
 .PHONY : CMakeFiles/acc_gen.dir/clean
 
 CMakeFiles/acc_gen.dir/depend:
-	cd /home/shevo/project/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/shevo/CLionProjects/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/acc_gen.dir/depend
 

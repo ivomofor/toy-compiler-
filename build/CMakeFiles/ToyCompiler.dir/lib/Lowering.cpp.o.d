@@ -1,8 +1,8 @@
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
- /home/shevo/project/toy-compiler-/lib/Lowering.cpp \
+ /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp \
  /usr/include/stdc-predef.h \
- /home/shevo/project/toy-compiler-/include/toy/Lowering.h \
- /home/shevo/project/toy-compiler-/include/toy/AST.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -399,4 +399,5 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
+ /usr/include/c++/13/iostream

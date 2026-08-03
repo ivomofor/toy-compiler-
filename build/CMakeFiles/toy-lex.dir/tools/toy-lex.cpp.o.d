@@ -1,5 +1,5 @@
 CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.o: \
- /home/shevo/project/toy-compiler-/tools/toy-lex.cpp \
+ /home/shevo/CLionProjects/toy-compiler-/tools/toy-lex.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/fstream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -154,4 +154,4 @@ CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iostream \
  /usr/include/c++/13/sstream /usr/include/c++/13/bits/sstream.tcc \
- /home/shevo/project/toy-compiler-/include/toy/Lexer.h
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h

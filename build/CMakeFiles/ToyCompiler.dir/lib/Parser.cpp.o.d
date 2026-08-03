@@ -1,8 +1,8 @@
 CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: \
- /home/shevo/project/toy-compiler-/lib/Parser.cpp \
+ /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp \
  /usr/include/stdc-predef.h \
- /home/shevo/project/toy-compiler-/include/toy/Parser.h \
- /home/shevo/project/toy-compiler-/include/toy/Lexer.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
  /usr/include/c++/13/cctype \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -117,7 +117,7 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/shevo/project/toy-compiler-/include/toy/AST.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \

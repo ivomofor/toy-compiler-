@@ -1,7 +1,7 @@
 CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
- /home/shevo/project/toy-compiler-/tools/toy-parse.cpp \
+ /home/shevo/CLionProjects/toy-compiler-/tools/toy-parse.cpp \
  /usr/include/stdc-predef.h \
- /home/shevo/project/toy-compiler-/include/toy/Lexer.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
  /usr/include/c++/13/cctype \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -116,8 +116,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/shevo/project/toy-compiler-/include/toy/Parser.h \
- /home/shevo/project/toy-compiler-/include/toy/AST.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
@@ -159,7 +159,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/shevo/project/toy-compiler-/include/toy/Lowering.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
@@ -404,7 +404,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
- /home/shevo/project/toy-compiler-/include/toy/ASTPrinter.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/LLVMIR/LLVMDialect.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/LLVMIR/LLVMAttrs.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/LLVMIR/LLVMTypes.h \

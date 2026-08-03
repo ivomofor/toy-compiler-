@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shevo/project/toy-compiler-
+CMAKE_SOURCE_DIR = /home/shevo/CLionProjects/toy-compiler-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shevo/project/toy-compiler-/build
+CMAKE_BINARY_DIR = /home/shevo/CLionProjects/toy-compiler-/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/toy-parse.dir/clean
 CMakeFiles/intrinsics_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
 .PHONY : CMakeFiles/intrinsics_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/intrinsics_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intrinsics_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/intrinsics_gen.dir/rule
 
 # Convenience name for target.
@@ -120,14 +120,14 @@ CMakeFiles/intrinsics_gen.dir/clean:
 CMakeFiles/vt_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vt_gen.dir/build.make CMakeFiles/vt_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vt_gen.dir/build.make CMakeFiles/vt_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target vt_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target vt_gen"
 .PHONY : CMakeFiles/vt_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/vt_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vt_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/vt_gen.dir/rule
 
 # Convenience name for target.
@@ -146,14 +146,14 @@ CMakeFiles/vt_gen.dir/clean:
 CMakeFiles/omp_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target omp_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target omp_gen"
 .PHONY : CMakeFiles/omp_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/omp_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/omp_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/omp_gen.dir/rule
 
 # Convenience name for target.
@@ -172,14 +172,14 @@ CMakeFiles/omp_gen.dir/clean:
 CMakeFiles/acc_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target acc_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target acc_gen"
 .PHONY : CMakeFiles/acc_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/acc_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/acc_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/acc_gen.dir/rule
 
 # Convenience name for target.
@@ -198,14 +198,14 @@ CMakeFiles/acc_gen.dir/clean:
 CMakeFiles/target_parser_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/target_parser_gen.dir/build.make CMakeFiles/target_parser_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/target_parser_gen.dir/build.make CMakeFiles/target_parser_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target target_parser_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target target_parser_gen"
 .PHONY : CMakeFiles/target_parser_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/target_parser_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/target_parser_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/target_parser_gen.dir/rule
 
 # Convenience name for target.
@@ -224,14 +224,14 @@ CMakeFiles/target_parser_gen.dir/clean:
 CMakeFiles/mlir-tablegen-targets.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-tablegen-targets.dir/build.make CMakeFiles/mlir-tablegen-targets.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-tablegen-targets.dir/build.make CMakeFiles/mlir-tablegen-targets.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-tablegen-targets"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-tablegen-targets"
 .PHONY : CMakeFiles/mlir-tablegen-targets.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mlir-tablegen-targets.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mlir-tablegen-targets.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/mlir-tablegen-targets.dir/rule
 
 # Convenience name for target.
@@ -250,14 +250,14 @@ CMakeFiles/mlir-tablegen-targets.dir/clean:
 CMakeFiles/mlir-headers.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-headers.dir/build.make CMakeFiles/mlir-headers.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-headers.dir/build.make CMakeFiles/mlir-headers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-headers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-headers"
 .PHONY : CMakeFiles/mlir-headers.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mlir-headers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mlir-headers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/mlir-headers.dir/rule
 
 # Convenience name for target.
@@ -276,14 +276,14 @@ CMakeFiles/mlir-headers.dir/clean:
 CMakeFiles/mlir-generic-headers.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-generic-headers.dir/build.make CMakeFiles/mlir-generic-headers.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-generic-headers.dir/build.make CMakeFiles/mlir-generic-headers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-generic-headers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-generic-headers"
 .PHONY : CMakeFiles/mlir-generic-headers.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mlir-generic-headers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mlir-generic-headers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/mlir-generic-headers.dir/rule
 
 # Convenience name for target.
@@ -302,14 +302,14 @@ CMakeFiles/mlir-generic-headers.dir/clean:
 CMakeFiles/mlir-doc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-doc.dir/build.make CMakeFiles/mlir-doc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlir-doc.dir/build.make CMakeFiles/mlir-doc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-doc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num= "Built target mlir-doc"
 .PHONY : CMakeFiles/mlir-doc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mlir-doc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mlir-doc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/mlir-doc.dir/rule
 
 # Convenience name for target.
@@ -328,14 +328,14 @@ CMakeFiles/mlir-doc.dir/clean:
 CMakeFiles/ToyCompiler.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ToyCompiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ToyCompiler"
 .PHONY : CMakeFiles/ToyCompiler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ToyCompiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ToyCompiler.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/ToyCompiler.dir/rule
 
 # Convenience name for target.
@@ -354,14 +354,14 @@ CMakeFiles/ToyCompiler.dir/clean:
 CMakeFiles/toy-lex.dir/all: CMakeFiles/ToyCompiler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=7,8 "Built target toy-lex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=7,8 "Built target toy-lex"
 .PHONY : CMakeFiles/toy-lex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/toy-lex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/toy-lex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/toy-lex.dir/rule
 
 # Convenience name for target.
@@ -380,14 +380,14 @@ CMakeFiles/toy-lex.dir/clean:
 CMakeFiles/toy-parse.dir/all: CMakeFiles/ToyCompiler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=9,10 "Built target toy-parse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=9,10 "Built target toy-parse"
 .PHONY : CMakeFiles/toy-parse.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/toy-parse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/toy-parse.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles 0
 .PHONY : CMakeFiles/toy-parse.dir/rule
 
 # Convenience name for target.
