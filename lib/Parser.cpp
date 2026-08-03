@@ -20,46 +20,28 @@ namespace toy {
     }
 
     std::unique_ptr<Expression> Parser::parseExpression() {
-
-        auto left = parsePrimary();
+        auto left = parseTerm();
 
         if (!left)
             return nullptr;
 
-        while (
-            currentToken.kind == TokenKind::Plus ||
-            currentToken.kind == TokenKind::Minus ||
-            currentToken.kind == TokenKind::Star ||
-            currentToken.kind == TokenKind::Slash
-        ) {
+        while (currentToken.kind == TokenKind::Plus || currentToken.kind == TokenKind::Minus) {
+            char op;
 
-            char op = '+';
-
-        switch (currentToken.kind) {
-                case TokenKind::Plus:
-                    op = '+';
-                    break;
-                case TokenKind::Minus:
-                    op = '-';
-                    break;
-                case TokenKind::Star:
-                    op = '*';
-                    break;
-                case TokenKind::Slash:
-                    op = '/';
-                    break;
-                default:
-                    break;
-            }
+            if (currentToken.kind == TokenKind::Plus)
+                op = '+';
+            else
+                op = '-';
 
             advance();
 
-            auto right = parsePrimary();
+            auto right = parseTerm();
 
-            if (!right)
+            if (!right) {
                 throw std::runtime_error("Expected expression after operator");
+            }
 
-            left = std::make_unique<BinaryExpression>(op, std::move(left), std::move(right));
+            left = std::make_unique<BinaryExpression>(op,std::move(left),std::move(right));
         }
 
         return left;
@@ -87,6 +69,34 @@ namespace toy {
         }
 
         return nullptr;
+    }
+
+    std::unique_ptr<Expression> Parser::parseTerm() {
+
+        auto left = parsePrimary();
+
+        if (!left)
+            return nullptr;
+
+        while (currentToken.kind == TokenKind::Star ||currentToken.kind == TokenKind::Slash) {
+            char op;
+            if (currentToken.kind == TokenKind::Star)
+                op = '*';
+            else
+                op = '/';
+
+            advance();
+
+            auto right = parsePrimary();
+
+            if (!right) {
+                throw std::runtime_error("Expected expression after operator");
+            }
+
+            left = std::make_unique<BinaryExpression>(op, std::move(left), std::move(right));
+        }
+
+        return left;
     }
 
     std::unique_ptr<VariableDecl> Parser::parseVariableDecl() {
