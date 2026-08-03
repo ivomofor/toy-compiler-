@@ -12,6 +12,7 @@ namespace toy {
         : context(context), builder(&context) {}
 
     mlir::ModuleOp Lowering::lower(const Program &program) {
+
         auto module = mlir::ModuleOp::create(mlir::UnknownLoc::get(&context));
         for (const auto &decl : program.declarations) {
             auto *function = dynamic_cast<FunctionDecl *>(decl.get());
@@ -23,6 +24,9 @@ namespace toy {
     }
 
     void Lowering::lowerFunction(mlir::ModuleOp module, const FunctionDecl &function) {
+        
+        symbolTable.clear();
+
         auto i32Type = mlir::IntegerType::get(&context,32);
         auto funcType = mlir::FunctionType::get(&context, {}, i32Type );
         auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name, funcType);
@@ -39,17 +43,19 @@ namespace toy {
         auto *integer = dynamic_cast<const IntegerLiteral *>(&expression);
 
         if (integer) {
-
             auto type = mlir::IntegerType::get(&context, 32);
             auto value = mlir::IntegerAttr::get(type, integer->value);
-
             return mlir::arith::ConstantOp::create(builder,mlir::UnknownLoc::get(&context), type, value);
         }
 
         auto *variable = dynamic_cast<const VariableReference *>(&expression);
 
         if (variable) {
-            throw std::runtime_error( "Variable references are not supported in lowering yet: " +variable->name );
+            auto it = symbolTable.find(variable->name);
+            if (it == symbolTable.end()) {
+                throw std::runtime_error("Undefined variable: " + variable->name);
+            }
+            return it->second;
         }
 
         throw std::runtime_error("Unsupported expression in lowering");
@@ -60,7 +66,9 @@ namespace toy {
         auto *variableDecl = dynamic_cast<const VariableDecl *>(&statement);
 
         if (variableDecl) {
-            throw std::runtime_error("Variable declarations are not supported in lowering yet: " + variableDecl->name);
+            mlir::Value value = lowerExpression(*variableDecl->initializer);
+            symbolTable[variableDecl->name] = value;
+            return;
         }
 
         auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);

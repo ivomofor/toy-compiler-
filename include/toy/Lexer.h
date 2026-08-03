@@ -25,6 +25,11 @@ enum class TokenKind {
     Equal,
     Semicolon,
 
+    Plus,
+    Minus,
+    Star,
+    Slash,
+
     Unknown
 };
 

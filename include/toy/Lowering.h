@@ -9,6 +9,9 @@
 #include "mlir/Dialect/Func/IR/FuncOps.h"
 #include "mlir/Dialect/Arith/IR/Arith.h"
 
+#include <unordered_map>
+#include <string>
+
 namespace toy {
 
     class Lowering {
@@ -20,6 +23,7 @@ namespace toy {
         private:
             mlir::MLIRContext &context;
             mlir::OpBuilder builder;
+            std::unordered_map<std::string, mlir::Value> symbolTable;
             void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);
             void lowerStatement(const Statement &statement);
             mlir::Value lowerExpression(const Expression &expression);

@@ -43,6 +43,18 @@ static const char *tokenKindToString(TokenKind kind) {
 
         case TokenKind::Semicolon:
             return "Semicolon";
+        
+        case TokenKind::Plus:
+            return "Plus";
+
+        case TokenKind::Minus:
+            return "Minus";
+
+        case TokenKind::Star:
+            return "Star";
+
+        case TokenKind::Slash:
+            return "Slash";
 
         case TokenKind::Unknown:
             return "Unknown";

@@ -83,6 +83,22 @@ Token Lexer::nextToken() {
         advance();
         return {TokenKind::Semicolon, ";"};
 
+        case '+':
+        advance();
+        return {TokenKind::Plus, "+"};
+
+        case '-':
+        advance();
+        return {TokenKind::Minus, "-"};
+
+        case '*':
+        advance();
+        return {TokenKind::Star, "*"};
+
+        case '/':
+        advance();
+        return {TokenKind::Slash, "/"};
+
         default:
         advance();
             return {TokenKind::Unknown, std::string(1, ch)};

@@ -69,6 +69,17 @@ namespace toy {
             std::string name;
     };
 
+    class BinaryExpression : public Expression {
+        public:
+            BinaryExpression(char op, std::unique_ptr<Expression> left,std::unique_ptr<Expression> right)
+                : op(op), left(std::move(left)), right(std::move(right)) {}
+
+        char op;
+
+        std::unique_ptr<Expression> left;
+        std::unique_ptr<Expression> right;
+    };
+
 }
 
 #endif

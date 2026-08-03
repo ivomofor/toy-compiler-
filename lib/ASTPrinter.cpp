@@ -71,6 +71,16 @@ namespace toy {
             std::cout << "VariableReference: " << variable->name << '\n';
             return;
         }
+
+        auto binary = dynamic_cast<const BinaryExpression *>(&expression);
+
+        if (binary) {
+            printIndent(indent);
+            std::cout << "BinaryExpression: " << binary->op << '\n';
+            printExpression(*binary->left,indent + 2);
+            printExpression(*binary->right,indent + 2);
+            return;
+        }
     }
 
 }

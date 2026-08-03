@@ -21,17 +21,71 @@ namespace toy {
 
     std::unique_ptr<Expression> Parser::parseExpression() {
 
-        if (currentToken.kind == TokenKind::Integer) {
-        int value = std::stoi(currentToken.text);
-        advance();
-        return std::make_unique<IntegerLiteral>(value);
+        auto left = parsePrimary();
+
+        if (!left)
+            return nullptr;
+
+        while (
+            currentToken.kind == TokenKind::Plus ||
+            currentToken.kind == TokenKind::Minus ||
+            currentToken.kind == TokenKind::Star ||
+            currentToken.kind == TokenKind::Slash
+        ) {
+
+            char op = '+';
+
+        switch (currentToken.kind) {
+                case TokenKind::Plus:
+                    op = '+';
+                    break;
+                case TokenKind::Minus:
+                    op = '-';
+                    break;
+                case TokenKind::Star:
+                    op = '*';
+                    break;
+                case TokenKind::Slash:
+                    op = '/';
+                    break;
+                default:
+                    break;
+            }
+
+            advance();
+
+            auto right = parsePrimary();
+
+            if (!right)
+                throw std::runtime_error("Expected expression after operator");
+
+            left = std::make_unique<BinaryExpression>(op, std::move(left), std::move(right));
+        }
+
+        return left;
     }
 
-    if (currentToken.kind == TokenKind::Identifier) {
-        std::string name = currentToken.text;
-        advance();
-        return std::make_unique<VariableReference>(std::move(name));
+    std::unique_ptr<Expression> Parser::parsePrimary() {
+
+        if (currentToken.kind == TokenKind::Integer) {
+            int value = std::stoi(currentToken.text);
+            advance();
+            return std::make_unique<IntegerLiteral>(value);
         }
+
+        if (currentToken.kind == TokenKind::Identifier) {
+            std::string name = currentToken.text;
+            advance();
+            return std::make_unique<VariableReference>(std::move(name));
+        }
+
+        if (currentToken.kind == TokenKind::LParen) {
+            match(TokenKind::LParen);
+            auto expression = parseExpression();
+            match(TokenKind::RParen);
+            return expression;
+        }
+
         return nullptr;
     }
 
