@@ -9,22 +9,22 @@ namespace toy {
 
     class ASTNode {
         public:
-        virtual ~ASTNode() = default;
+            virtual ~ASTNode() = default;
     };
 
     class Program : public ASTNode {
         public:
-        std::vector<std::unique_ptr<ASTNode>> declarations;
+            std::vector<std::unique_ptr<ASTNode>> declarations;
     };
 
     class Statement : public ASTNode {
         public:
-        virtual ~Statement() = default;
+            virtual ~Statement() = default;
     };
 
     class Expression : public ASTNode {
         public:
-        virtual ~Expression() = default;
+            virtual ~Expression() = default;
     };
 
     class FunctionDecl : public ASTNode {
@@ -33,6 +33,7 @@ namespace toy {
             : name(std::move(name)) {}
 
         std::string name;
+        std::vector<std::string> parameters;
         std::vector<std::unique_ptr<Statement>> body;
     };
 
@@ -75,7 +76,6 @@ namespace toy {
                 : op(op), left(std::move(left)), right(std::move(right)) {}
 
         char op;
-
         std::unique_ptr<Expression> left;
         std::unique_ptr<Expression> right;
     };

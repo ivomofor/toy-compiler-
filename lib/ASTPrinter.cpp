@@ -23,33 +23,38 @@ namespace toy {
 
         std::cout << "Function: " << function.name << '\n';
 
-        for (const auto &stmt : function.body)
-            printStatement(*stmt, indent + 2);
+        if (!function.parameters.empty()) {
+            printIndent(indent + 2);
+            std::cout << "Parameters\n";
+            for (const auto &parameter : function.parameters) {
+                printIndent(indent + 4);
+                std::cout << parameter << '\n';
+            }
+        }
+
+        for (const auto &stmt : function.body) {
+            printStatement(*stmt,indent + 2);
+        }
     }
 
    void ASTPrinter::printStatement( const Statement &statement, int indent) { 
     
         auto variableDecl = dynamic_cast<const VariableDecl *>(&statement); 
 
-        if (variableDecl) { 
-
-            printIndent(indent); 
-
-            std::cout << "Variable: " << variableDecl->name << '\n'; 
-
-            printExpression( *variableDecl->initializer, indent + 2 ); 
-
+        if (variableDecl) {
+            printIndent(indent);
+            std::cout << "Variable: " << variableDecl->name << '\n';
+            printExpression( *variableDecl->initializer, indent + 2 );
             return;
-     } 
+        }
 
-     auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement); 
+        auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
 
-     if (returnStmt) { 
-
-            printIndent(indent); std::cout << "Return\n"; printExpression( *returnStmt->value, indent + 2 ); 
-
+        if (returnStmt) {
+            printIndent(indent); std::cout << "Return\n";
+            printExpression( *returnStmt->value, indent + 2 );
             return;
-        } 
+        }
     }
 
    

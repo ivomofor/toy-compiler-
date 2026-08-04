@@ -24,6 +24,7 @@ enum class TokenKind {
 
     Equal,
     Semicolon,
+    Comma,
 
     Plus,
     Minus,

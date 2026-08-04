@@ -102,14 +102,10 @@ namespace toy {
     std::unique_ptr<VariableDecl> Parser::parseVariableDecl() {
 
         match(TokenKind::Var);
-
         std::string name = currentToken.text;
-
         match(TokenKind::Identifier);
         match(TokenKind::Equal);
-
         auto initializer = parseExpression();
-
         match(TokenKind::Semicolon);
 
         return std::make_unique<VariableDecl>(
@@ -137,15 +133,29 @@ namespace toy {
     std::unique_ptr<FunctionDecl> Parser::parseFunction() {
 
         match(TokenKind::Fun);
-
         std::string name = currentToken.text;
-
         match(TokenKind::Identifier);
+        auto function = std::make_unique<FunctionDecl>(name);
         match(TokenKind::LParen);
+
+        if (currentToken.kind != TokenKind::RParen) {
+
+            while (true) {
+
+                if (currentToken.kind != TokenKind::Identifier) {
+                    throw std::runtime_error("Expected parameter name");
+                }
+                function->parameters.push_back(currentToken.text);
+                advance();
+                if (currentToken.kind == TokenKind::RParen)
+                    break;
+                match(TokenKind::Comma);
+            }
+        }
         match(TokenKind::RParen);
         match(TokenKind::LBrace);
 
-        auto function = std::make_unique<FunctionDecl>(name);
+        //auto function = std::make_unique<FunctionDecl>(name);
         while (currentToken.kind != TokenKind::RBrace) {
         auto statement = parseStatement();
 

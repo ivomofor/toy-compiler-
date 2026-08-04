@@ -56,6 +56,9 @@ static const char *tokenKindToString(TokenKind kind) {
         case TokenKind::Slash:
             return "Slash";
 
+        case TokenKind::Comma:
+            return "Comma";
+
         case TokenKind::Unknown:
             return "Unknown";
     }
