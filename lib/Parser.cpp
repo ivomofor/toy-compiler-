@@ -143,7 +143,38 @@ namespace toy {
             return std::make_unique<ReturnStmt>(std::move(value));
         }
 
+        if (currentToken.kind == TokenKind::If) {
+            return parseIfStatement();
+        }
+
         return nullptr;
+    }
+
+    std::unique_ptr<IfStmt> Parser::parseIfStatement() {
+
+        match(TokenKind::If);
+        match(TokenKind::LParen);
+
+        auto condition = parseExpression();
+
+        match(TokenKind::RParen);
+        match(TokenKind::LBrace);
+
+        std::vector<std::unique_ptr<Statement>> thenBody;
+
+        while (currentToken.kind != TokenKind::RBrace) {
+
+            auto stmt = parseStatement();
+
+            if (!stmt)
+                throw std::runtime_error("Invalid statement inside if");
+
+            thenBody.push_back(std::move(stmt));
+        }
+
+        match(TokenKind::RBrace);
+
+        return std::make_unique<IfStmt>(std::move(condition),std::move(thenBody));
     }
 
     std::unique_ptr<FunctionDecl> Parser::parseFunction() {

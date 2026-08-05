@@ -63,6 +63,15 @@ namespace toy {
             std::unique_ptr<Expression> initializer;
     };
 
+    class IfStmt : public Statement {
+        public:
+            IfStmt(std::unique_ptr<Expression> condition, std::vector<std::unique_ptr<Statement>> thenBody)
+                : condition(std::move(condition)),thenBody(std::move(thenBody)) {}
+
+        std::unique_ptr<Expression> condition;
+        std::vector<std::unique_ptr<Statement>> thenBody;
+    };
+
     class IntegerLiteral : public Expression {
         public:
             explicit IntegerLiteral(int value)

@@ -48,6 +48,28 @@ namespace toy {
             return;
         }
 
+        auto ifStmt = dynamic_cast<const IfStmt *>(&statement);
+
+        if (ifStmt) {
+
+            printIndent(indent);
+            std::cout << "If\n";
+
+            printIndent(indent + 2);
+            std::cout << "Condition\n";
+
+            printExpression(*ifStmt->condition, indent + 4);
+
+            printIndent(indent + 2);
+            std::cout << "Then\n";
+
+            for (const auto &stmt : ifStmt->thenBody) {
+                printStatement(*stmt,indent + 4);
+            }
+            
+            return;
+        }
+
         auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
 
         if (returnStmt) {

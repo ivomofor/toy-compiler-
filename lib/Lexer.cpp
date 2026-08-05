@@ -32,6 +32,8 @@ namespace toy {
             return {TokenKind::Fun, text};
         if (text == "var")
             return {TokenKind::Var, text};
+        if (text == "if")
+            return {TokenKind::If, text};
         return {TokenKind::Identifier, text};
     }
 

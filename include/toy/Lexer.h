@@ -15,6 +15,7 @@ enum class TokenKind {
     Fun,
     Return,
     Var,
+    If,
 
     LParen,
     RParen,
