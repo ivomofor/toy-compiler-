@@ -24,9 +24,10 @@ namespace toy {
             mlir::MLIRContext &context;
             mlir::OpBuilder builder;
             std::unordered_map<std::string, mlir::Value> symbolTable;
-            void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);
-            void lowerStatement(const Statement &statement);
+            void lowerFunction(mlir::ModuleOp module,const FunctionDecl &function);\
             mlir::Value lowerExpression(const Expression &expression);
+            void lowerStatement(const Statement &statement);
+            void lowerIfStatement(const IfStmt &stmt);
     };
 
 }

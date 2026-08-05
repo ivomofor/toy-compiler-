@@ -2,7 +2,9 @@
 
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/Location.h"
+
 #include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Dialect/SCF/IR/SCF.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -90,21 +92,41 @@ namespace toy {
     void Lowering::lowerStatement(const Statement &statement) {
 
         auto *variableDecl = dynamic_cast<const VariableDecl *>(&statement);
+
         if (variableDecl) {
             mlir::Value value = lowerExpression(*variableDecl->initializer);
             symbolTable[variableDecl->name] = value;
             return;
         }
 
-    auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
+        auto ifStmt = dynamic_cast<const IfStmt *>(&statement);
 
-    if (returnStmt) {
+        if (ifStmt) {
+            lowerIfStatement(*ifStmt);
+            return;
+        }
+
+        auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
+
+        if (returnStmt) {
             mlir::Value value =lowerExpression(*returnStmt->value);
             mlir::func::ReturnOp::create(builder,mlir::UnknownLoc::get(&context),value);
             return;
         }
 
         throw std::runtime_error("Unsupported statement in lowering");
+    }
+
+    void Lowering::lowerIfStatement(const IfStmt &stmt) {
+
+        mlir::Value condition = lowerExpression(*stmt.condition);
+        auto ifOp = builder.create<mlir::scf::IfOp>(builder.getUnknownLoc(),condition,false);
+        builder.setInsertionPointToStart(&ifOp.getThenRegion().front());
+
+        for (const auto &statement : stmt.thenBody) {
+            lowerStatement(*statement);
+        }
+        builder.setInsertionPointAfter(ifOp);
     }
 
 }

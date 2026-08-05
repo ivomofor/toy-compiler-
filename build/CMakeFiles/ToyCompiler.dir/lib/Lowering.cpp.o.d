@@ -400,4 +400,21 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingAttrInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOps.h.inc \
  /usr/include/c++/13/iostream

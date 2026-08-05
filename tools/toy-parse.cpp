@@ -8,6 +8,7 @@
 
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Dialect/SCF/IR/SCF.h"
 #include "mlir/Dialect/LLVMIR/LLVMDialect.h"
 
 #include "mlir/Pass/PassManager.h"
@@ -69,6 +70,7 @@ int main(int argc, char **argv) {
 
     context.getOrLoadDialect<mlir::func::FuncDialect>();
     context.getOrLoadDialect<mlir::arith::ArithDialect>();
+    context.getOrLoadDialect<mlir::scf::SCFDialect>();
     context.getOrLoadDialect<mlir::LLVM::LLVMDialect>();
 
     mlir::registerBuiltinDialectTranslation(context);
@@ -99,7 +101,7 @@ int main(int argc, char **argv) {
     }
 
     mlir::ConversionTarget target(context);
-
+    target.addLegalDialect<mlir::scf::SCFDialect>();
     target.addLegalDialect<mlir::LLVM::LLVMDialect>();
     target.addLegalOp<mlir::ModuleOp>();
 
