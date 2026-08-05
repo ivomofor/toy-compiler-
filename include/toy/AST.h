@@ -27,6 +27,15 @@ namespace toy {
             virtual ~Expression() = default;
     };
 
+    class CallExpression : public Expression {
+        public:
+            CallExpression(std::string callee, std::vector<std::unique_ptr<Expression>> arguments)
+                : callee(std::move(callee)), arguments(std::move(arguments)) {}
+
+            std::string callee;
+            std::vector<std::unique_ptr<Expression>> arguments;
+    };
+
     class FunctionDecl : public ASTNode {
         public:
             explicit FunctionDecl(std::string name)

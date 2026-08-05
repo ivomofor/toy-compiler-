@@ -7,10 +7,12 @@ namespace toy {
     Parser::Parser(Lexer &lexer)
         : lexer(lexer) {
             currentToken = this->lexer.nextToken();
+            lookaheadToken = this->lexer.nextToken();
         }
 
     void Parser::advance() {
-        currentToken = lexer.nextToken();
+        currentToken = lookaheadToken;
+        lookaheadToken = lexer.nextToken();
     }
 
     void Parser::match(TokenKind expected) {
@@ -21,30 +23,43 @@ namespace toy {
 
     std::unique_ptr<Expression> Parser::parseExpression() {
         auto left = parseTerm();
-
         if (!left)
             return nullptr;
-
         while (currentToken.kind == TokenKind::Plus || currentToken.kind == TokenKind::Minus) {
             char op;
-
             if (currentToken.kind == TokenKind::Plus)
                 op = '+';
             else
                 op = '-';
-
             advance();
-
             auto right = parseTerm();
-
             if (!right) {
                 throw std::runtime_error("Expected expression after operator");
             }
-
             left = std::make_unique<BinaryExpression>(op,std::move(left),std::move(right));
         }
-
         return left;
+    }
+
+    std::unique_ptr<Expression> Parser::parseCallExpression() {
+
+        std::string callee = currentToken.text;
+        match(TokenKind::Identifier);
+        match(TokenKind::LParen);
+        std::vector<std::unique_ptr<Expression>> arguments;
+
+        if (currentToken.kind != TokenKind::RParen) {
+            while (true) {
+                arguments.push_back(parseExpression());
+                if (currentToken.kind == TokenKind::RParen) {
+                    break;
+                }
+                match(TokenKind::Comma);
+            }
+        }
+
+        match(TokenKind::RParen);
+        return std::make_unique<CallExpression>(std::move(callee), std::move(arguments));
     }
 
     std::unique_ptr<Expression> Parser::parsePrimary() {
@@ -56,6 +71,11 @@ namespace toy {
         }
 
         if (currentToken.kind == TokenKind::Identifier) {
+
+            if (lookaheadToken.kind == TokenKind::LParen) {
+                return parseCallExpression();
+            }
+
             std::string name = currentToken.text;
             advance();
             return std::make_unique<VariableReference>(std::move(name));
@@ -86,7 +106,6 @@ namespace toy {
                 op = '/';
 
             advance();
-
             auto right = parsePrimary();
 
             if (!right) {
@@ -108,10 +127,7 @@ namespace toy {
         auto initializer = parseExpression();
         match(TokenKind::Semicolon);
 
-        return std::make_unique<VariableDecl>(
-            std::move(name),
-            std::move(initializer)
-        );
+        return std::make_unique<VariableDecl>(std::move(name),std::move(initializer));
     }
     
     std::unique_ptr<Statement> Parser::parseStatement() {
@@ -167,7 +183,6 @@ namespace toy {
     }
 
         match(TokenKind::RBrace);
-
         return function;
     }
 

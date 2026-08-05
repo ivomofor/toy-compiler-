@@ -9,12 +9,12 @@ namespace toy {
 class Parser {
     public:
         explicit Parser(Lexer &lexer);
-
         std::unique_ptr<Program> parseProgram();
 
     private:
         Lexer &lexer;
         Token currentToken;
+        Token lookaheadToken;
 
         void advance();
         void match(TokenKind expected);
@@ -23,6 +23,7 @@ class Parser {
         std::unique_ptr<Statement> parseStatement();
         std::unique_ptr<VariableDecl> parseVariableDecl();
         std::unique_ptr<Expression> parseExpression();
+        std::unique_ptr<Expression> parseCallExpression();
         std::unique_ptr<Expression> parsePrimary();
         std::unique_ptr<Expression> parseTerm();
     };

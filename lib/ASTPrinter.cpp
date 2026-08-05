@@ -86,6 +86,18 @@ namespace toy {
             printExpression(*binary->right,indent + 2);
             return;
         }
+
+        auto call = dynamic_cast<const CallExpression *>(&expression);
+
+        if (call) {
+            printIndent(indent);
+            std::cout << "Call: " << call->callee << '\n';
+            
+            for (const auto &argument : call->arguments) {
+                printExpression(*argument,indent + 2);
+            }
+            return;
+        }
     }
 
 }
