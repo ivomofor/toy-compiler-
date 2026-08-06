@@ -38,18 +38,21 @@ namespace toy {
 
         builder.setInsertionPointToEnd(entryBlock);
 
-        for (const auto &statement :function.body) {
+        for (const auto &statement :function.body)
             lowerStatement(*statement);
-        }
+
         module.push_back(func);
+
+        if (function.body.empty())
+            throw std::runtime_error("Function contains no body");
     }
 
     mlir::Value Lowering::lowerExpression(const Expression &expression) {
-        std::cerr << "DEBUG: Entered lowerExpression()\n";
+        //std::cerr << "DEBUG: Entered lowerExpression()\n";
         auto *integer = dynamic_cast<const IntegerLiteral *>(&expression);
 
         if (integer) {
-            std::cerr << "DEBUG: IntegerLiteral detected: " << integer->value<< "\n";
+            //std::cerr << "DEBUG: IntegerLiteral detected: " << integer->value<< "\n";
             auto type = mlir::IntegerType::get(&context,32);
             auto value = mlir::IntegerAttr::get(type,integer->value);
 
@@ -59,7 +62,7 @@ namespace toy {
         auto *binary = dynamic_cast<const BinaryExpression *>(&expression);
 
         if (binary) {
-            std::cerr << "DEBUG: BinaryExpression detected: " << binary->op<< "\n";
+            //std::cerr << "DEBUG: BinaryExpression detected: " << binary->op<< "\n";
             mlir::Value left = lowerExpression(*binary->left);
             mlir::Value right = lowerExpression(*binary->right);
 
@@ -116,18 +119,23 @@ namespace toy {
         auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
 
         if (returnStmt) {
+
             mlir::Value value =lowerExpression(*returnStmt->value);
+
+            if (!value)
+                throw std::runtime_error("Failed to lower return expression");
+
             mlir::func::ReturnOp::create(builder,mlir::UnknownLoc::get(&context),value);
+
             return;
         }
-
         throw std::runtime_error("Unsupported statement in lowering");
     }
 
     void Lowering::lowerIfStatement(const IfStmt &stmt) {
 
         mlir::Value condition = lowerExpression(*stmt.condition);
-        auto ifOp = builder.create<mlir::scf::IfOp>(builder.getUnknownLoc(),condition,false);
+        auto ifOp = mlir::scf::IfOp::create(builder,builder.getUnknownLoc(), condition,false);
         builder.setInsertionPointToStart(&ifOp.getThenRegion().front());
 
         for (const auto &statement : stmt.thenBody) {
@@ -138,7 +146,7 @@ namespace toy {
 
     void Lowering::lowerWhileStatement(const WhileStmt &stmt) {
 
-        auto whileOp = builder.create<mlir::scf::WhileOp>( builder.getUnknownLoc(), mlir::TypeRange{}, mlir::ValueRange{});
+        auto whileOp = mlir::scf::WhileOp::create(builder,builder.getUnknownLoc(),mlir::TypeRange{},mlir::ValueRange{});
 
         auto &beforeRegion = whileOp.getBefore();
         auto &afterRegion  = whileOp.getAfter();
@@ -148,14 +156,14 @@ namespace toy {
 
         auto condition = lowerExpression(*stmt.condition);
 
-        builder.create<mlir::scf::ConditionOp>(builder.getUnknownLoc(),condition,mlir::ValueRange{});
+        mlir::scf::ConditionOp::create(builder,builder.getUnknownLoc(),condition,mlir::ValueRange{});
         builder.createBlock(&afterRegion);
         builder.setInsertionPointToStart(&afterRegion.front());
 
         for (const auto &statement : stmt.body)
             lowerStatement(*statement);
 
-        builder.create<mlir::scf::YieldOp>(builder.getUnknownLoc());
+        mlir::scf::YieldOp::create(builder,builder.getUnknownLoc());
         builder.setInsertionPointAfter(whileOp);
     }
 
