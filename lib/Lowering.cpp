@@ -106,6 +106,13 @@ namespace toy {
             return;
         }
 
+        auto whileStmt = dynamic_cast<const WhileStmt *>(&statement);
+
+        if (whileStmt) {
+            lowerWhileStatement(*whileStmt);
+            return;
+        }
+
         auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
 
         if (returnStmt) {
@@ -127,6 +134,29 @@ namespace toy {
             lowerStatement(*statement);
         }
         builder.setInsertionPointAfter(ifOp);
+    }
+
+    void Lowering::lowerWhileStatement(const WhileStmt &stmt) {
+
+        auto whileOp = builder.create<mlir::scf::WhileOp>( builder.getUnknownLoc(), mlir::TypeRange{}, mlir::ValueRange{});
+
+        auto &beforeRegion = whileOp.getBefore();
+        auto &afterRegion  = whileOp.getAfter();
+
+        builder.createBlock(&beforeRegion);
+        builder.setInsertionPointToStart(&beforeRegion.front());
+
+        auto condition = lowerExpression(*stmt.condition);
+
+        builder.create<mlir::scf::ConditionOp>(builder.getUnknownLoc(),condition,mlir::ValueRange{});
+        builder.createBlock(&afterRegion);
+        builder.setInsertionPointToStart(&afterRegion.front());
+
+        for (const auto &statement : stmt.body)
+            lowerStatement(*statement);
+
+        builder.create<mlir::scf::YieldOp>(builder.getUnknownLoc());
+        builder.setInsertionPointAfter(whileOp);
     }
 
 }

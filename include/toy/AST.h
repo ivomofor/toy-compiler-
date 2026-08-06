@@ -72,6 +72,15 @@ namespace toy {
         std::vector<std::unique_ptr<Statement>> thenBody;
     };
 
+    class WhileStmt : public Statement {
+    public:
+        WhileStmt(std::unique_ptr<Expression> condition,std::vector<std::unique_ptr<Statement>> body)
+            : condition(std::move(condition)),body(std::move(body)) {}
+
+        std::unique_ptr<Expression> condition;
+        std::vector<std::unique_ptr<Statement>> body;
+    };
+
     class IntegerLiteral : public Expression {
         public:
             explicit IntegerLiteral(int value)

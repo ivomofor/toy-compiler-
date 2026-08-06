@@ -23,6 +23,7 @@ class Parser {
         std::unique_ptr<Statement> parseStatement();
         std::unique_ptr<VariableDecl> parseVariableDecl();
         std::unique_ptr<IfStmt> parseIfStatement();
+        std::unique_ptr<WhileStmt> parseWhileStatement();
         std::unique_ptr<Expression> parseExpression();
         std::unique_ptr<Expression> parseCallExpression();
         std::unique_ptr<Expression> parsePrimary();

@@ -147,6 +147,10 @@ namespace toy {
             return parseIfStatement();
         }
 
+        if (currentToken.kind == TokenKind::While) {
+            return parseWhileStatement();
+        }
+
         return nullptr;
     }
 
@@ -175,6 +179,33 @@ namespace toy {
         match(TokenKind::RBrace);
 
         return std::make_unique<IfStmt>(std::move(condition),std::move(thenBody));
+    }
+
+    std::unique_ptr<WhileStmt> Parser::parseWhileStatement() {
+
+        match(TokenKind::While);
+        match(TokenKind::LParen);
+
+        auto condition = parseExpression();
+
+        match(TokenKind::RParen);
+        match(TokenKind::LBrace);
+
+        std::vector<std::unique_ptr<Statement>> body;
+
+        while (currentToken.kind != TokenKind::RBrace) {
+
+            auto stmt = parseStatement();
+
+            if (!stmt)
+                throw std::runtime_error("Invalid statement inside while");
+
+            body.push_back(std::move(stmt));
+        }
+
+        match(TokenKind::RBrace);
+
+        return std::make_unique<WhileStmt>(std::move(condition),std::move(body));
     }
 
     std::unique_ptr<FunctionDecl> Parser::parseFunction() {

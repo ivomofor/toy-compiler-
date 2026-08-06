@@ -28,6 +28,7 @@ namespace toy {
             mlir::Value lowerExpression(const Expression &expression);
             void lowerStatement(const Statement &statement);
             void lowerIfStatement(const IfStmt &stmt);
+            void lowerWhileStatement(const WhileStmt &stmt);
     };
 
 }

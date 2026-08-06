@@ -61,7 +61,10 @@ static const char *tokenKindToString(TokenKind kind) {
 
         case TokenKind::If:
             return "If";
-            
+
+        case TokenKind::While:
+            return "While";
+
         case TokenKind::Unknown:
             return "Unknown";
     }

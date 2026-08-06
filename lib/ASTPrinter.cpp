@@ -70,6 +70,27 @@ namespace toy {
             return;
         }
 
+        auto whileStmt = dynamic_cast<const WhileStmt *>(&statement);
+
+        if (whileStmt) {
+
+            printIndent(indent);
+            std::cout << "While\n";
+
+            printIndent(indent + 2);
+            std::cout << "Condition\n";
+
+            printExpression(*whileStmt->condition,indent + 4);
+
+            printIndent(indent + 2);
+            std::cout << "Body\n";
+
+            for (const auto &stmt : whileStmt->body)
+                printStatement(*stmt, indent + 4);
+
+            return;
+        }
+
         auto returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
 
         if (returnStmt) {

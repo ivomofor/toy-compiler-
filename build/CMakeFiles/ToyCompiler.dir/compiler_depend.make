@@ -627,9 +627,16 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/CLionProjects/toy-com
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOps.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
@@ -654,8 +661,10 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/CLionProjects/toy-com
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
@@ -693,16 +702,24 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/CLionProjects/toy-com
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutOpInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
@@ -1283,6 +1300,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc:
@@ -1345,7 +1364,11 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h:
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
@@ -1389,7 +1412,17 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc:
 
@@ -1439,6 +1472,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Allocator.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOps.h.inc:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Alignment.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h:
@@ -1466,6 +1501,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 /usr/include/c++/13/bits/basic_string.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingAttrInterface.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ErrorHandling.h:
 
@@ -1589,6 +1626,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /usr/include/c++/13/clocale:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h:
 
 /usr/include/c++/13/cerrno:
@@ -1694,6 +1733,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
@@ -1905,6 +1946,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmSupport.h:
@@ -1918,6 +1961,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h:
 
@@ -1999,6 +2044,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h.inc:
+
 /usr/include/c++/13/bits/locale_facets.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
@@ -2052,6 +2099,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 /usr/include/c++/13/memory:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APInt.h:
 
@@ -2124,6 +2173,8 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h:
 
 /usr/include/c++/13/bits/std_function.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h:
 
