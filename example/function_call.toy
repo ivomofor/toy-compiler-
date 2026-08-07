@@ -1,7 +1,7 @@
-fun add(a, b) {
-    return a + b;
+fun square(x) {
+    return x * x;
 }
 
 fun main() {
-    return add(10, 20);
+    return square(5);
 }

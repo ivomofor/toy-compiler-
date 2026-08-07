@@ -66,19 +66,31 @@ namespace toy {
             mlir::Value left = lowerExpression(*binary->left);
             mlir::Value right = lowerExpression(*binary->right);
 
-        switch (binary->op) {
-            case '+':
-                return mlir::arith::AddIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
-            case '-':
-                return mlir::arith::SubIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
-            case '*':
-                return mlir::arith::MulIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
-            case '/':
-                return mlir::arith::DivSIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
-            default:
-                throw std::runtime_error("Unsupported binary operator");
+            switch (binary->op) {
+                case '+':
+                    return mlir::arith::AddIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                case '-':
+                    return mlir::arith::SubIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                case '*':
+                    return mlir::arith::MulIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                case '/':
+                    return mlir::arith::DivSIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                default:
+                    throw std::runtime_error("Unsupported binary operator");
+            }
         }
-    }
+
+        auto call = dynamic_cast<const CallExpression *>(&expression);
+
+        if (call) {
+            std::vector<mlir::Value> arguments;
+            for (const auto &argument : call->arguments) {
+                arguments.push_back(lowerExpression(*argument));
+            }
+            auto callee = builder.getStringAttr(call->callee);
+            auto callOp = mlir::func::CallOp::create(builder,builder.getUnknownLoc(),call->callee,{builder.getI32Type()},arguments);
+            return callOp.getResult(0);
+        }
 
         auto *variable = dynamic_cast<const VariableReference *>(&expression);
 
