@@ -417,4 +417,26 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRef.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/AlignmentAttrInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/AlignmentAttrInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dominance.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionGraphTraits.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/GraphTraits.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/GenericDomTree.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CFGDiff.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CFGUpdate.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Debug.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotOpInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotTypeInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRefOpsDialect.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRefOps.h.inc \
  /usr/include/c++/13/iostream

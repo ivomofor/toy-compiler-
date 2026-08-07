@@ -5,6 +5,7 @@
 
 #include "mlir/Dialect/Func/IR/FuncOps.h"
 #include "mlir/Dialect/SCF/IR/SCF.h"
+#include "mlir/Dialect/MemRef/IR/MemRef.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -99,7 +100,8 @@ namespace toy {
             if (it == symbolTable.end()) {
                 throw std::runtime_error("Undefined variable: " +variable->name);
             }
-            return it->second;
+            auto location = builder.getUnknownLoc();
+            return mlir::memref::LoadOp::create(builder,location,it->second);
         }
         throw std::runtime_error("Unsupported expression in lowering");
     }
@@ -109,8 +111,17 @@ namespace toy {
         auto *variableDecl = dynamic_cast<const VariableDecl *>(&statement);
 
         if (variableDecl) {
+            auto location = builder.getUnknownLoc();
+            auto i32Type = builder.getI32Type();
+            auto memrefType = mlir::MemRefType::get({}, i32Type);
+            auto memory = mlir::memref::AllocaOp::create(builder,location,memrefType);
+
             mlir::Value value = lowerExpression(*variableDecl->initializer);
-            symbolTable[variableDecl->name] = value;
+            
+            mlir::memref::StoreOp::create(builder,location,value,memory);
+
+            symbolTable[variableDecl->name] = memory;
+
             return;
         }
 
