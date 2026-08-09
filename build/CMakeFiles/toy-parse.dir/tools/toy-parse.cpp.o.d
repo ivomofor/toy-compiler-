@@ -405,6 +405,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h \
+ /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h \

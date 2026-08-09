@@ -2,6 +2,7 @@
 #include "toy/Parser.h"
 #include "toy/Lowering.h"
 #include "toy/ASTPrinter.h"
+#include "toy/ToyDialect.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -69,6 +70,7 @@ int main(int argc, char **argv) {
 
     mlir::MLIRContext context;
 
+    context.getOrLoadDialect<toy::ToyDialect>();
     context.getOrLoadDialect<mlir::func::FuncDialect>();
     context.getOrLoadDialect<mlir::arith::ArithDialect>();
     context.getOrLoadDialect<mlir::scf::SCFDialect>();

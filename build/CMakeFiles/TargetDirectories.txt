@@ -7,6 +7,7 @@
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/mlir-headers.dir
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/mlir-generic-headers.dir
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/mlir-doc.dir
+/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/ToyDialectIncGen.dir
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/ToyCompiler.dir
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/toy-lex.dir
 /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/toy-parse.dir

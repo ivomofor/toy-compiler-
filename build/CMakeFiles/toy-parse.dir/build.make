@@ -93,6 +93,7 @@ toy__parse_EXTERNAL_OBJECTS =
 toy-parse: CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
 toy-parse: CMakeFiles/toy-parse.dir/build.make
 toy-parse: libToyCompiler.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRIR.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRTargetLLVMIRExport.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRLLVMToLLVMIRTranslation.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libMLIRToLLVMIRTranslationRegistration.a
@@ -228,9 +229,9 @@ toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMBitstreamReader.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMBinaryFormat.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMTargetParser.a
 toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMSupport.a
-toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMDemangle.a
 toy-parse: /usr/lib/x86_64-linux-gnu/libz.so
 toy-parse: /usr/lib/x86_64-linux-gnu/libzstd.a
+toy-parse: /home/shevo/LLVM-22.1.0-Linux-X64/lib/libLLVMDemangle.a
 toy-parse: CMakeFiles/toy-parse.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable toy-parse"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/toy-parse.dir/link.txt --verbose=$(VERBOSE)

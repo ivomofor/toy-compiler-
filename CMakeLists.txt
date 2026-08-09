@@ -20,17 +20,47 @@ include_directories(
 
 add_definitions(${LLVM_DEFINITIONS})
 
-add_library(ToyCompiler
-    lib/Lexer.cpp
-    lib/Parser.cpp
-    lib/AST.cpp
-    lib/ASTPrinter.cpp
-    lib/Lowering.cpp
+include(TableGen)
+include(AddMLIR)
+include(AddLLVM)
+
+set(LLVM_TARGET_DEFINITIONS
+        ${PROJECT_SOURCE_DIR}/dialects/ToyDialect.td
 )
+
+mlir_tablegen(ToyDialect.h.inc
+        -gen-dialect-decls
+        -I ${PROJECT_SOURCE_DIR}/dialects
+)
+
+mlir_tablegen(ToyDialect.cpp.inc
+        -gen-dialect-defs
+        -I ${PROJECT_SOURCE_DIR}/dialects
+)
+
+add_public_tablegen_target(ToyDialectIncGen)
+
+add_library(ToyCompiler
+        lib/Lexer.cpp
+        lib/Parser.cpp
+        lib/AST.cpp
+        lib/ASTPrinter.cpp
+        lib/Lowering.cpp
+        lib/ToyDialect.cpp
+)
+
+set_source_files_properties(
+        lib/ToyDialect.cpp
+        PROPERTIES
+        COMPILE_OPTIONS "-fno-rtti"
+)
+
+add_dependencies(ToyCompiler ToyDialectIncGen)
 
 target_include_directories(ToyCompiler
     PUBLIC
         ${PROJECT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 target_link_libraries(ToyCompiler
@@ -62,6 +92,7 @@ add_executable(toy-parse
 target_link_libraries(toy-parse
     PRIVATE
         ToyCompiler
+        MLIRIR
         MLIRTargetLLVMIRExport
         MLIRLLVMToLLVMIRTranslation
         MLIRToLLVMIRTranslationRegistration

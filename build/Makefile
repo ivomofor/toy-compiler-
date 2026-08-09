@@ -234,6 +234,19 @@ mlir-doc/fast:
 .PHONY : mlir-doc/fast
 
 #=============================================================================
+# Target rules for targets named ToyDialectIncGen
+
+# Build rule for target.
+ToyDialectIncGen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ToyDialectIncGen
+.PHONY : ToyDialectIncGen
+
+# fast build rule for target.
+ToyDialectIncGen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyDialectIncGen.dir/build.make CMakeFiles/ToyDialectIncGen.dir/build
+.PHONY : ToyDialectIncGen/fast
+
+#=============================================================================
 # Target rules for targets named ToyCompiler
 
 # Build rule for target.
@@ -392,6 +405,30 @@ lib/Parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
 .PHONY : lib/Parser.cpp.s
 
+lib/ToyDialect.o: lib/ToyDialect.cpp.o
+.PHONY : lib/ToyDialect.o
+
+# target to build an object file
+lib/ToyDialect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o
+.PHONY : lib/ToyDialect.cpp.o
+
+lib/ToyDialect.i: lib/ToyDialect.cpp.i
+.PHONY : lib/ToyDialect.i
+
+# target to preprocess a source file
+lib/ToyDialect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.i
+.PHONY : lib/ToyDialect.cpp.i
+
+lib/ToyDialect.s: lib/ToyDialect.cpp.s
+.PHONY : lib/ToyDialect.s
+
+# target to generate assembly for a file
+lib/ToyDialect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s
+.PHONY : lib/ToyDialect.cpp.s
+
 tools/toy-lex.o: tools/toy-lex.cpp.o
 .PHONY : tools/toy-lex.o
 
@@ -448,6 +485,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ToyDialectIncGen"
 	@echo "... acc_gen"
 	@echo "... intrinsics_gen"
 	@echo "... mlir-doc"
@@ -475,6 +513,9 @@ help:
 	@echo "... lib/Parser.o"
 	@echo "... lib/Parser.i"
 	@echo "... lib/Parser.s"
+	@echo "... lib/ToyDialect.o"
+	@echo "... lib/ToyDialect.i"
+	@echo "... lib/ToyDialect.s"
 	@echo "... tools/toy-lex.o"
 	@echo "... tools/toy-lex.i"
 	@echo "... tools/toy-lex.s"
