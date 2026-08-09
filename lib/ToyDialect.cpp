@@ -3,14 +3,18 @@
 //
 
 #include "toy/ToyDialect.h"
+#include "toy/ToyOps.h"
 
-#define GET_DIALECT_DEFS
-#include "ToyDialect.cpp.inc"
-#undef GET_DIALECT_DEFS
+using namespace mlir;
 
 namespace toy {
 
     void ToyDialect::initialize() {
+        addOperations<
+            ConstantOp
+        >();
     }
 
 } // namespace toy
+
+#include "ToyDialect.cpp.inc"

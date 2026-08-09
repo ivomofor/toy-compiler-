@@ -4,12 +4,15 @@
 CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
  /home/shevo/CLionProjects/toy-compiler-/tools/toy-parse.cpp
  /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc
+ /home/shevo/CLionProjects/toy-compiler-/build/ToyOps.h.inc
  /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/ExternC.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/Types.h

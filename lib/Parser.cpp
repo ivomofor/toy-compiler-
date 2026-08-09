@@ -16,9 +16,10 @@ namespace toy {
     }
 
     void Parser::match(TokenKind expected) {
-        if (currentToken.kind != expected) 
-            throw std::runtime_error("Unexpected token");
-        advance();  
+        if (currentToken.kind != expected) {
+            throw std::runtime_error("Unexpected token: '" + currentToken.text + "'");
+        }
+        advance();
     }
 
     std::unique_ptr<Expression> Parser::parseExpression() {

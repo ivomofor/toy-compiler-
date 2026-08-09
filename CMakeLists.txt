@@ -65,10 +65,13 @@ add_library(ToyCompiler
         lib/ASTPrinter.cpp
         lib/Lowering.cpp
         lib/ToyDialect.cpp
+        lib/ToyOps.cpp
+        lib/ConstantToArith.cpp
 )
 
 set_source_files_properties(
         lib/ToyDialect.cpp
+        lib/ConstantToArith.cpp
         PROPERTIES
         COMPILE_OPTIONS "-fno-rtti"
 )
@@ -87,6 +90,7 @@ target_link_libraries(ToyCompiler
         MLIRFuncDialect
         MLIRArithDialect
         MLIRPass
+        MLIRRewrite
         MLIRTransforms
         MLIRArithToLLVM
         MLIRFuncToLLVM

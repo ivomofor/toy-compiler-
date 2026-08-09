@@ -10,3 +10,5 @@ CXX_FLAGS = -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CON
 
 # Custom options: CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o_OPTIONS = -fno-rtti
 
+# Custom options: CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o_OPTIONS = -fno-rtti
+

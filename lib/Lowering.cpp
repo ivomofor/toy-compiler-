@@ -54,10 +54,12 @@ namespace toy {
 
         if (integer) {
             //std::cerr << "DEBUG: IntegerLiteral detected: " << integer->value<< "\n";
-            auto type = mlir::IntegerType::get(&context,32);
-            auto value = mlir::IntegerAttr::get(type,integer->value);
+            auto type = mlir::IntegerType::get(&context, 32);
+            //auto valueType = mlir::IntegerType::get(&context, 64);//a temporary test for toy.constant
+            auto value = mlir::IntegerAttr::get(type, integer->value);
 
-            return mlir::arith::ConstantOp::create(builder,mlir::UnknownLoc::get(&context),type,value);
+            //return mlir::arith::ConstantOp::create(builder,mlir::UnknownLoc::get(&context),type,value);
+            return toy::ConstantOp::create(builder,mlir::UnknownLoc::get(&context),type,value); // a temporary test for toy.constant independently
         }
 
         auto *binary = dynamic_cast<const BinaryExpression *>(&expression);

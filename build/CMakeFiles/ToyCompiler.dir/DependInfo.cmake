@@ -10,10 +10,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp" "CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o.d"
   "/home/shevo/CLionProjects/toy-compiler-/lib/ASTPrinter.cpp" "CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o.d"
+  "/home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp" "CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o.d"
   "/home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp" "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o.d"
   "/home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp" "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o.d"
   "/home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp" "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o.d"
   "/home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp" "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d"
+  "/home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp" "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

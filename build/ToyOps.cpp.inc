@@ -34,9 +34,9 @@ static ::llvm::LogicalResult __mlir_ods_local_type_constraint_ToyOps1(
 
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
     ::mlir::Attribute attr, ::llvm::StringRef attrName, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
-  if (attr && !(((::llvm::isa<::mlir::IntegerAttr>(attr))) && ((::llvm::cast<::mlir::IntegerAttr>(attr).getType().isSignlessInteger(64)))))
+  if (attr && !(((::llvm::isa<::mlir::IntegerAttr>(attr))) && ((::llvm::cast<::mlir::IntegerAttr>(attr).getType().isSignlessInteger(32)))))
     return emitError() << "attribute '" << attrName
-        << "' failed to satisfy constraint: 64-bit signless integer attribute";
+        << "' failed to satisfy constraint: 32-bit signless integer attribute";
   return ::mlir::success();
 }
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
@@ -56,7 +56,7 @@ namespace detail {
 
 ConstantOpGenericAdaptorBase::ConstantOpGenericAdaptorBase(ConstantOp op) : odsAttrs(op->getRawDictionaryAttrs()), odsOpName(op->getName()), properties(op.getProperties()), odsRegions(op->getRegions()) {}
 
-uint64_t ConstantOpGenericAdaptorBase::getValue() {
+uint32_t ConstantOpGenericAdaptorBase::getValue() {
   auto attr = getValueAttr();
   return attr.getValue().getZExtValue();
 }
@@ -69,8 +69,8 @@ ConstantOpAdaptor::ConstantOpAdaptor(ConstantOp op) : ConstantOpGenericAdaptor(o
   auto tblgen_value = getProperties().value; (void)tblgen_value;
   if (!tblgen_value) return emitError(loc, "'toy.constant' op requires attribute 'value'");
 
-  if (tblgen_value && !(((::llvm::isa<::mlir::IntegerAttr>(tblgen_value))) && ((::llvm::cast<::mlir::IntegerAttr>(tblgen_value).getType().isSignlessInteger(64)))))
-    return emitError(loc, "'toy.constant' op attribute 'value' failed to satisfy constraint: 64-bit signless integer attribute");
+  if (tblgen_value && !(((::llvm::isa<::mlir::IntegerAttr>(tblgen_value))) && ((::llvm::cast<::mlir::IntegerAttr>(tblgen_value).getType().isSignlessInteger(32)))))
+    return emitError(loc, "'toy.constant' op attribute 'value' failed to satisfy constraint: 32-bit signless integer attribute");
   return ::mlir::success();
 }
 
@@ -157,13 +157,13 @@ void ConstantOp::writeProperties(::mlir::DialectBytecodeWriter &writer) {
   writer.writeAttribute(prop.value);
 }
 
-uint64_t ConstantOp::getValue() {
+uint32_t ConstantOp::getValue() {
   auto attr = getValueAttr();
   return attr.getValue().getZExtValue();
 }
 
-void ConstantOp::setValue(uint64_t attrValue) {
-  getProperties().value = ::mlir::Builder((*this)->getContext()).getIntegerAttr(::mlir::Builder((*this)->getContext()).getIntegerType(64), attrValue);
+void ConstantOp::setValue(uint32_t attrValue) {
+  getProperties().value = ::mlir::Builder((*this)->getContext()).getIntegerAttr(::mlir::Builder((*this)->getContext()).getIntegerType(32), attrValue);
 }
 
 void ConstantOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, ::mlir::IntegerAttr value) {
@@ -201,12 +201,12 @@ ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Typ
   return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(value)>(value));
 }
 
-void ConstantOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, uint64_t value) {
-  odsState.getOrAddProperties<Properties>().value = odsBuilder.getIntegerAttr(odsBuilder.getIntegerType(64), value);
+void ConstantOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, uint32_t value) {
+  odsState.getOrAddProperties<Properties>().value = odsBuilder.getIntegerAttr(odsBuilder.getIntegerType(32), value);
   odsState.addTypes(resultType0);
 }
 
-ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, uint64_t value) {
+ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, uint32_t value) {
   ::mlir::OperationState __state__(location, getOperationName());
   build(builder, __state__, std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(value)>(value));
   auto __res__ = ::llvm::dyn_cast<ConstantOp>(builder.create(__state__));
@@ -214,17 +214,17 @@ ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location locat
   return __res__;
 }
 
-ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, uint64_t value) {
+ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, uint32_t value) {
   return create(builder, builder.getLoc(), std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(value)>(value));
 }
 
-void ConstantOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, uint64_t value) {
-  odsState.getOrAddProperties<Properties>().value = odsBuilder.getIntegerAttr(odsBuilder.getIntegerType(64), value);
+void ConstantOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, uint32_t value) {
+  odsState.getOrAddProperties<Properties>().value = odsBuilder.getIntegerAttr(odsBuilder.getIntegerType(32), value);
   assert(resultTypes.size() == 1u && "mismatched number of results");
   odsState.addTypes(resultTypes);
 }
 
-ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, uint64_t value) {
+ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, uint32_t value) {
   ::mlir::OperationState __state__(location, getOperationName());
   build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(value)>(value));
   auto __res__ = ::llvm::dyn_cast<ConstantOp>(builder.create(__state__));
@@ -232,7 +232,7 @@ ConstantOp ConstantOp::create(::mlir::OpBuilder &builder, ::mlir::Location locat
   return __res__;
 }
 
-ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, uint64_t value) {
+ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, uint32_t value) {
   return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(value)>(value));
 }
 

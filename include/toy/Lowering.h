@@ -2,6 +2,7 @@
 #define TOY_LOWERING_H
 
 #include "toy/AST.h"
+#include "toy/ToyOps.h"
 
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/Builders.h"

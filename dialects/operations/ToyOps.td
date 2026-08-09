@@ -3,6 +3,6 @@ include "dialects/ToyDialect.td"
 
 def Toy_ConstantOp : Toy_Op<"constant"> {
   let summary = "Toy constant operation";
-  let arguments = (ins I64Attr:$value);
+  let arguments = (ins I32Attr:$value);
   let results = (outs I32);
 }
