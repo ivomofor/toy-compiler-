@@ -3,6 +3,7 @@
 #include "toy/Lowering.h"
 #include "toy/ASTPrinter.h"
 #include "toy/ToyDialect.h"
+#include "toy/ConstantToArith.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -85,6 +86,7 @@ int main(int argc, char **argv) {
     mlir::ModuleOp module;
     try {
         module = lowering.lower(*program);
+        module.dump();
     } catch (const std::exception &e) {
         std::cerr << "Error during lowering: " << e.what() << '\n';
         return 1;
@@ -98,11 +100,15 @@ int main(int argc, char **argv) {
     mlir::PassManager pm(&context);
 
     pm.addPass(mlir::createCanonicalizerPass());
+    pm.addPass(toy::createConstantToArithPass());
 
     if (mlir::failed(pm.run(module))) {
         std::cerr << "Error: MLIR pass pipeline failed\n";
         return 1;
     }
+
+    module.dump();
+    return 0;
 
     mlir::ConversionTarget target(context);
     target.addLegalDialect<mlir::scf::SCFDialect>();

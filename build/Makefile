@@ -346,6 +346,30 @@ lib/ASTPrinter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s
 .PHONY : lib/ASTPrinter.cpp.s
 
+lib/ConstantToArith.o: lib/ConstantToArith.cpp.o
+.PHONY : lib/ConstantToArith.o
+
+# target to build an object file
+lib/ConstantToArith.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o
+.PHONY : lib/ConstantToArith.cpp.o
+
+lib/ConstantToArith.i: lib/ConstantToArith.cpp.i
+.PHONY : lib/ConstantToArith.i
+
+# target to preprocess a source file
+lib/ConstantToArith.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.i
+.PHONY : lib/ConstantToArith.cpp.i
+
+lib/ConstantToArith.s: lib/ConstantToArith.cpp.s
+.PHONY : lib/ConstantToArith.s
+
+# target to generate assembly for a file
+lib/ConstantToArith.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s
+.PHONY : lib/ConstantToArith.cpp.s
+
 lib/Lexer.o: lib/Lexer.cpp.o
 .PHONY : lib/Lexer.o
 
@@ -442,6 +466,30 @@ lib/ToyDialect.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s
 .PHONY : lib/ToyDialect.cpp.s
 
+lib/ToyOps.o: lib/ToyOps.cpp.o
+.PHONY : lib/ToyOps.o
+
+# target to build an object file
+lib/ToyOps.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o
+.PHONY : lib/ToyOps.cpp.o
+
+lib/ToyOps.i: lib/ToyOps.cpp.i
+.PHONY : lib/ToyOps.i
+
+# target to preprocess a source file
+lib/ToyOps.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.i
+.PHONY : lib/ToyOps.cpp.i
+
+lib/ToyOps.s: lib/ToyOps.cpp.s
+.PHONY : lib/ToyOps.s
+
+# target to generate assembly for a file
+lib/ToyOps.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s
+.PHONY : lib/ToyOps.cpp.s
+
 tools/toy-lex.o: tools/toy-lex.cpp.o
 .PHONY : tools/toy-lex.o
 
@@ -518,6 +566,9 @@ help:
 	@echo "... lib/ASTPrinter.o"
 	@echo "... lib/ASTPrinter.i"
 	@echo "... lib/ASTPrinter.s"
+	@echo "... lib/ConstantToArith.o"
+	@echo "... lib/ConstantToArith.i"
+	@echo "... lib/ConstantToArith.s"
 	@echo "... lib/Lexer.o"
 	@echo "... lib/Lexer.i"
 	@echo "... lib/Lexer.s"
@@ -530,6 +581,9 @@ help:
 	@echo "... lib/ToyDialect.o"
 	@echo "... lib/ToyDialect.i"
 	@echo "... lib/ToyDialect.s"
+	@echo "... lib/ToyOps.o"
+	@echo "... lib/ToyOps.i"
+	@echo "... lib/ToyOps.s"
 	@echo "... tools/toy-lex.o"
 	@echo "... tools/toy-lex.i"
 	@echo "... tools/toy-lex.s"

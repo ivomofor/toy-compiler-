@@ -329,4 +329,22 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
  /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+ /home/shevo/CLionProjects/toy-compiler-/build/ToyOps.h.inc \
  /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.cpp.inc

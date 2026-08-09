@@ -404,6 +404,473 @@ CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o: /home/shevo/CLionProjects/toy-c
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
+CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp \
+  ToyOps.h.inc \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ADL.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APInt.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APSInt.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitmaskEnum.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FloatingPointMode.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Hashing.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/MapVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerUnion.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLForwardCompat.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLFunctionalExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Sequence.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SetVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallBitVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallPtrSet.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallString.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVectorExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMapEntry.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/bit.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_base.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_iterator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_options.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator_range.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/simple_ilist.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/abi-breaking.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/llvm-config.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Alignment.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Allocator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CommandLine.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compiler.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/DataTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ErrorHandling.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/LogicalResult.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MathExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MemAlloc.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/PointerLikeTypeTraits.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SwapByteOrder.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Threading.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeSize.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/float128.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Config/mlir-config.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Action.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Block.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BlockSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmTypeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PDLPatternMatch.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PatternMatch.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/StorageUniquerSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfacesAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolTable.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeRange.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Types.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Unit.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/UseDefLists.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/AnalysisManager.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/Pass.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassOptions.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Rewrite/FrozenRewritePatternSet.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
+  /usr/include/c++/13/backward/auto_ptr.h \
+  /usr/include/c++/13/backward/binders.h \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
+  /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
+  /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/13/bits/basic_ios.h \
+  /usr/include/c++/13/bits/basic_ios.tcc \
+  /usr/include/c++/13/bits/basic_string.h \
+  /usr/include/c++/13/bits/basic_string.tcc \
+  /usr/include/c++/13/bits/char_traits.h \
+  /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
+  /usr/include/c++/13/bits/concept_check.h \
+  /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/cxxabi_forced.h \
+  /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/locale_classes.h \
+  /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/locale_facets.h \
+  /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/localefwd.h \
+  /usr/include/c++/13/bits/memory_resource.h \
+  /usr/include/c++/13/bits/memoryfwd.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/nested_exception.h \
+  /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/ostream.tcc \
+  /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/sstream.tcc \
+  /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/stl_algo.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
+  /usr/include/c++/13/bits/stream_iterator.h \
+  /usr/include/c++/13/bits/streambuf.tcc \
+  /usr/include/c++/13/bits/streambuf_iterator.h \
+  /usr/include/c++/13/bits/string_view.tcc \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_lock.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/uses_allocator.h \
+  /usr/include/c++/13/bits/uses_allocator_args.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/cassert \
+  /usr/include/c++/13/cctype \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/climits \
+  /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
+  /usr/include/c++/13/complex \
+  /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
+  /usr/include/c++/13/cstdio \
+  /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
+  /usr/include/c++/13/cwctype \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
+  /usr/include/c++/13/ext/alloc_traits.h \
+  /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/string_conversions.h \
+  /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
+  /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/ios \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
+  /usr/include/c++/13/istream \
+  /usr/include/c++/13/iterator \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
+  /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
+  /usr/include/c++/13/optional \
+  /usr/include/c++/13/ostream \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
+  /usr/include/c++/13/shared_mutex \
+  /usr/include/c++/13/sstream \
+  /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/streambuf \
+  /usr/include/c++/13/string \
+  /usr/include/c++/13/string_view \
+  /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
+  /usr/include/c++/13/tuple \
+  /usr/include/c++/13/type_traits \
+  /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/utility \
+  /usr/include/c++/13/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/inttypes.h \
+  /usr/include/limits.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
+
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
   /usr/include/alloca.h \
@@ -546,8 +1013,10 @@ CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: /home/shevo/CLionProjects/toy-compil
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp \
+  ToyOps.h.inc \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ADL.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h \
@@ -1240,7 +1709,9 @@ CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compi
 CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp \
   ToyDialect.cpp.inc \
   ToyDialect.h.inc \
+  ToyOps.h.inc \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ADL.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h \
@@ -1294,12 +1765,16 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-c
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MemAlloc.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/PointerLikeTypeTraits.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SwapByteOrder.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/float128.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
@@ -1307,22 +1782,33 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-c
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Block.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BlockSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmSupport.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmTypeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/StorageUniquerSupport.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeRange.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h \
@@ -1331,6 +1817,410 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-c
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/backward/auto_ptr.h \
+  /usr/include/c++/13/backward/binders.h \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
+  /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
+  /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/13/bits/basic_ios.h \
+  /usr/include/c++/13/bits/basic_ios.tcc \
+  /usr/include/c++/13/bits/basic_string.h \
+  /usr/include/c++/13/bits/basic_string.tcc \
+  /usr/include/c++/13/bits/char_traits.h \
+  /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/concept_check.h \
+  /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/cxxabi_forced.h \
+  /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/locale_classes.h \
+  /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/locale_facets.h \
+  /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/localefwd.h \
+  /usr/include/c++/13/bits/memory_resource.h \
+  /usr/include/c++/13/bits/memoryfwd.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/nested_exception.h \
+  /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/ostream.tcc \
+  /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/postypes.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/sstream.tcc \
+  /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/stl_algo.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
+  /usr/include/c++/13/bits/stream_iterator.h \
+  /usr/include/c++/13/bits/streambuf.tcc \
+  /usr/include/c++/13/bits/streambuf_iterator.h \
+  /usr/include/c++/13/bits/string_view.tcc \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/uses_allocator.h \
+  /usr/include/c++/13/bits/uses_allocator_args.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/cassert \
+  /usr/include/c++/13/cctype \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/climits \
+  /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
+  /usr/include/c++/13/complex \
+  /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
+  /usr/include/c++/13/cstdio \
+  /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
+  /usr/include/c++/13/cwchar \
+  /usr/include/c++/13/cwctype \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
+  /usr/include/c++/13/ext/alloc_traits.h \
+  /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/string_conversions.h \
+  /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
+  /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/ios \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/istream \
+  /usr/include/c++/13/iterator \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
+  /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
+  /usr/include/c++/13/optional \
+  /usr/include/c++/13/ostream \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/set \
+  /usr/include/c++/13/sstream \
+  /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/streambuf \
+  /usr/include/c++/13/string \
+  /usr/include/c++/13/string_view \
+  /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
+  /usr/include/c++/13/tuple \
+  /usr/include/c++/13/type_traits \
+  /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/utility \
+  /usr/include/c++/13/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/inttypes.h \
+  /usr/include/limits.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
+
+CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp \
+  ToyOps.cpp.inc \
+  ToyOps.h.inc \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ADL.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APInt.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitmaskEnum.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FloatingPointMode.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Hashing.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/MapVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerUnion.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLForwardCompat.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLFunctionalExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Sequence.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallBitVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallPtrSet.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVector.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVectorExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/bit.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_base.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_iterator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_options.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator_range.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/simple_ilist.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/abi-breaking.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/llvm-config.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Alignment.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Allocator.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compiler.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/DataTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ErrorHandling.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/LogicalResult.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MathExtras.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MemAlloc.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/PointerLikeTypeTraits.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SwapByteOrder.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/float128.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Block.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BlockSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmTypeInterface.h.inc \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/StorageUniquerSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeRange.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Types.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/UseDefLists.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h \
+  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h \
@@ -1625,11 +2515,69 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-c
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 
+ToyOps.cpp.inc:
+
+/home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp:
+
 ToyDialect.cpp.inc:
 
 /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h:
 
 /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotTypeInterfaces.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotOpInterfaces.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotInterfaces.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dominance.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRefOps.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Debug.h:
+
+ToyDialect.h.inc:
+
+/home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CFGUpdate.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
@@ -1681,6 +2629,10 @@ ToyDialect.cpp.inc:
 
 /usr/include/c++/13/bits/stl_relops.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h.inc:
+
+/usr/include/c++/13/bits/stl_numeric.h:
+
 /usr/include/c++/13/bits/stl_algo.h:
 
 /usr/include/c++/13/bits/std_mutex.h:
@@ -1705,39 +2657,25 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassOptions.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/Pass.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/AnalysisManager.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h:
 
-/usr/include/c++/13/bits/stl_numeric.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ShapedOpInterfaces.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotTypeInterfaces.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotOpInterfaces.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemorySlotInterfaces.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutOpInterface.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h:
 
@@ -1789,19 +2727,15 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dominance.h:
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Rewrite/FrozenRewritePatternSet.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h:
 
@@ -1839,22 +2773,6 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCFOpsDialect.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRefOps.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc:
@@ -1875,6 +2793,8 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h:
 
 /usr/include/c++/13/functional:
@@ -1885,6 +2805,10 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Threading.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h:
+
+/usr/include/c++/13/atomic:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h:
@@ -1893,23 +2817,15 @@ ToyDialect.cpp.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/LogicalResult.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Debug.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRef.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/DataTypes.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compiler.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CommandLine.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h:
-
-ToyDialect.h.inc:
-
-/home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CFGUpdate.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h:
 
@@ -2127,6 +3043,8 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/std_abs.h:
 
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
@@ -2223,6 +3141,8 @@ ToyDialect.h.inc:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
+/home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVector.h:
@@ -2275,6 +3195,8 @@ ToyDialect.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h:
 
+ToyOps.h.inc:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h:
 
 /usr/include/c++/13/bits/stringfwd.h:
@@ -2291,9 +3213,9 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
-/usr/include/c++/13/bits/hashtable.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/MemRef/IR/MemRefOpsDialect.h.inc:
+
+/usr/include/c++/13/bits/hashtable.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -2325,6 +3247,10 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/system_error:
 
+/home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp:
+
+/usr/include/c++/13/bits/refwrap.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/13/set:
@@ -2341,10 +3267,6 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/stl_vector.h:
 
-/usr/include/c++/13/bits/refwrap.h:
-
-/home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp:
-
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
 /usr/include/features.h:
@@ -2357,9 +3279,11 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/GenericDomTree.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/GenericDomTree.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Action.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -2385,6 +3309,8 @@ ToyDialect.h.inc:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -2395,17 +3321,19 @@ ToyDialect.h.inc:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Unit.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
 /usr/include/math.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc:
+
 /usr/include/c++/13/bits/stl_multimap.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -2507,6 +3435,8 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/locale_facets.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h:
+
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
@@ -2525,9 +3455,9 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/ios:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h:
-
 /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h:
 
 /usr/include/c++/13/iostream:
 
@@ -2545,10 +3475,6 @@ ToyDialect.h.inc:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
-/home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h:
-
-/home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h:
 
 /usr/include/c++/13/tr1/special_function_util.h:
@@ -2564,6 +3490,10 @@ ToyDialect.h.inc:
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APInt.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APSInt.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/GraphTraits.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h:
 
@@ -2582,10 +3512,6 @@ ToyDialect.h.inc:
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallBitVector.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/GraphTraits.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -2615,6 +3541,10 @@ ToyDialect.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVectorExtras.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h:
@@ -2625,17 +3555,15 @@ ToyDialect.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h:
-
 /usr/include/c++/13/cassert:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h:
 
-/usr/include/c++/13/bits/std_function.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/LoopLikeInterface.h.inc:
+
+/usr/include/c++/13/bits/std_function.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h:
 

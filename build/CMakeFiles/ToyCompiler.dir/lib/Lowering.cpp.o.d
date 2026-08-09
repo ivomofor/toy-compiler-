@@ -156,11 +156,10 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h \
@@ -232,23 +231,25 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/MapVector.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/StorageUniquerSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h \
- /usr/include/c++/13/set /usr/include/c++/13/bits/stl_tree.h \
- /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/MapVector.h \
- /usr/include/c++/13/map /usr/include/c++/13/bits/stl_map.h \
- /usr/include/c++/13/bits/stl_multimap.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h \
@@ -257,14 +258,11 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Types.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BlockSupport.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/UseDefLists.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/simple_ilist.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_base.h \
@@ -329,22 +327,27 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Sequence.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeRange.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+ /home/shevo/CLionProjects/toy-compiler-/build/ToyOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h.inc \
@@ -369,7 +372,6 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h.inc \

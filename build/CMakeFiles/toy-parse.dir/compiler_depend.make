@@ -3,12 +3,15 @@
 
 CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-compiler-/tools/toy-parse.cpp \
   ToyDialect.h.inc \
+  ToyOps.h.inc \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/ExternC.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/Types.h \
@@ -677,17 +680,15 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h:
 
@@ -861,9 +862,9 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Ptr/IR/MemorySpaceAttrInterfaces.h.inc:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h:
 
@@ -939,42 +940,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerUnion.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeUtilities.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitVector.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h.inc:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeSize.h:
-
-/usr/include/c++/13/functional:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h.inc:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h:
-
-/usr/include/c++/13/bits/stl_function.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/c++/13/bits/basic_string.tcc:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator.h:
@@ -987,6 +952,28 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /usr/include/c++/13/bits/utility.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h:
+
+/usr/include/c++/13/bits/fstream.tcc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/VersionTuple.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/13/bits/nested_exception.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Use.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc:
+
+/usr/include/c++/13/bits/uses_allocator_args.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/DbgVariableFragmentInfo.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h:
@@ -996,6 +983,60 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerEmbeddedInt.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/c++/13/debug/assertions.h:
+
+/usr/include/c++/13/bits/locale_classes.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Attributes.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/LocationSnapshot.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Attributes.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h:
+
+/usr/include/string.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/ExternC.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionGraphTraits.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLExtras.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h.inc:
 
@@ -1023,6 +1064,14 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CBindingWrapping.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h:
+
+/usr/include/c++/13/memory:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Constant.h:
@@ -1039,69 +1088,39 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /usr/include/c++/13/cstring:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h:
+/usr/include/c++/13/functional:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h:
 
-/usr/include/c++/13/bits/fstream.tcc:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h.inc:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/VersionTuple.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h:
 
-/home/shevo/CLionProjects/toy-compiler-/include/toy/ToyDialect.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h:
 
-/usr/include/c++/13/bits/nested_exception.h:
+/usr/include/c++/13/bits/stl_function.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Use.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitVector.h:
 
-/usr/include/c++/13/bits/uses_allocator_args.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/usr/include/c++/13/debug/assertions.h:
+/usr/include/c++/13/bits/basic_string.tcc:
 
-/home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h:
 
-/home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeUtilities.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/LocationSnapshot.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Attributes.inc:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerEmbeddedInt.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h:
-
-/usr/include/string.h:
-
-/usr/include/c++/13/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/13/tr1/special_function_util.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h:
-
-/usr/include/c++/13/memory:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/ExternC.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionGraphTraits.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLExtras.h:
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallBitVector.h:
 
@@ -1155,8 +1174,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/GlobalValue.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLForwardCompat.h:
@@ -1171,6 +1188,10 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MemAlloc.h:
 
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h:
+
 /usr/include/c++/13/sstream:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Function.h:
@@ -1184,8 +1205,6 @@ ToyDialect.h.inc:
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ParallelCombiningOpInterface.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ManagedStatic.h:
-
-/usr/include/c++/13/bits/locale_classes.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/Passes.h:
 
@@ -1204,14 +1223,6 @@ ToyDialect.h.inc:
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/PointerLikeTypeTraits.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Attributes.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/c++/13/tr1/poly_hermite.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -1319,8 +1330,6 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/bits/string_view.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h:
 
 /usr/include/stdc-predef.h:
@@ -1333,11 +1342,9 @@ ToyDialect.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/DerivedTypes.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h:
-
-/usr/include/c++/13/bits/range_access.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h:
 
 /usr/include/c++/13/tr1/hypergeometric.tcc:
 
@@ -1367,9 +1374,19 @@ ToyDialect.h.inc:
 
 /usr/include/c++/13/atomic:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h:
+/usr/include/c++/13/bits/range_access.h:
 
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h:
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeSize.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferStridedMetadataInterface.h.inc:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h:
 
@@ -1482,6 +1499,8 @@ ToyDialect.h.inc:
 /usr/include/c++/13/bits/allocated_ptr.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc:
+
+ToyOps.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Target/LLVMIR/Dialect/LLVMIR/LLVMToLLVMIRTranslation.h:
 
@@ -1793,18 +1812,8 @@ ToyDialect.h.inc:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
