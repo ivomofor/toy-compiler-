@@ -10,3 +10,15 @@
 --- !FileInfo:
   filepath: "/home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td"
   includes: "/home/shevo/CLionProjects/toy-compiler-;/home/shevo/LLVM-22.1.0-Linux-X64/include;/home/shevo/LLVM-22.1.0-Linux-X64/include"
+--- !FileInfo:
+  filepath: "/home/shevo/CLionProjects/toy-compiler-/dialects/operations/ToyOps.td"
+  includes: "/home/shevo/CLionProjects/toy-compiler-;/home/shevo/LLVM-22.1.0-Linux-X64/include;/home/shevo/LLVM-22.1.0-Linux-X64/include"
+--- !FileInfo:
+  filepath: "/home/shevo/CLionProjects/toy-compiler-/dialects/operations/ToyOps.td"
+  includes: "/home/shevo/CLionProjects/toy-compiler-;/home/shevo/LLVM-22.1.0-Linux-X64/include;/home/shevo/LLVM-22.1.0-Linux-X64/include"
+--- !FileInfo:
+  filepath: "/home/shevo/CLionProjects/toy-compiler-/dialects/operations/ToyOps.td"
+  includes: "/home/shevo/CLionProjects/toy-compiler-;/home/shevo/LLVM-22.1.0-Linux-X64/include;/home/shevo/LLVM-22.1.0-Linux-X64/include"
+--- !FileInfo:
+  filepath: "/home/shevo/CLionProjects/toy-compiler-/dialects/operations/ToyOps.td"
+  includes: "/home/shevo/CLionProjects/toy-compiler-;/home/shevo/LLVM-22.1.0-Linux-X64/include;/home/shevo/LLVM-22.1.0-Linux-X64/include"

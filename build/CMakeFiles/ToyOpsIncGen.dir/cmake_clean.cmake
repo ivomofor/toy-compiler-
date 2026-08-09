@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ToyOpsIncGen"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
   "ToyOps.cpp.inc"
@@ -7,5 +8,5 @@ file(REMOVE_RECURSE
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )
-  include(CMakeFiles/mlir-doc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/ToyOpsIncGen.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

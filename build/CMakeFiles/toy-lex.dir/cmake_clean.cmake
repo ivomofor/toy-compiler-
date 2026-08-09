@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.o.d"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
+  "ToyOps.cpp.inc"
+  "ToyOps.h.inc"
   "toy-lex"
   "toy-lex.pdb"
 )

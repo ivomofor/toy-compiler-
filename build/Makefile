@@ -247,6 +247,19 @@ ToyDialectIncGen/fast:
 .PHONY : ToyDialectIncGen/fast
 
 #=============================================================================
+# Target rules for targets named ToyOpsIncGen
+
+# Build rule for target.
+ToyOpsIncGen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ToyOpsIncGen
+.PHONY : ToyOpsIncGen
+
+# fast build rule for target.
+ToyOpsIncGen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyOpsIncGen.dir/build.make CMakeFiles/ToyOpsIncGen.dir/build
+.PHONY : ToyOpsIncGen/fast
+
+#=============================================================================
 # Target rules for targets named ToyCompiler
 
 # Build rule for target.
@@ -486,6 +499,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ToyDialectIncGen"
+	@echo "... ToyOpsIncGen"
 	@echo "... acc_gen"
 	@echo "... intrinsics_gen"
 	@echo "... mlir-doc"

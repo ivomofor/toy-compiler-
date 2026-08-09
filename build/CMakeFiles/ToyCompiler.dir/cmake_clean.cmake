@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
+  "ToyOps.cpp.inc"
+  "ToyOps.h.inc"
   "libToyCompiler.a"
   "libToyCompiler.pdb"
 )

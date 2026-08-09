@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyDialectIncGen"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
+  "ToyOps.cpp.inc"
+  "ToyOps.h.inc"
 )
 
 # Per-language clean rules from dependency scanning.

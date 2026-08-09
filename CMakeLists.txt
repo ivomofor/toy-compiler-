@@ -40,6 +40,24 @@ mlir_tablegen(ToyDialect.cpp.inc
 
 add_public_tablegen_target(ToyDialectIncGen)
 
+set(TOY_OPS_TD
+        ${PROJECT_SOURCE_DIR}/dialects/operations/ToyOps.td
+)
+
+set(LLVM_TARGET_DEFINITIONS ${TOY_OPS_TD})
+
+mlir_tablegen(ToyOps.h.inc
+        -gen-op-decls
+        -I ${PROJECT_SOURCE_DIR}
+)
+
+mlir_tablegen(ToyOps.cpp.inc
+        -gen-op-defs
+        -I ${PROJECT_SOURCE_DIR}
+)
+
+add_public_tablegen_target(ToyOpsIncGen)
+
 add_library(ToyCompiler
         lib/Lexer.cpp
         lib/Parser.cpp
@@ -55,7 +73,7 @@ set_source_files_properties(
         COMPILE_OPTIONS "-fno-rtti"
 )
 
-add_dependencies(ToyCompiler ToyDialectIncGen)
+add_dependencies(ToyCompiler ToyDialectIncGen ToyOpsIncGen)
 
 target_include_directories(ToyCompiler
     PUBLIC
