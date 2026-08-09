@@ -81,11 +81,14 @@ int main(int argc, char **argv) {
     mlir::registerBuiltinDialectTranslation(context);
     mlir::registerLLVMDialectTranslation(context);
 
+    //PASS PIPE LINE + CONVERSION PASSES
+
     toy::Lowering lowering(context);
 
     mlir::ModuleOp module;
     try {
         module = lowering.lower(*program);
+        llvm::outs() << "=== MLIR BEFORE PASSES ===\n";
         module.dump();
     } catch (const std::exception &e) {
         std::cerr << "Error during lowering: " << e.what() << '\n';
@@ -98,18 +101,18 @@ int main(int argc, char **argv) {
     }
 
     mlir::PassManager pm(&context);
-
-    pm.addPass(mlir::createCanonicalizerPass());
     pm.addPass(toy::createConstantToArithPass());
+    pm.addPass(mlir::createCanonicalizerPass());
 
     if (mlir::failed(pm.run(module))) {
         std::cerr << "Error: MLIR pass pipeline failed\n";
         return 1;
     }
 
+    llvm::outs() << "=== MLIR AFTER LLVM CONVERSION ===\n";
     module.dump();
-    return 0;
 
+    //CONVENTION TARGET & TYPE CONVERSION
     mlir::ConversionTarget target(context);
     target.addLegalDialect<mlir::scf::SCFDialect>();
     target.addLegalDialect<mlir::LLVM::LLVMDialect>();
@@ -119,11 +122,8 @@ int main(int argc, char **argv) {
     target.addIllegalDialect<mlir::arith::ArithDialect>();
 
     mlir::RewritePatternSet patterns(&context);
-
     mlir::LLVMTypeConverter typeConverter(&context);
-
     mlir::arith::populateArithToLLVMConversionPatterns(typeConverter,patterns);
-
     mlir::populateFuncToLLVMConversionPatterns(typeConverter,patterns);
 
     if (mlir::failed(mlir::applyPartialConversion(module,target,std::move(patterns)))) {
@@ -136,6 +136,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    //Translate LLVM Dialect to LLVM IR
     llvm::LLVMContext llvmContext;
     //mlir::registerBuiltinDialectTranslation(context);
     //mlir::registerLLVMDialectTranslation(context);
