@@ -1,4 +1,5 @@
 #include "toy/Lowering.h"
+#include "toy/ToyOps.h"
 
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/Location.h"
@@ -69,15 +70,20 @@ namespace toy {
             mlir::Value left = lowerExpression(*binary->left);
             mlir::Value right = lowerExpression(*binary->right);
 
+            auto resultType = left.getType();
+
             switch (binary->op) {
                 case '+':
-                    return mlir::arith::AddIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                    return toy::AddOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+
                 case '-':
-                    return mlir::arith::SubIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                    return toy::SubOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+
                 case '*':
-                    return mlir::arith::MulIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                    return toy::MulOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+
                 case '/':
-                    return mlir::arith::DivSIOp::create(builder,mlir::UnknownLoc::get(&context),left,right);
+                    return toy::DivOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
                 default:
                     throw std::runtime_error("Unsupported binary operator");
             }
@@ -116,11 +122,11 @@ namespace toy {
             auto location = builder.getUnknownLoc();
             auto i32Type = builder.getI32Type();
             auto memrefType = mlir::MemRefType::get({}, i32Type);
-            auto memory = mlir::memref::AllocaOp::create(builder,location,memrefType);
+            auto memory = mlir::memref::AllocaOp::create(builder, location, memrefType);
 
             mlir::Value value = lowerExpression(*variableDecl->initializer);
             
-            mlir::memref::StoreOp::create(builder,location,value,memory);
+            mlir::memref::StoreOp::create(builder, location, value, memory);
 
             symbolTable[variableDecl->name] = memory;
 
@@ -150,7 +156,7 @@ namespace toy {
             if (!value)
                 throw std::runtime_error("Failed to lower return expression");
 
-            mlir::func::ReturnOp::create(builder,mlir::UnknownLoc::get(&context),value);
+            toy::ReturnOp::create(builder, mlir::UnknownLoc::get(&context), value);
 
             return;
         }
@@ -160,7 +166,7 @@ namespace toy {
     void Lowering::lowerIfStatement(const IfStmt &stmt) {
 
         mlir::Value condition = lowerExpression(*stmt.condition);
-        auto ifOp = mlir::scf::IfOp::create(builder,builder.getUnknownLoc(), condition,false);
+        auto ifOp = mlir::scf::IfOp::create(builder, builder.getUnknownLoc(), condition, false);
         builder.setInsertionPointToStart(&ifOp.getThenRegion().front());
 
         for (const auto &statement : stmt.thenBody) {

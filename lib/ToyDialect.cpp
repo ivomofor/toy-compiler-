@@ -11,7 +11,12 @@ namespace toy {
 
     void ToyDialect::initialize() {
         addOperations<
-            ConstantOp
+            ConstantOp,
+            AddOp,
+            SubOp,
+            MulOp,
+            DivOp,
+            ReturnOp
         >();
     }
 

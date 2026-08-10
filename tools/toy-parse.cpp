@@ -4,6 +4,7 @@
 #include "toy/ASTPrinter.h"
 #include "toy/ToyDialect.h"
 #include "toy/ConstantToArith.h"
+#include "toy/ReturnToFunc.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -103,6 +104,7 @@ int main(int argc, char **argv) {
     mlir::PassManager pm(&context);
     pm.addPass(toy::createConstantToArithPass());
     pm.addPass(mlir::createCanonicalizerPass());
+    pm.addPass(toy::createReturnToFuncPass());
 
     if (mlir::failed(pm.run(module))) {
         std::cerr << "Error: MLIR pass pipeline failed\n";

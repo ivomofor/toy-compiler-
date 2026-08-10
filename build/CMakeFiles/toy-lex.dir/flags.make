@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/CLionProjects/toy-compiler-/include -I/home/shevo/CLionProjects/toy-compiler-/build
+CXX_INCLUDES = -I/home/shevo/llvm-project-22.1.0.src/llvm/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/include -I/home/shevo/llvm-project-22.1.0.src/mlir/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include -I/home/shevo/CLionProjects/toy-compiler-/include -I/home/shevo/CLionProjects/toy-compiler-/build
 
 CXX_FLAGS = -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 

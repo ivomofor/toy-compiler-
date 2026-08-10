@@ -71,15 +71,15 @@ CMakeFiles/ToyDialectIncGen: ToyDialect.h.inc
 CMakeFiles/ToyDialectIncGen: ToyDialect.cpp.inc
 CMakeFiles/ToyDialectIncGen: ToyDialect.cpp.inc
 
-ToyDialect.cpp.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyDialect.cpp.inc: /home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen
 ToyDialect.cpp.inc: /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ToyDialect.cpp.inc..."
-	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-dialect-defs -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.cpp.inc
+	/home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen -gen-dialect-defs -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/llvm-project-22.1.0.src/llvm/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/include -I/home/shevo/llvm-project-22.1.0.src/mlir/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.cpp.inc
 
-ToyDialect.h.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyDialect.h.inc: /home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen
 ToyDialect.h.inc: /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ToyDialect.h.inc..."
-	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-dialect-decls -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc
+	/home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen -gen-dialect-decls -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/llvm-project-22.1.0.src/llvm/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/include -I/home/shevo/llvm-project-22.1.0.src/mlir/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc
 
 ToyDialectIncGen: CMakeFiles/ToyDialectIncGen
 ToyDialectIncGen: ToyDialect.cpp.inc

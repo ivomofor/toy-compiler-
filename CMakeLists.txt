@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(ToyCompiler LANGUAGES CXX)
+project(ToyCompiler LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -67,13 +67,13 @@ add_library(ToyCompiler
         lib/ToyDialect.cpp
         lib/ToyOps.cpp
         lib/ConstantToArith.cpp
+        lib/ReturnToFunc.cpp
 )
 
 set_source_files_properties(
         lib/ToyDialect.cpp
         lib/ConstantToArith.cpp
-        PROPERTIES
-        COMPILE_OPTIONS "-fno-rtti"
+        
 )
 
 add_dependencies(ToyCompiler ToyDialectIncGen ToyOpsIncGen)
@@ -112,9 +112,12 @@ add_executable(toy-parse
 )
 
 target_link_libraries(toy-parse
-    PRIVATE
+        PRIVATE
         ToyCompiler
         MLIRIR
+        MLIRPass
+        MLIRRewrite
+        MLIRTransforms
         MLIRTargetLLVMIRExport
         MLIRLLVMToLLVMIRTranslation
         MLIRToLLVMIRTranslationRegistration

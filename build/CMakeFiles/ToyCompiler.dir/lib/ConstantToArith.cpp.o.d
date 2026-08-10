@@ -2,18 +2,18 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp \
  /usr/include/stdc-predef.h \
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PatternMatch.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Dialect.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compiler.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/llvm-config.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/PatternMatch.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Builders.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/OpDefinition.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Dialect.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/DialectRegistry.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/MLIRContext.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/LLVM.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/Casting.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/Compiler.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/include/llvm/Config/llvm-config.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/type_traits.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/type_traits.h \
  /usr/include/c++/13/type_traits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -130,14 +130,14 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/optional \
  /usr/include/c++/13/initializer_list \
  /usr/include/c++/13/bits/enable_special_members.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/LogicalResult.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMapInfo.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/LogicalResult.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/TypeID.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/DenseMapInfo.h \
  /usr/include/c++/13/cstddef /usr/include/c++/13/cstdint \
  /usr/include/c++/13/limits /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Hashing.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ADL.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Hashing.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ADL.h \
  /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /usr/include/c++/13/bits/streambuf_iterator.h \
  /usr/include/c++/13/streambuf /usr/include/c++/13/bits/localefwd.h \
@@ -181,24 +181,24 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /usr/include/c++/13/system_error \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/bits/streambuf.tcc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Config/abi-breaking.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/DataTypes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm-c/DataTypes.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/include/llvm/Config/abi-breaking.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/DataTypes.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm-c/DataTypes.h \
  /usr/include/inttypes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ErrorHandling.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SwapByteOrder.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLForwardCompat.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/bit.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/ErrorHandling.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/SwapByteOrder.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/STLForwardCompat.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/bit.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/STLFunctionalExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/iterator_range.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/STLExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/STLFunctionalExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/iterator.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/iterator_range.h \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
@@ -212,10 +212,10 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /usr/include/c++/13/compare /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Allocator.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Alignment.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MathExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/Allocator.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SmallVector.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/Alignment.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/MathExtras.h \
  /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
@@ -225,65 +225,65 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MemAlloc.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/PointerLikeTypeTraits.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeName.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringRef.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/MapVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseMap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/EpochTracker.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AlignOf.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/AllocatorBase.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/MemAlloc.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/PointerLikeTypeTraits.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/TypeName.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringRef.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ArrayRef.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/MapVector.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/DenseMap.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/EpochTracker.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/AlignOf.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/ReverseIteration.h \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OperationSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Attributes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttributeSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/StorageUniquerSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AttrTypeSubElements.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Visitors.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/DenseSet.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/OperationSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Attributes.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/AttributeSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/StorageUniquerSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/AttrTypeSubElements.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Visitors.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/WalkResult.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/CyclicReplacerCache.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/DenseSet.h \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FunctionExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerUnion.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Types.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Twine.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BlockSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/UseDefLists.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/simple_ilist.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_base.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_iterator.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_options.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallBitVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVectorExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Block.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallPtrSet.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmTypeInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/InterfaceSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/StorageUniquer.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/FunctionExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/PointerIntPair.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/PointerUnion.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Types.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/TypeSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Twine.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BlockSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Value.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/UseDefLists.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Location.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinLocationAttributes.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/simple_ilist.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist_base.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist_node_base.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist_iterator.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist_node.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ilist_node_options.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinAttributes.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinAttributeInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/AffineMap.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/AffineExpr.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SmallBitVector.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/BitVector.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SmallVectorExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinTypeInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/OpAsmSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Block.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SmallPtrSet.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinTypeInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/OpAsmTypeInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/raw_ostream.h \
  /usr/include/c++/13/complex /usr/include/c++/13/cmath \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -317,93 +317,93 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APInt.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/float128.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/FloatingPointMode.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/BitmaskEnum.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringSwitch.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Sequence.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Diagnostics.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeRange.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpImplementation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypes.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolTable.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SetVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMapEntry.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Threading.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinAttributeInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/OpAsmAttrInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APFloat.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APInt.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/float128.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/FloatingPointMode.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/BitmaskEnum.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringSwitch.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Sequence.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinAttributes.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Diagnostics.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/TypeRange.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/ValueRange.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/TrailingObjects.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/ODSSupport.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Operation.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Region.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinOps.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Bytecode/BytecodeOpInterface.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Bytecode/BytecodeImplementation.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/DialectInterface.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/OpImplementation.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinTypes.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Support/ADTExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinTypes.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinTypeConstraints.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/SMLoc.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/OpAsmOpInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/OwningOpRef.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/RegionKindInterface.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/RegionKindInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/SymbolTable.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SetVector.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringMap.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringMapEntry.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/RWMutex.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/Threading.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/chrono.h \
  /usr/include/c++/13/ratio /usr/include/c++/13/ctime \
  /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/shared_mutex \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfacesAttrInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeSize.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutOpInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PDLPatternMatch.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Config/mlir-config.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/Pass.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Action.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Unit.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/AnalysisManager.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassOptions.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CommandLine.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/SymbolInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/SymbolInterfacesAttrInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/DataLayoutInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/TypeSize.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutOpInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/SideEffectInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/SideEffectInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinOps.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/PDLPatternMatch.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Config/mlir-config.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Pass/Pass.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Action.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Unit.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Pass/AnalysisManager.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Pass/PassInstrumentation.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Pass/PassRegistry.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Pass/PassOptions.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/CommandLine.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/StringSaver.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Statistic.h \
  /usr/include/c++/13/atomic \
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ToyOps.h \
  /home/shevo/CLionProjects/toy-compiler-/build/ToyOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringExtras.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APSInt.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallString.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Rewrite/FrozenRewritePatternSet.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Dialect/Arith/IR/Arith.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/CastInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/CastInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/ControlFlowInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/ControlFlowInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/InferIntRangeInterface.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/InferIntRangeInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/InferTypeOpInterface.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/VectorInterfaces.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/VectorInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringExtras.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APSInt.h \
+ /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/SmallString.h \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+ /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Rewrite/FrozenRewritePatternSet.h \
  /usr/include/c++/13/iostream

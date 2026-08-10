@@ -442,6 +442,30 @@ lib/Parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
 .PHONY : lib/Parser.cpp.s
 
+lib/ReturnToFunc.o: lib/ReturnToFunc.cpp.o
+.PHONY : lib/ReturnToFunc.o
+
+# target to build an object file
+lib/ReturnToFunc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o
+.PHONY : lib/ReturnToFunc.cpp.o
+
+lib/ReturnToFunc.i: lib/ReturnToFunc.cpp.i
+.PHONY : lib/ReturnToFunc.i
+
+# target to preprocess a source file
+lib/ReturnToFunc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.i
+.PHONY : lib/ReturnToFunc.cpp.i
+
+lib/ReturnToFunc.s: lib/ReturnToFunc.cpp.s
+.PHONY : lib/ReturnToFunc.s
+
+# target to generate assembly for a file
+lib/ReturnToFunc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s
+.PHONY : lib/ReturnToFunc.cpp.s
+
 lib/ToyDialect.o: lib/ToyDialect.cpp.o
 .PHONY : lib/ToyDialect.o
 
@@ -578,6 +602,9 @@ help:
 	@echo "... lib/Parser.o"
 	@echo "... lib/Parser.i"
 	@echo "... lib/Parser.s"
+	@echo "... lib/ReturnToFunc.o"
+	@echo "... lib/ReturnToFunc.i"
+	@echo "... lib/ReturnToFunc.s"
 	@echo "... lib/ToyDialect.o"
 	@echo "... lib/ToyDialect.i"
 	@echo "... lib/ToyDialect.s"
