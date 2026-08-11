@@ -674,7 +674,7 @@ toy-compiler-/
 │   ├── toy-lex.cpp
 │   |── toy-parse.cpp
 │
-└── example/
+|── example/
     |── simple.toy
 ```
 
