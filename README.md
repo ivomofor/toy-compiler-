@@ -1071,5 +1071,8 @@ The immediate development goals are:
 
 No license is currently specified in the repository. If this project is intended for public reuse, a license should be added explicitly.
 
+# About ME 
 email: ivomofor@live.com
+Cell: +27670771540
+I am a motivated CS graduate with a strong foundation in compiler theory, seeking an entry level compiler engineering role. Equipped with hands on academic experience in C++, Clang, MLIR and LLVM. I aim to deepen my expertise in IR design and optimization passes while contributing meaningfully to real world compiler infrastructure.
 
