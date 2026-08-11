@@ -33,11 +33,17 @@ namespace toy {
 
         symbolTable.clear();
 
+        /*
         auto i32Type = mlir::IntegerType::get( &context, 32 );
         auto funcType = mlir::FunctionType::get(&context,{},i32Type);
         auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name,funcType);
         auto *entryBlock = func.addEntryBlock();
+        */
 
+        auto func = toy::FuncOp::create(builder, builder.getUnknownLoc(), builder.getStringAttr(function.name));
+        auto &body = func.getBody();
+        body.push_back(new mlir::Block());
+        auto *entryBlock = &body.front();
         builder.setInsertionPointToEnd(entryBlock);
 
         for (const auto &statement :function.body)

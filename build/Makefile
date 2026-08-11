@@ -370,6 +370,30 @@ lib/ConstantToArith.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s
 .PHONY : lib/ConstantToArith.cpp.s
 
+lib/FuncToFunc.o: lib/FuncToFunc.cpp.o
+.PHONY : lib/FuncToFunc.o
+
+# target to build an object file
+lib/FuncToFunc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o
+.PHONY : lib/FuncToFunc.cpp.o
+
+lib/FuncToFunc.i: lib/FuncToFunc.cpp.i
+.PHONY : lib/FuncToFunc.i
+
+# target to preprocess a source file
+lib/FuncToFunc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i
+.PHONY : lib/FuncToFunc.cpp.i
+
+lib/FuncToFunc.s: lib/FuncToFunc.cpp.s
+.PHONY : lib/FuncToFunc.s
+
+# target to generate assembly for a file
+lib/FuncToFunc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s
+.PHONY : lib/FuncToFunc.cpp.s
+
 lib/Lexer.o: lib/Lexer.cpp.o
 .PHONY : lib/Lexer.o
 
@@ -593,6 +617,9 @@ help:
 	@echo "... lib/ConstantToArith.o"
 	@echo "... lib/ConstantToArith.i"
 	@echo "... lib/ConstantToArith.s"
+	@echo "... lib/FuncToFunc.o"
+	@echo "... lib/FuncToFunc.i"
+	@echo "... lib/FuncToFunc.s"
 	@echo "... lib/Lexer.o"
 	@echo "... lib/Lexer.i"
 	@echo "... lib/Lexer.s"

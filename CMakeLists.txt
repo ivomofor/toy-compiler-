@@ -68,6 +68,7 @@ add_library(ToyCompiler
         lib/ToyOps.cpp
         lib/ConstantToArith.cpp
         lib/ReturnToFunc.cpp
+        lib/FuncToFunc.cpp
 )
 
 set_source_files_properties(

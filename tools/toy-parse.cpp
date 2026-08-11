@@ -4,6 +4,7 @@
 #include "toy/ASTPrinter.h"
 #include "toy/ToyDialect.h"
 #include "toy/ConstantToArith.h"
+#include "toy/FuncToFunc.h"
 #include "toy/ReturnToFunc.h"
 
 #include "mlir/IR/MLIRContext.h"
@@ -102,6 +103,13 @@ int main(int argc, char **argv) {
     }
 
     mlir::PassManager pm(&context);
+    /*
+    pm.addPass(toy::createConstantToArithPass());
+    pm.addPass(mlir::createCanonicalizerPass());
+    pm.addPass(toy::createFuncToFuncPass());
+    pm.addPass(toy::createReturnToFuncPass());
+    */
+    pm.addPass(toy::createFuncToFuncPass());
     pm.addPass(toy::createConstantToArithPass());
     pm.addPass(mlir::createCanonicalizerPass());
     pm.addPass(toy::createReturnToFuncPass());

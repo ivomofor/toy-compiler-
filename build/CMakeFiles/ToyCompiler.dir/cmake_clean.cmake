@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o.d"
+  "CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o"
+  "CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o"

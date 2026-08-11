@@ -195,6 +195,20 @@ CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ReturnToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s
 
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp
+
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp > CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i
+
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s
+
 # Object files for target ToyCompiler
 ToyCompiler_OBJECTS = \
 "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o" \
@@ -205,7 +219,8 @@ ToyCompiler_OBJECTS = \
 "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o" \
 "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o" \
 "CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o" \
-"CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o"
+"CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o" \
+"CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o"
 
 # External object files for target ToyCompiler
 ToyCompiler_EXTERNAL_OBJECTS =
@@ -219,9 +234,10 @@ libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o
+libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/build.make
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libToyCompiler.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libToyCompiler.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ToyCompiler.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ToyCompiler.dir/link.txt --verbose=$(VERBOSE)
 

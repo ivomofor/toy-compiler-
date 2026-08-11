@@ -421,6 +421,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/StringSaver.h \
  /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Statistic.h \
  /usr/include/c++/13/atomic \
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/FuncToFunc.h \
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ReturnToFunc.h \
  /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Dialect/SCF/IR/SCF.h \
  /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Dialect/Arith/Utils/Utils.h \

@@ -13,6 +13,7 @@
 ::toy::AddOp,
 ::toy::ConstantOp,
 ::toy::DivOp,
+::toy::FuncOp,
 ::toy::MulOp,
 ::toy::ReturnOp,
 ::toy::SubOp
@@ -49,6 +50,31 @@ static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
   return __mlir_ods_local_attr_constraint_ToyOps1(attr, attrName, [op]() {
     return op->emitOpError();
   });
+}
+
+static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps2(
+    ::mlir::Attribute attr, ::llvm::StringRef attrName, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+  if (attr && !((::llvm::isa<::mlir::StringAttr>(attr))))
+    return emitError() << "attribute '" << attrName
+        << "' failed to satisfy constraint: string attribute";
+  return ::mlir::success();
+}
+static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps2(
+    ::mlir::Operation *op, ::mlir::Attribute attr, ::llvm::StringRef attrName) {
+  return __mlir_ods_local_attr_constraint_ToyOps2(attr, attrName, [op]() {
+    return op->emitOpError();
+  });
+}
+
+static ::llvm::LogicalResult __mlir_ods_local_region_constraint_ToyOps1(
+    ::mlir::Operation *op, ::mlir::Region &region, ::llvm::StringRef regionName,
+    unsigned regionIndex) {
+  if (!((true))) {
+    return op->emitOpError("region #") << regionIndex
+        << (regionName.empty() ? " " : " ('" + regionName + "') ")
+        << "failed to verify constraint: any region";
+  }
+  return ::mlir::success();
 }
 namespace toy {
 
@@ -738,6 +764,319 @@ DivOp DivOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange res
 
 } // namespace toy
 MLIR_DEFINE_EXPLICIT_TYPE_ID(::toy::DivOp)
+
+namespace toy {
+
+
+//===----------------------------------------------------------------------===//
+// ::toy::FuncOp definitions
+//===----------------------------------------------------------------------===//
+
+namespace detail {
+
+FuncOpGenericAdaptorBase::FuncOpGenericAdaptorBase(FuncOp op) : odsAttrs(op->getRawDictionaryAttrs()), odsOpName(op->getName()), properties(op.getProperties()), odsRegions(op->getRegions()) {}
+
+::llvm::StringRef FuncOpGenericAdaptorBase::getSymName() {
+  auto attr = getSymNameAttr();
+  return attr.getValue();
+}
+
+
+} // namespace detail
+FuncOpAdaptor::FuncOpAdaptor(FuncOp op) : FuncOpGenericAdaptor(op->getOperands(), op) {}
+
+::llvm::LogicalResult FuncOpAdaptor::verify(::mlir::Location loc) {
+  auto tblgen_sym_name = getProperties().sym_name; (void)tblgen_sym_name;
+  if (!tblgen_sym_name) return emitError(loc, "'toy.func' op requires attribute 'sym_name'");
+
+  if (tblgen_sym_name && !((::llvm::isa<::mlir::StringAttr>(tblgen_sym_name))))
+    return emitError(loc, "'toy.func' op attribute 'sym_name' failed to satisfy constraint: string attribute");
+  return ::mlir::success();
+}
+
+::llvm::LogicalResult FuncOp::setPropertiesFromAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+  ::mlir::DictionaryAttr dict = ::llvm::dyn_cast<::mlir::DictionaryAttr>(attr);
+  if (!dict) {
+    emitError() << "expected DictionaryAttr to set properties";
+    return ::mlir::failure();
+  }
+
+  {
+    auto &propStorage = prop.sym_name;
+       auto attr = dict.get("sym_name");
+    if (attr) {
+      auto convertedAttr = ::llvm::dyn_cast<std::remove_reference_t<decltype(propStorage)>>(attr);
+      if (convertedAttr) {
+        propStorage = convertedAttr;
+      } else {
+        emitError() << "Invalid attribute `sym_name` in property conversion: " << attr;
+        return ::mlir::failure();
+      }
+    }
+  }
+  return ::mlir::success();
+}
+
+::mlir::Attribute FuncOp::getPropertiesAsAttr(::mlir::MLIRContext *ctx, const Properties &prop) {
+    ::mlir::SmallVector<::mlir::NamedAttribute> attrs;
+    ::mlir::Builder odsBuilder{ctx};
+
+    {
+      const auto &propStorage = prop.sym_name;
+      if (propStorage)
+        attrs.push_back(odsBuilder.getNamedAttr("sym_name",
+                                       propStorage));
+    }
+
+  if (!attrs.empty())
+    return odsBuilder.getDictionaryAttr(attrs);
+  return {};
+}
+
+llvm::hash_code FuncOp::computePropertiesHash(const Properties &prop) {
+  using llvm::hash_value;
+  return llvm::hash_combine(
+    llvm::hash_value(prop.sym_name.getAsOpaquePointer()));
+}
+
+std::optional<mlir::Attribute> FuncOp::getInherentAttr(::mlir::MLIRContext *ctx, const Properties &prop, llvm::StringRef name) {
+    if (name == "sym_name")
+      return prop.sym_name;
+  return std::nullopt;
+}
+
+void FuncOp::setInherentAttr(Properties &prop, llvm::StringRef name, mlir::Attribute value) {
+    if (name == "sym_name") {
+       prop.sym_name = ::llvm::dyn_cast_or_null<std::remove_reference_t<decltype(prop.sym_name)>>(value);
+       return;
+    }
+}
+
+void FuncOp::populateInherentAttrs(::mlir::MLIRContext *ctx, const Properties &prop, ::mlir::NamedAttrList &attrs) {
+    if (prop.sym_name) attrs.append("sym_name", prop.sym_name);
+}
+
+::llvm::LogicalResult FuncOp::verifyInherentAttrs(::mlir::OperationName opName, ::mlir::NamedAttrList &attrs, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+    {
+      ::mlir::Attribute attr = attrs.get(getSymNameAttrName(opName));
+      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(attr, "sym_name", emitError)))
+        return ::mlir::failure();
+    }
+    return ::mlir::success();
+}
+
+::llvm::LogicalResult FuncOp::readProperties(::mlir::DialectBytecodeReader &reader, ::mlir::OperationState &state) {
+  auto &prop = state.getOrAddProperties<Properties>(); (void)prop;
+  if (::mlir::failed(reader.readAttribute(prop.sym_name)))
+    return ::mlir::failure();
+  return ::mlir::success();
+}
+
+void FuncOp::writeProperties(::mlir::DialectBytecodeWriter &writer) {
+  auto &prop = getProperties(); (void)prop;
+  writer.writeAttribute(prop.sym_name);
+}
+
+::llvm::StringRef FuncOp::getSymName() {
+  auto attr = getSymNameAttr();
+  return attr.getValue();
+}
+
+void FuncOp::setSymName(::llvm::StringRef attrValue) {
+  getProperties().sym_name = ::mlir::Builder((*this)->getContext()).getStringAttr(attrValue);
+}
+
+void FuncOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::StringAttr sym_name) {
+  odsState.getOrAddProperties<Properties>().sym_name = sym_name;
+  (void)odsState.addRegion();
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::StringAttr sym_name) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(sym_name)>(sym_name));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::StringAttr sym_name) {
+  return create(builder, builder.getLoc(), std::forward<decltype(sym_name)>(sym_name));
+}
+
+void FuncOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::StringAttr sym_name) {
+  odsState.getOrAddProperties<Properties>().sym_name = sym_name;
+  (void)odsState.addRegion();
+  assert(resultTypes.size() == 0u && "mismatched number of results");
+  odsState.addTypes(resultTypes);
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::StringAttr sym_name) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(sym_name)>(sym_name));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::StringAttr sym_name) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(sym_name)>(sym_name));
+}
+
+void FuncOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::llvm::StringRef sym_name) {
+  odsState.getOrAddProperties<Properties>().sym_name = odsBuilder.getStringAttr(sym_name);
+  (void)odsState.addRegion();
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::llvm::StringRef sym_name) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(sym_name)>(sym_name));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::llvm::StringRef sym_name) {
+  return create(builder, builder.getLoc(), std::forward<decltype(sym_name)>(sym_name));
+}
+
+void FuncOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::llvm::StringRef sym_name) {
+  odsState.getOrAddProperties<Properties>().sym_name = odsBuilder.getStringAttr(sym_name);
+  (void)odsState.addRegion();
+  assert(resultTypes.size() == 0u && "mismatched number of results");
+  odsState.addTypes(resultTypes);
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::llvm::StringRef sym_name) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(sym_name)>(sym_name));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::llvm::StringRef sym_name) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(sym_name)>(sym_name));
+}
+
+void FuncOp::build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  assert(operands.size() == 0u && "mismatched number of parameters");
+  odsState.addOperands(operands);
+  odsState.addAttributes(attributes);
+  for (unsigned i = 0; i != 1; ++i)
+    (void)odsState.addRegion();
+  assert(resultTypes.size() == 0u && "mismatched number of return types");
+  odsState.addTypes(resultTypes);
+
+  if (!attributes.empty()) {
+    ::mlir::OpaqueProperties properties =
+      &odsState.getOrAddProperties<FuncOp::Properties>();
+    std::optional<::mlir::RegisteredOperationName> info =
+      odsState.name.getRegisteredInfo();
+    if (failed(info->setOpPropertiesFromAttribute(odsState.name, properties,
+        odsState.attributes.getDictionary(odsState.getContext()), nullptr)))
+      ::llvm::report_fatal_error("Property conversion failed.");
+  }
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(attributes)>(attributes));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(attributes)>(attributes));
+}
+
+void FuncOp::build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  assert(operands.size() == 0u && "mismatched number of parameters");
+  odsState.addOperands(operands);
+  odsState.useProperties(const_cast<Properties&>(properties));
+  odsState.addAttributes(discardableAttributes);
+  for (unsigned i = 0; i != 1; ++i)
+    (void)odsState.addRegion();
+  assert(resultTypes.size() == 0u && "mismatched number of return types");
+  odsState.addTypes(resultTypes);
+}
+
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(properties)>(properties), std::forward<decltype(discardableAttributes)>(discardableAttributes));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(properties)>(properties), std::forward<decltype(discardableAttributes)>(discardableAttributes));
+}
+
+::llvm::LogicalResult FuncOp::verifyInvariantsImpl() {
+  auto tblgen_sym_name = getProperties().sym_name; (void)tblgen_sym_name;
+  if (!tblgen_sym_name) return emitOpError("requires attribute 'sym_name'");
+
+  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(*this, tblgen_sym_name, "sym_name")))
+    return ::mlir::failure();
+  {
+    unsigned index = 0; (void)index;
+
+    for (auto &region : ::llvm::MutableArrayRef((*this)->getRegion(0)))
+      if (::mlir::failed(__mlir_ods_local_region_constraint_ToyOps1(*this, region, "body", index++)))
+        return ::mlir::failure();
+  }
+  return ::mlir::success();
+}
+
+::llvm::LogicalResult FuncOp::verifyInvariants() {
+  return verifyInvariantsImpl();
+}
+
+::llvm::LogicalResult FuncOp::setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+  ::mlir::DictionaryAttr dict = ::llvm::dyn_cast<::mlir::DictionaryAttr>(attr);
+  if (!dict) {
+    emitError() << "expected DictionaryAttr to set properties";
+    return ::mlir::failure();
+  }
+  // keep track of used keys in the input dictionary to be able to error out
+  // if there are some unknown ones.
+  ::mlir::DenseSet<::mlir::StringAttr> usedKeys;
+  ::mlir::MLIRContext *ctx = dict.getContext();
+  (void)ctx;
+  {
+
+    auto &propStorage = prop.sym_name;
+    auto sym_nameAttrName = ::mlir::StringAttr::get(ctx, "sym_name");
+    auto attr = dict.get(sym_nameAttrName);
+    usedKeys.insert(sym_nameAttrName);
+    if (attr || /*isRequired=*/true) {
+      if (!attr) {
+        emitError() << "expected key entry for sym_name in DictionaryAttr to set "
+                   "Properties.";
+        return ::mlir::failure();
+      }
+      auto convertedAttr = ::llvm::dyn_cast<std::remove_reference_t<decltype(propStorage)>>(attr);
+      if (convertedAttr) {
+        propStorage = convertedAttr;
+      } else {
+        emitError() << "Invalid attribute `sym_name` in property conversion: " << attr;
+        return ::mlir::failure();
+      }
+    }
+  }
+
+  for (::mlir::NamedAttribute attr : dict) {
+    if (!usedKeys.contains(attr.getName()))
+      return emitError() << "unknown key '" << attr.getName() <<
+          "' when parsing properties dictionary";
+  }
+  return ::mlir::success();
+}
+
+
+} // namespace toy
+MLIR_DEFINE_EXPLICIT_TYPE_ID(::toy::FuncOp)
 
 namespace toy {
 

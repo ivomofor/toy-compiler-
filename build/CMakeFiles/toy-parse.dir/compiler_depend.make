@@ -7,6 +7,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
   /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h \
+  /home/shevo/CLionProjects/toy-compiler-/include/toy/FuncToFunc.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h \
   /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h \
@@ -735,10 +736,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Diagnostics.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Value.def:
-
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BuiltinAttributeInterfaces.h:
 
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/BlockSupport.h:
@@ -863,8 +860,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/ProfileSummary.h:
 
-/usr/include/c++/13/bits/atomic_base.h:
-
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Metadata.h:
 
 /usr/include/pthread.h:
@@ -899,6 +894,10 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/GlobalAlias.h:
 
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Value.def:
+
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Conversion/LLVMCommon/TypeConverter.h:
 
 /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/SymbolInterfacesAttrInterface.h.inc:
@@ -910,6 +909,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /usr/include/c++/13/atomic:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Comdat.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Attributes.h:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
@@ -923,8 +924,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Transforms/ViewOpGraph.h:
 
-/usr/include/c++/13/bits/basic_string.h:
-
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/StringMapEntry.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APSInt.h:
@@ -936,6 +935,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc:
 
 /usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/c++/13/bits/basic_string.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/ReverseIteration.h:
 
@@ -987,13 +988,15 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Sequence.h:
 
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/GlobalObject.h:
+
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/DenseMap.h:
 
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Interfaces/LoopLikeInterface.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/Bitfields.h:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/Attributes.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/AllocatorBase.h:
 
@@ -1009,6 +1012,14 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /usr/include/c++/13/tuple:
 
+/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinTypes.h.inc:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/STLFunctionalExtras.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
 /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinAttributes.h.inc:
 
 /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/VectorInterfaces.h.inc:
@@ -1020,10 +1031,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/TypeUtilities.h:
 
 /usr/include/c++/13/bits/istream.tcc:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/STLFunctionalExtras.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/BasicBlock.h:
 
@@ -1047,16 +1054,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 
 /usr/include/c++/13/unordered_map:
 
-/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Config/mlir-config.h:
-
-/usr/include/c++/13/climits:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/PointerUnion.h:
-
-/usr/include/c++/13/bits/stl_map.h:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/BitVector.h:
-
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/bit.h:
 
 /home/shevo/CLionProjects/toy-compiler-/include/toy/ReturnToFunc.h:
@@ -1064,6 +1061,16 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /home/shevo/CLionProjects/toy-compiler-/tools/toy-parse.cpp:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/PointerUnion.h:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/BitVector.h:
+
+/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Config/mlir-config.h:
+
+/usr/include/c++/13/climits:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/CodeGen.h:
 
@@ -1098,10 +1105,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/CLionProjects/toy-co
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/Transforms/LocationSnapshot.h:
 
 /home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/IR/GlobalObject.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
 
@@ -1227,10 +1230,6 @@ ToyDialect.h.inc:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/ADL.h:
 
-/home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Types.h:
-
-/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APFloat.h:
-
 /usr/include/c++/13/bits/specfun.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
@@ -1354,6 +1353,12 @@ ToyDialect.h.inc:
 /usr/include/c++/13/bits/hash_bytes.h:
 
 /home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/Support/AlignOf.h:
+
+/home/shevo/llvm-project-22.1.0.src/llvm/include/llvm/ADT/APFloat.h:
+
+/home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Types.h:
+
+/usr/include/c++/13/bits/atomic_base.h:
 
 /home/shevo/llvm-project-22.1.0.src/mlir/include/mlir/IR/Value.h:
 
@@ -1495,10 +1500,6 @@ ToyOps.h.inc:
 
 /usr/include/c++/13/cassert:
 
-/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/IR/BuiltinTypes.h.inc:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/13/bits/erase_if.h:
@@ -1560,6 +1561,12 @@ ToyOps.h.inc:
 /usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/c++/13/bits/shared_ptr_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc:
+
+/usr/include/wchar.h:
 
 /usr/include/c++/13/bits/sstream.tcc:
 
@@ -1765,6 +1772,8 @@ ToyOps.h.inc:
 
 /usr/include/features.h:
 
+/home/shevo/CLionProjects/toy-compiler-/include/toy/FuncToFunc.h:
+
 /usr/include/inttypes.h:
 
 /usr/include/locale.h:
@@ -1814,9 +1823,3 @@ ToyOps.h.inc:
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include/mlir/Interfaces/DataLayoutTypeInterface.h.inc:
-
-/usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:

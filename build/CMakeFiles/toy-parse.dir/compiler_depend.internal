@@ -8,6 +8,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
  /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ASTPrinter.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/ConstantToArith.h
+ /home/shevo/CLionProjects/toy-compiler-/include/toy/FuncToFunc.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Lexer.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Lowering.h
  /home/shevo/CLionProjects/toy-compiler-/include/toy/Parser.h
