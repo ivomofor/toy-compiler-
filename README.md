@@ -184,7 +184,7 @@ The parser therefore transforms:
 
 ```text
 tokens
-   ↓
+   |
 AST
 ```
 
@@ -515,7 +515,6 @@ Conceptually:
 ```text
 toy.return
      │
-     ▼
 func.return
 ```
 
