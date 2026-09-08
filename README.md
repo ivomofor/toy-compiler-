@@ -1,10 +1,9 @@
-# toy-compiler 
+# Toy Compiler 
  toy compiler project 
-# Toy Compiler
 
 A small programming language compiler built from scratch in C++ and progressively lowered through **MLIR** to **LLVM IR**.
 
-This project is primarily an educational compiler-engineering project. It explores how a programming language moves from source text through lexical analysis, parsing, an abstract syntax tree, a custom MLIR dialect, MLIR transformation passes, and finally LLVM IR.
+This project is primarily an educational compiler engineering project. It explores how a programming language moves from source text through lexical analysis, parsing, an abstract syntax tree, a custom MLIR dialect, MLIR transformation passes, and finally LLVM IR.
 
 The compiler is being developed incrementally, with each stage introducing a real compiler concept and integrating it into the existing pipeline.
 
@@ -52,7 +51,7 @@ define i32 @main() {
 
 ---
 
-# Why This Project Exists
+# More about this Project
 
 The goal is not simply to create another toy language.
 
@@ -106,7 +105,7 @@ Each stage has a specific responsibility.
 
 ---
 
-# 1. Lexer
+# Lexer
 
 The lexer converts raw source text into tokens.
 
@@ -156,7 +155,7 @@ Example:
 
 ---
 
-# 2. Parser
+# Parser
 
 The parser consumes the tokens produced by the lexer and constructs an Abstract Syntax Tree.
 
@@ -190,7 +189,7 @@ AST
 
 ---
 
-# 3. Abstract Syntax Tree
+# Abstract Syntax Tree
 
 The AST represents the source program in a structured form.
 
@@ -235,7 +234,7 @@ This makes the frontend easier to debug before MLIR lowering begins.
 
 ---
 
-# 4. Toy MLIR Dialect
+# Toy MLIR Dialect
 
 Once the AST exists, the compiler lowers it into a custom MLIR dialect named:
 
@@ -267,7 +266,7 @@ This gives the compiler an intermediate representation that is specific to the s
 
 ---
 
-# 5. MLIR TableGen
+# MLIR TableGen
 
 The Toy dialect uses MLIR TableGen to describe its operations.
 
@@ -306,7 +305,7 @@ These files are generated during the CMake build and should not be edited manual
 
 ---
 
-# 6. Custom Operations
+# Custom Operations
 
 The Toy dialect has gradually evolved from representing simple expressions into representing language level constructs.
 
@@ -371,7 +370,7 @@ For example:
 
 ---
 
-# 7. AST Toy MLIR Lowering
+# AST Toy MLIR Lowering
 
 The main AST to MLIR lowering implementation is located in:
 
@@ -418,7 +417,7 @@ Toy MLIR
 
 ---
 
-# 8. Symbol Handling
+# Symbol Handling
 
 The lowering stage also maintains symbol information while translating expressions.
 
@@ -428,7 +427,7 @@ The compiler can therefore move beyond simply compiling isolated constants and e
 
 ---
 
-# 9. MLIR Transformation Passes
+# MLIR Transformation Passes
 
 The compiler does not directly translate every Toy operation into LLVM IR.
 
@@ -460,7 +459,7 @@ Standard MLIR dialect
 
 ---
 
-# 10. `toy.constant`  `arith.constant`
+# `toy.constant`  `arith.constant`
 
 The `toy.constant` operation is transformed into the standard MLIR `arith` dialect.
 
@@ -486,7 +485,7 @@ This is one of the first examples in the project of lowering a language-specific
 
 ---
 
-# 11. `toy.return` -> `func.return`
+# `toy.return` -> `func.return`
 
 The Toy return operation is lowered to MLIR's standard function return operation.
 
@@ -520,7 +519,7 @@ func.return
 
 ---
 
-# 12. `toy.fun` → `func.func`
+# `toy.fun` → `func.func`
 
 The Toy dialect also contains a custom function operation:
 
@@ -551,7 +550,7 @@ This is an important step because MLIR's standard `fun` dialect provides the inf
 
 ---
 
-# 13. The Pass Pipeline
+# The Pass Pipeline
 
 The compiler driver is:
 
@@ -585,7 +584,7 @@ The compiler therefore acts as both a language frontend and an MLIR-based compil
 
 ---
 
-# 14. LLVM IR
+# LLVM IR
 
 The final target of the current pipeline is LLVM IR.
 
@@ -1074,9 +1073,6 @@ No license is currently specified in the repository. If this project is intended
 
 # About ME 
 
-email: ivomofor@live.com
----
-Cell: +27670771540
 ---
 I am a motivated CS graduate with a strong foundation in compiler theory, seeking an entry level compiler engineering role. Equipped with hands on academic experience in C++, Clang, MLIR and LLVM. I aim to deepen my expertise in IR design and optimization passes while contributing meaningfully to real world compiler infrastructure.
 
