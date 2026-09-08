@@ -1,6 +1,5 @@
-# toy-compiler 
+# Toy Compiler 
  toy compiler project 
-# Toy Compiler
 
 A small programming language compiler built from scratch in C++ and progressively lowered through **MLIR** to **LLVM IR**.
 
