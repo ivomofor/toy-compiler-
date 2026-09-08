@@ -1,7 +1,6 @@
 CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o: \
- /home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp \
- /usr/include/stdc-predef.h \
- /home/shevo/CLionProjects/toy-compiler-/include/toy/AST.h \
+ /home/shevo/project/toy-compiler-/lib/AST.cpp /usr/include/stdc-predef.h \
+ /home/shevo/project/toy-compiler-/include/toy/AST.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

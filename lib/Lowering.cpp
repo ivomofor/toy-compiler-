@@ -21,58 +21,106 @@ namespace toy {
             auto module = mlir::ModuleOp::create(mlir::UnknownLoc::get(&context));
 
         for (const auto &decl : program.declarations) {
-            auto *function = dynamic_cast<FunctionDecl *>(decl.get());
-            if (function) {
-                lowerFunction(module,*function);
+            if (decl->getKind() == ASTNodeKind::FunctionDecl) {
+                auto *function = static_cast<FunctionDecl *>(decl.get());
+                lowerFunction(module, *function);
             }
         }
         return module;
     }
 
-    void Lowering::lowerFunction(mlir::ModuleOp module,const FunctionDecl &function) {
+    void Lowering::lowerFunction(
+    mlir::ModuleOp module,
+    const FunctionDecl &function) {
+
+        std::cerr << "DEBUG 1: lowering function: "
+                  << function.name << "\n";
 
         symbolTable.clear();
 
-        /*
-        auto i32Type = mlir::IntegerType::get( &context, 32 );
-        auto funcType = mlir::FunctionType::get(&context,{},i32Type);
-        auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name,funcType);
-        auto *entryBlock = func.addEntryBlock();
-        */
+        std::cerr << "DEBUG 2: creating toy.func\n";
+
+        auto func = toy::FuncOp::create(
+            builder,
+            builder.getUnknownLoc(),
+            builder.getStringAttr(function.name));
+
+        std::cerr << "DEBUG 3: toy.func created\n";
+
+        auto &body = func.getBody();
+
+        std::cerr << "DEBUG 4: got body\n";
+
+        body.push_back(new mlir::Block());
+
+        std::cerr << "DEBUG 5: added block\n";
+
+        auto *entryBlock = &body.front();
+
+        builder.setInsertionPointToEnd(entryBlock);
+
+        std::cerr << "DEBUG 6: insertion point set\n";
+
+        for (const auto &statement : function.body) {
+
+            std::cerr << "DEBUG 7: lowering statement\n";
+
+            lowerStatement(*statement);
+
+            std::cerr << "DEBUG 8: statement lowered\n";
+        }
+
+        std::cerr << "DEBUG 9: all statements lowered\n";
+
+        module.push_back(func);
+
+        std::cerr << "DEBUG 10: function added to module\n";
+
+        if (function.body.empty())
+            throw std::runtime_error("Function contains no body");
+    }
+    /*
+    void Lowering::lowerFunction(mlir::ModuleOp module,const FunctionDecl &function) {
+        symbolTable.clear();
+
+        //auto i32Type = mlir::IntegerType::get( &context, 32 );
+        //auto funcType = mlir::FunctionType::get(&context,{},i32Type);
+        //auto func = mlir::func::FuncOp::create(mlir::UnknownLoc::get(&context),function.name,funcType);
+        //auto *entryBlock = func.addEntryBlock();
+
 
         auto func = toy::FuncOp::create(builder, builder.getUnknownLoc(), builder.getStringAttr(function.name));
         auto &body = func.getBody();
         body.push_back(new mlir::Block());
         auto *entryBlock = &body.front();
         builder.setInsertionPointToEnd(entryBlock);
-
         for (const auto &statement :function.body)
             lowerStatement(*statement);
-
         module.push_back(func);
 
         if (function.body.empty())
             throw std::runtime_error("Function contains no body");
     }
+    */
 
     mlir::Value Lowering::lowerExpression(const Expression &expression) {
-        //std::cerr << "DEBUG: Entered lowerExpression()\n";
-        auto *integer = dynamic_cast<const IntegerLiteral *>(&expression);
 
-        if (integer) {
-            //std::cerr << "DEBUG: IntegerLiteral detected: " << integer->value<< "\n";
+        if (expression.getKind() == ASTNodeKind::IntegerLiteral) {
+            auto *integer = static_cast<const IntegerLiteral *>(&expression);
+
             auto type = mlir::IntegerType::get(&context, 32);
-            //auto valueType = mlir::IntegerType::get(&context, 64);//a temporary test for toy.constant
             auto value = mlir::IntegerAttr::get(type, integer->value);
 
-            //return mlir::arith::ConstantOp::create(builder,mlir::UnknownLoc::get(&context),type,value);
-            return toy::ConstantOp::create(builder,mlir::UnknownLoc::get(&context),type,value); // a temporary test for toy.constant independently
+            return toy::ConstantOp::create(
+                builder,
+                mlir::UnknownLoc::get(&context),
+                type,
+                value);
         }
 
-        auto *binary = dynamic_cast<const BinaryExpression *>(&expression);
+        if (expression.getKind() == ASTNodeKind::BinaryExpression) {
+            auto *binary = static_cast<const BinaryExpression *>(&expression);
 
-        if (binary) {
-            //std::cerr << "DEBUG: BinaryExpression detected: " << binary->op<< "\n";
             mlir::Value left = lowerExpression(*binary->left);
             mlir::Value right = lowerExpression(*binary->right);
 
@@ -80,82 +128,128 @@ namespace toy {
 
             switch (binary->op) {
                 case '+':
-                    return toy::AddOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+                    return toy::AddOp::create(
+                        builder,
+                        mlir::UnknownLoc::get(&context),
+                        resultType,
+                        left,
+                        right);
 
                 case '-':
-                    return toy::SubOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+                    return toy::SubOp::create(
+                        builder,
+                        mlir::UnknownLoc::get(&context),
+                        resultType,
+                        left,
+                        right);
 
                 case '*':
-                    return toy::MulOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+                    return toy::MulOp::create(
+                        builder,
+                        mlir::UnknownLoc::get(&context),
+                        resultType,
+                        left,
+                        right);
 
                 case '/':
-                    return toy::DivOp::create(builder,mlir::UnknownLoc::get(&context),resultType,left,right);
+                    return toy::DivOp::create(
+                        builder,
+                        mlir::UnknownLoc::get(&context),
+                        resultType,
+                        left,
+                        right);
+
                 default:
                     throw std::runtime_error("Unsupported binary operator");
             }
         }
 
-        auto call = dynamic_cast<const CallExpression *>(&expression);
+        if (expression.getKind() == ASTNodeKind::CallExpression) {
+            auto *call = static_cast<const CallExpression *>(&expression);
 
-        if (call) {
-            std::vector<mlir::Value> arguments;
-            for (const auto &argument : call->arguments) {
-                arguments.push_back(lowerExpression(*argument));
-            }
+            std::cerr << "DEBUG: lowering call to " << call->callee << "\n";
+
             auto callee = builder.getStringAttr(call->callee);
-            auto callOp = mlir::func::CallOp::create(builder,builder.getUnknownLoc(),call->callee,{builder.getI32Type()},arguments);
-            return callOp.getResult(0);
+
+            std::cerr << "DEBUG: creating toy.call\n";
+
+            auto callOp = toy::CallOp::create(
+                builder,
+                mlir::UnknownLoc::get(&context),
+                builder.getI32Type(),
+                callee);
+
+            std::cerr << "DEBUG: toy.call created\n";
+
+            return callOp.getResult();
         }
 
-        auto *variable = dynamic_cast<const VariableReference *>(&expression);
+        if (expression.getKind() == ASTNodeKind::VariableReference) {
+            auto *variable = static_cast<const VariableReference *>(&expression);
 
-        if (variable) {
             auto it = symbolTable.find(variable->name);
+
             if (it == symbolTable.end()) {
-                throw std::runtime_error("Undefined variable: " +variable->name);
+                throw std::runtime_error(
+                    "Undefined variable: " + variable->name);
             }
+
             auto location = builder.getUnknownLoc();
-            return mlir::memref::LoadOp::create(builder,location,it->second);
+
+            return mlir::memref::LoadOp::create(
+                builder,
+                location,
+                it->second);
         }
         throw std::runtime_error("Unsupported expression in lowering");
     }
 
     void Lowering::lowerStatement(const Statement &statement) {
 
-        auto *variableDecl = dynamic_cast<const VariableDecl *>(&statement);
+        if (statement.getKind() == ASTNodeKind::VariableDecl) {
+            auto *variableDecl =
+                static_cast<const VariableDecl *>(&statement);
 
-        if (variableDecl) {
             auto location = builder.getUnknownLoc();
             auto i32Type = builder.getI32Type();
             auto memrefType = mlir::MemRefType::get({}, i32Type);
-            auto memory = mlir::memref::AllocaOp::create(builder, location, memrefType);
 
-            mlir::Value value = lowerExpression(*variableDecl->initializer);
-            
-            mlir::memref::StoreOp::create(builder, location, value, memory);
+            auto memory =
+                mlir::memref::AllocaOp::create(
+                    builder,
+                    location,
+                    memrefType);
+
+            mlir::Value value =
+                lowerExpression(*variableDecl->initializer);
+
+            mlir::memref::StoreOp::create(
+                builder,
+                location,
+                value,
+                memory);
 
             symbolTable[variableDecl->name] = memory;
 
             return;
         }
 
-        auto ifStmt = dynamic_cast<const IfStmt *>(&statement);
+        if (statement.getKind() == ASTNodeKind::IfStmt) {
+            auto *ifStmt = static_cast<const IfStmt *>(&statement);
 
-        if (ifStmt) {
             lowerIfStatement(*ifStmt);
             return;
         }
 
-        auto whileStmt = dynamic_cast<const WhileStmt *>(&statement);
-
-        if (whileStmt) {
+      
+        if (statement.getKind() == ASTNodeKind::WhileStmt) {
+            auto *whileStmt = static_cast<const WhileStmt *>(&statement);
             lowerWhileStatement(*whileStmt);
             return;
         }
 
-        auto *returnStmt = dynamic_cast<const ReturnStmt *>(&statement);
-
-        if (returnStmt) {
+        if (statement.getKind() == ASTNodeKind::ReturnStmt) {
+            auto *returnStmt = static_cast<const ReturnStmt *>(&statement);
 
             mlir::Value value =lowerExpression(*returnStmt->value);
 

@@ -48,3 +48,17 @@ def Toy_FuncOp : Toy_Op<"func"> {
 
     let regions = (region AnyRegion:$body);
 }
+
+def Toy_CallOp : Toy_Op<"call"> {
+    let summary = "Call a Toy function";
+
+    let arguments = (ins
+        StrAttr:$callee
+    );
+
+    let results = (outs I32);
+}
+
+
+
+

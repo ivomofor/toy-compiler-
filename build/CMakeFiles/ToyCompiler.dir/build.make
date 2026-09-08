@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shevo/CLionProjects/toy-compiler-
+CMAKE_SOURCE_DIR = /home/shevo/project/toy-compiler-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shevo/CLionProjects/toy-compiler-/build
+CMAKE_BINARY_DIR = /home/shevo/project/toy-compiler-/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ToyCompiler.dir/depend.make
@@ -70,144 +70,144 @@ include CMakeFiles/ToyCompiler.dir/progress.make
 include CMakeFiles/ToyCompiler.dir/flags.make
 
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp
+CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: /home/shevo/project/toy-compiler-/lib/Lexer.cpp
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o -c /home/shevo/project/toy-compiler-/lib/Lexer.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp > CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/Lexer.cpp > CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/Lexer.cpp -o CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/Lexer.cpp -o CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp
+CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: /home/shevo/project/toy-compiler-/lib/Parser.cpp
 CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o -c /home/shevo/project/toy-compiler-/lib/Parser.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp > CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/Parser.cpp > CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/Parser.cpp -o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/Parser.cpp -o CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp
+CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o: /home/shevo/project/toy-compiler-/lib/AST.cpp
 CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/AST.cpp.o -c /home/shevo/project/toy-compiler-/lib/AST.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/AST.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/AST.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp > CMakeFiles/ToyCompiler.dir/lib/AST.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/AST.cpp > CMakeFiles/ToyCompiler.dir/lib/AST.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/AST.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/AST.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/AST.cpp -o CMakeFiles/ToyCompiler.dir/lib/AST.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/AST.cpp -o CMakeFiles/ToyCompiler.dir/lib/AST.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ASTPrinter.cpp
+CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o: /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp
 CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/ASTPrinter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.o -c /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/ASTPrinter.cpp > CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp > CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ASTPrinter.cpp -o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ASTPrinter.cpp -o CMakeFiles/ToyCompiler.dir/lib/ASTPrinter.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp
+CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/project/toy-compiler-/lib/Lowering.cpp
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o -c /home/shevo/project/toy-compiler-/lib/Lowering.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp > CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/Lowering.cpp > CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/Lowering.cpp -o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/Lowering.cpp -o CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp
+CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/project/toy-compiler-/lib/ToyDialect.cpp
 CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o -c /home/shevo/project/toy-compiler-/lib/ToyDialect.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp > CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ToyDialect.cpp > CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ToyDialect.cpp -o CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ToyDialect.cpp -o CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp
+CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: /home/shevo/project/toy-compiler-/lib/ToyOps.cpp
 CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o -c /home/shevo/project/toy-compiler-/lib/ToyOps.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp > CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ToyOps.cpp > CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ToyOps.cpp -o CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ToyOps.cpp -o CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp
+CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: /home/shevo/project/toy-compiler-/lib/ConstantToArith.cpp
 CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o -c /home/shevo/project/toy-compiler-/lib/ConstantToArith.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp > CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ConstantToArith.cpp > CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ConstantToArith.cpp -o CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ConstantToArith.cpp -o CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/ReturnToFunc.cpp
+CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o: /home/shevo/project/toy-compiler-/lib/ReturnToFunc.cpp
 CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/ReturnToFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o -c /home/shevo/project/toy-compiler-/lib/ReturnToFunc.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/ReturnToFunc.cpp > CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/ReturnToFunc.cpp > CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/ReturnToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/ReturnToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s
 
 CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/flags.make
-CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp
+CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: /home/shevo/project/toy-compiler-/lib/FuncToFunc.cpp
 CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: CMakeFiles/ToyCompiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -c /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -MF CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o.d -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o -c /home/shevo/project/toy-compiler-/lib/FuncToFunc.cpp
 
 CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp > CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shevo/project/toy-compiler-/lib/FuncToFunc.cpp > CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.i
 
 CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/CLionProjects/toy-compiler-/lib/FuncToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shevo/project/toy-compiler-/lib/FuncToFunc.cpp -o CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.s
 
 # Object files for target ToyCompiler
 ToyCompiler_OBJECTS = \
@@ -237,7 +237,7 @@ libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/build.make
 libToyCompiler.a: CMakeFiles/ToyCompiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libToyCompiler.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libToyCompiler.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ToyCompiler.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ToyCompiler.dir/link.txt --verbose=$(VERBOSE)
 
@@ -250,6 +250,6 @@ CMakeFiles/ToyCompiler.dir/clean:
 .PHONY : CMakeFiles/ToyCompiler.dir/clean
 
 CMakeFiles/ToyCompiler.dir/depend:
-	cd /home/shevo/CLionProjects/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/ToyCompiler.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/shevo/project/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build/CMakeFiles/ToyCompiler.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ToyCompiler.dir/depend
 

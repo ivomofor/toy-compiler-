@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shevo/CLionProjects/toy-compiler-
+CMAKE_SOURCE_DIR = /home/shevo/project/toy-compiler-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shevo/CLionProjects/toy-compiler-/build
+CMAKE_BINARY_DIR = /home/shevo/project/toy-compiler-/build
 
 # Utility rule file for ToyDialectIncGen.
 
@@ -71,15 +71,15 @@ CMakeFiles/ToyDialectIncGen: ToyDialect.h.inc
 CMakeFiles/ToyDialectIncGen: ToyDialect.cpp.inc
 CMakeFiles/ToyDialectIncGen: ToyDialect.cpp.inc
 
-ToyDialect.cpp.inc: /home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen
-ToyDialect.cpp.inc: /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ToyDialect.cpp.inc..."
-	/home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen -gen-dialect-defs -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/llvm-project-22.1.0.src/llvm/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/include -I/home/shevo/llvm-project-22.1.0.src/mlir/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.cpp.inc
+ToyDialect.cpp.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyDialect.cpp.inc: /home/shevo/project/toy-compiler-/dialects/ToyDialect.td
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ToyDialect.cpp.inc..."
+	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-dialect-defs -I /home/shevo/project/toy-compiler-/dialects -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyDialect.cpp.inc
 
-ToyDialect.h.inc: /home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen
-ToyDialect.h.inc: /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ToyDialect.h.inc..."
-	/home/shevo/llvm-project-22.1.0.src/build-rtti/bin/mlir-tblgen -gen-dialect-decls -I /home/shevo/CLionProjects/toy-compiler-/dialects -I/home/shevo/CLionProjects/toy-compiler- -I/home/shevo/llvm-project-22.1.0.src/llvm/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/include -I/home/shevo/llvm-project-22.1.0.src/mlir/include -I/home/shevo/llvm-project-22.1.0.src/build-rtti/tools/mlir/include /home/shevo/CLionProjects/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/CLionProjects/toy-compiler-/build/ToyDialect.h.inc
+ToyDialect.h.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyDialect.h.inc: /home/shevo/project/toy-compiler-/dialects/ToyDialect.td
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ToyDialect.h.inc..."
+	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-dialect-decls -I /home/shevo/project/toy-compiler-/dialects -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyDialect.h.inc
 
 ToyDialectIncGen: CMakeFiles/ToyDialectIncGen
 ToyDialectIncGen: ToyDialect.cpp.inc
@@ -96,6 +96,6 @@ CMakeFiles/ToyDialectIncGen.dir/clean:
 .PHONY : CMakeFiles/ToyDialectIncGen.dir/clean
 
 CMakeFiles/ToyDialectIncGen.dir/depend:
-	cd /home/shevo/CLionProjects/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler- /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build /home/shevo/CLionProjects/toy-compiler-/build/CMakeFiles/ToyDialectIncGen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/shevo/project/toy-compiler-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler- /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build /home/shevo/project/toy-compiler-/build/CMakeFiles/ToyDialectIncGen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ToyDialectIncGen.dir/depend
 

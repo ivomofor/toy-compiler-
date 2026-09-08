@@ -91,7 +91,8 @@ int main(int argc, char **argv) {
     try {
         module = lowering.lower(*program);
         llvm::outs() << "=== MLIR BEFORE PASSES ===\n";
-        module.dump();
+        //module.dump();
+        std::cout << "Module was created successfully.\n";
     } catch (const std::exception &e) {
         std::cerr << "Error during lowering: " << e.what() << '\n';
         return 1;

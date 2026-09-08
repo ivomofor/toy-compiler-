@@ -1,3 +1,7 @@
-fun main() {
+fun add() {
     return 42;
+}
+
+fun main() {
+    return add();
 }

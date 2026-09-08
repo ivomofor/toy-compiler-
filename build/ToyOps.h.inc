@@ -15,6 +15,12 @@ class AddOp;
 } // namespace toy
 namespace toy {
 
+/// Call a Toy function
+class CallOp;
+
+} // namespace toy
+namespace toy {
+
 /// Toy constant operation
 class ConstantOp;
 
@@ -225,6 +231,215 @@ public:
 
 } // namespace toy
 MLIR_DECLARE_EXPLICIT_TYPE_ID(::toy::AddOp)
+
+namespace toy {
+
+
+//===----------------------------------------------------------------------===//
+// ::toy::CallOp declarations
+//===----------------------------------------------------------------------===//
+
+namespace detail {
+
+class CallOpGenericAdaptorBase {
+public:
+  struct Properties {
+    using calleeTy = ::mlir::StringAttr;
+    calleeTy callee;
+
+    auto getCallee() const {
+      auto &propStorage = this->callee;
+      return ::llvm::cast<::mlir::StringAttr>(propStorage);
+    }
+    void setCallee(const ::mlir::StringAttr &propValue) {
+      this->callee = propValue;
+    }
+    bool operator==(const Properties &rhs) const {
+      return 
+        rhs.callee == this->callee &&
+        true;
+    }
+    bool operator!=(const Properties &rhs) const {
+      return !(*this == rhs);
+    }
+  };
+protected:
+  ::mlir::DictionaryAttr odsAttrs;
+  ::std::optional<::mlir::OperationName> odsOpName;
+  Properties properties;
+  ::mlir::RegionRange odsRegions;
+public:
+  CallOpGenericAdaptorBase(::mlir::DictionaryAttr attrs, const Properties &properties, ::mlir::RegionRange regions = {}) : odsAttrs(attrs), properties(properties), odsRegions(regions) {  if (odsAttrs)
+      odsOpName.emplace("toy.call", odsAttrs.getContext());
+  }
+
+  CallOpGenericAdaptorBase(CallOp op);
+
+  std::pair<unsigned, unsigned> getODSOperandIndexAndLength(unsigned index, unsigned odsOperandsSize) {
+    return {index, 1};
+  }
+
+  const Properties &getProperties() {
+    return properties;
+  }
+
+  ::mlir::DictionaryAttr getAttributes() {
+    return odsAttrs;
+  }
+
+  ::mlir::StringAttr getCalleeAttr() {
+    auto attr = ::llvm::cast<::mlir::StringAttr>(getProperties().callee);
+    return attr;
+  }
+
+  ::llvm::StringRef getCallee();
+};
+
+} // namespace detail
+template <typename RangeT>
+class CallOpGenericAdaptor : public detail::CallOpGenericAdaptorBase {
+  using ValueT = ::llvm::detail::ValueOfRange<RangeT>;
+  using Base = detail::CallOpGenericAdaptorBase;
+public:
+  CallOpGenericAdaptor(RangeT values, ::mlir::DictionaryAttr attrs, const Properties &properties, ::mlir::RegionRange regions = {}) : Base(attrs, properties, regions), odsOperands(values) {}
+
+  CallOpGenericAdaptor(RangeT values, ::mlir::DictionaryAttr attrs, ::mlir::OpaqueProperties properties, ::mlir::RegionRange regions = {}) : CallOpGenericAdaptor(values, attrs, (properties ? *properties.as<Properties *>() : Properties{}), regions) {}
+
+  CallOpGenericAdaptor(RangeT values, ::mlir::DictionaryAttr attrs = nullptr) : CallOpGenericAdaptor(values, attrs, Properties{}, {}) {}
+
+  CallOpGenericAdaptor(RangeT values, const CallOpGenericAdaptorBase &base) : Base(base), odsOperands(values) {}
+
+  template <typename LateInst = CallOp, typename = std::enable_if_t<std::is_same_v<LateInst, CallOp>>>
+  CallOpGenericAdaptor(RangeT values, LateInst op) : Base(op), odsOperands(values) {}
+
+  std::pair<unsigned, unsigned> getODSOperandIndexAndLength(unsigned index) {
+    return Base::getODSOperandIndexAndLength(index, odsOperands.size());
+  }
+
+  RangeT getODSOperands(unsigned index) {
+    auto valueRange = getODSOperandIndexAndLength(index);
+    return {std::next(odsOperands.begin(), valueRange.first),
+             std::next(odsOperands.begin(), valueRange.first + valueRange.second)};
+  }
+
+  RangeT getOperands() {
+    return odsOperands;
+  }
+
+private:
+  RangeT odsOperands;
+};
+class CallOpAdaptor : public CallOpGenericAdaptor<::mlir::ValueRange> {
+public:
+  using CallOpGenericAdaptor::CallOpGenericAdaptor;
+  CallOpAdaptor(CallOp op);
+
+  ::llvm::LogicalResult verify(::mlir::Location loc);
+};
+class CallOp : public ::mlir::Op<CallOp, ::mlir::OpTrait::ZeroRegions, ::mlir::OpTrait::OneResult, ::mlir::OpTrait::OneTypedResult<::mlir::IntegerType>::Impl, ::mlir::OpTrait::ZeroSuccessors, ::mlir::OpTrait::ZeroOperands, ::mlir::OpTrait::OpInvariants, ::mlir::BytecodeOpInterface::Trait> {
+public:
+  using Op::Op;
+  using Op::print;
+  using Adaptor = CallOpAdaptor;
+  template <typename RangeT>
+  using GenericAdaptor = CallOpGenericAdaptor<RangeT>;
+  using FoldAdaptor = GenericAdaptor<::llvm::ArrayRef<::mlir::Attribute>>;
+  using Properties = FoldAdaptor::Properties;
+  static ::llvm::ArrayRef<::llvm::StringRef> getAttributeNames() {
+    static ::llvm::StringRef attrNames[] = {::llvm::StringRef("callee")};
+    return ::llvm::ArrayRef(attrNames);
+  }
+
+  ::mlir::StringAttr getCalleeAttrName() {
+    return getAttributeNameForIndex(0);
+  }
+
+  static ::mlir::StringAttr getCalleeAttrName(::mlir::OperationName name) {
+    return getAttributeNameForIndex(name, 0);
+  }
+
+  static constexpr ::llvm::StringLiteral getOperationName() {
+    return ::llvm::StringLiteral("toy.call");
+  }
+
+  std::pair<unsigned, unsigned> getODSOperandIndexAndLength(unsigned index) {
+    return {index, 1};
+  }
+
+  ::mlir::Operation::operand_range getODSOperands(unsigned index) {
+    auto valueRange = getODSOperandIndexAndLength(index);
+    return {std::next(getOperation()->operand_begin(), valueRange.first),
+             std::next(getOperation()->operand_begin(), valueRange.first + valueRange.second)};
+  }
+
+  std::pair<unsigned, unsigned> getODSResultIndexAndLength(unsigned index) {
+    return {index, 1};
+  }
+
+  ::mlir::Operation::result_range getODSResults(unsigned index) {
+    auto valueRange = getODSResultIndexAndLength(index);
+    return {std::next(getOperation()->result_begin(), valueRange.first),
+             std::next(getOperation()->result_begin(), valueRange.first + valueRange.second)};
+  }
+
+  static ::llvm::LogicalResult setPropertiesFromAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError);
+  static ::mlir::Attribute getPropertiesAsAttr(::mlir::MLIRContext *ctx, const Properties &prop);
+  static llvm::hash_code computePropertiesHash(const Properties &prop);
+  static std::optional<mlir::Attribute> getInherentAttr(::mlir::MLIRContext *ctx, const Properties &prop, llvm::StringRef name);
+  static void setInherentAttr(Properties &prop, llvm::StringRef name, mlir::Attribute value);
+  static void populateInherentAttrs(::mlir::MLIRContext *ctx, const Properties &prop, ::mlir::NamedAttrList &attrs);
+  static ::llvm::LogicalResult verifyInherentAttrs(::mlir::OperationName opName, ::mlir::NamedAttrList &attrs, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError);
+  static ::llvm::LogicalResult readProperties(::mlir::DialectBytecodeReader &reader, ::mlir::OperationState &state);
+  void writeProperties(::mlir::DialectBytecodeWriter &writer);
+  ::mlir::StringAttr getCalleeAttr() {
+    return ::llvm::cast<::mlir::StringAttr>(getProperties().callee);
+  }
+
+  ::llvm::StringRef getCallee();
+  void setCalleeAttr(::mlir::StringAttr attr) {
+    getProperties().callee = attr;
+  }
+
+  void setCallee(::llvm::StringRef attrValue);
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, ::mlir::StringAttr callee);
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, ::mlir::StringAttr callee);
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, ::mlir::StringAttr callee);
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee);
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee);
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee);
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, ::llvm::StringRef callee);
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, ::llvm::StringRef callee);
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, ::llvm::StringRef callee);
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee);
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee);
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee);
+  static void build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes = {});
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes = {});
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes = {});
+  static void build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes = {});
+  static CallOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes = {});
+  static CallOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes = {});
+  ::llvm::LogicalResult verifyInvariantsImpl();
+  ::llvm::LogicalResult verifyInvariants();
+  static ::llvm::LogicalResult setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError);
+private:
+  ::mlir::StringAttr getAttributeNameForIndex(unsigned index) {
+    return getAttributeNameForIndex((*this)->getName(), index);
+  }
+
+  static ::mlir::StringAttr getAttributeNameForIndex(::mlir::OperationName name, unsigned index) {
+    assert(index < 1 && "invalid attribute index");
+    assert(name.getStringRef() == getOperationName() && "invalid operation name");
+    assert(name.isRegistered() && "Operation isn't registered, missing a "
+          "dependent dialect loading?");
+    return name.getAttributeNames()[index];
+  }
+
+public:
+};
+
+} // namespace toy
+MLIR_DECLARE_EXPLICIT_TYPE_ID(::toy::CallOp)
 
 namespace toy {
 

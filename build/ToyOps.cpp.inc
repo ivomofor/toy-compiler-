@@ -11,6 +11,7 @@
 #undef GET_OP_LIST
 
 ::toy::AddOp,
+::toy::CallOp,
 ::toy::ConstantOp,
 ::toy::DivOp,
 ::toy::FuncOp,
@@ -40,9 +41,9 @@ static ::llvm::LogicalResult __mlir_ods_local_type_constraint_ToyOps1(
 
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
     ::mlir::Attribute attr, ::llvm::StringRef attrName, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
-  if (attr && !(((::llvm::isa<::mlir::IntegerAttr>(attr))) && ((::llvm::cast<::mlir::IntegerAttr>(attr).getType().isSignlessInteger(32)))))
+  if (attr && !((::llvm::isa<::mlir::StringAttr>(attr))))
     return emitError() << "attribute '" << attrName
-        << "' failed to satisfy constraint: 32-bit signless integer attribute";
+        << "' failed to satisfy constraint: string attribute";
   return ::mlir::success();
 }
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
@@ -54,9 +55,9 @@ static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps1(
 
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps2(
     ::mlir::Attribute attr, ::llvm::StringRef attrName, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
-  if (attr && !((::llvm::isa<::mlir::StringAttr>(attr))))
+  if (attr && !(((::llvm::isa<::mlir::IntegerAttr>(attr))) && ((::llvm::cast<::mlir::IntegerAttr>(attr).getType().isSignlessInteger(32)))))
     return emitError() << "attribute '" << attrName
-        << "' failed to satisfy constraint: string attribute";
+        << "' failed to satisfy constraint: 32-bit signless integer attribute";
   return ::mlir::success();
 }
 static ::llvm::LogicalResult __mlir_ods_local_attr_constraint_ToyOps2(
@@ -270,6 +271,315 @@ namespace toy {
 
 
 //===----------------------------------------------------------------------===//
+// ::toy::CallOp definitions
+//===----------------------------------------------------------------------===//
+
+namespace detail {
+
+CallOpGenericAdaptorBase::CallOpGenericAdaptorBase(CallOp op) : odsAttrs(op->getRawDictionaryAttrs()), odsOpName(op->getName()), properties(op.getProperties()), odsRegions(op->getRegions()) {}
+
+::llvm::StringRef CallOpGenericAdaptorBase::getCallee() {
+  auto attr = getCalleeAttr();
+  return attr.getValue();
+}
+
+
+} // namespace detail
+CallOpAdaptor::CallOpAdaptor(CallOp op) : CallOpGenericAdaptor(op->getOperands(), op) {}
+
+::llvm::LogicalResult CallOpAdaptor::verify(::mlir::Location loc) {
+  auto tblgen_callee = getProperties().callee; (void)tblgen_callee;
+  if (!tblgen_callee) return emitError(loc, "'toy.call' op requires attribute 'callee'");
+
+  if (tblgen_callee && !((::llvm::isa<::mlir::StringAttr>(tblgen_callee))))
+    return emitError(loc, "'toy.call' op attribute 'callee' failed to satisfy constraint: string attribute");
+  return ::mlir::success();
+}
+
+::llvm::LogicalResult CallOp::setPropertiesFromAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+  ::mlir::DictionaryAttr dict = ::llvm::dyn_cast<::mlir::DictionaryAttr>(attr);
+  if (!dict) {
+    emitError() << "expected DictionaryAttr to set properties";
+    return ::mlir::failure();
+  }
+
+  {
+    auto &propStorage = prop.callee;
+       auto attr = dict.get("callee");
+    if (attr) {
+      auto convertedAttr = ::llvm::dyn_cast<std::remove_reference_t<decltype(propStorage)>>(attr);
+      if (convertedAttr) {
+        propStorage = convertedAttr;
+      } else {
+        emitError() << "Invalid attribute `callee` in property conversion: " << attr;
+        return ::mlir::failure();
+      }
+    }
+  }
+  return ::mlir::success();
+}
+
+::mlir::Attribute CallOp::getPropertiesAsAttr(::mlir::MLIRContext *ctx, const Properties &prop) {
+    ::mlir::SmallVector<::mlir::NamedAttribute> attrs;
+    ::mlir::Builder odsBuilder{ctx};
+
+    {
+      const auto &propStorage = prop.callee;
+      if (propStorage)
+        attrs.push_back(odsBuilder.getNamedAttr("callee",
+                                       propStorage));
+    }
+
+  if (!attrs.empty())
+    return odsBuilder.getDictionaryAttr(attrs);
+  return {};
+}
+
+llvm::hash_code CallOp::computePropertiesHash(const Properties &prop) {
+  using llvm::hash_value;
+  return llvm::hash_combine(
+    llvm::hash_value(prop.callee.getAsOpaquePointer()));
+}
+
+std::optional<mlir::Attribute> CallOp::getInherentAttr(::mlir::MLIRContext *ctx, const Properties &prop, llvm::StringRef name) {
+    if (name == "callee")
+      return prop.callee;
+  return std::nullopt;
+}
+
+void CallOp::setInherentAttr(Properties &prop, llvm::StringRef name, mlir::Attribute value) {
+    if (name == "callee") {
+       prop.callee = ::llvm::dyn_cast_or_null<std::remove_reference_t<decltype(prop.callee)>>(value);
+       return;
+    }
+}
+
+void CallOp::populateInherentAttrs(::mlir::MLIRContext *ctx, const Properties &prop, ::mlir::NamedAttrList &attrs) {
+    if (prop.callee) attrs.append("callee", prop.callee);
+}
+
+::llvm::LogicalResult CallOp::verifyInherentAttrs(::mlir::OperationName opName, ::mlir::NamedAttrList &attrs, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+    {
+      ::mlir::Attribute attr = attrs.get(getCalleeAttrName(opName));
+      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(attr, "callee", emitError)))
+        return ::mlir::failure();
+    }
+    return ::mlir::success();
+}
+
+::llvm::LogicalResult CallOp::readProperties(::mlir::DialectBytecodeReader &reader, ::mlir::OperationState &state) {
+  auto &prop = state.getOrAddProperties<Properties>(); (void)prop;
+  if (::mlir::failed(reader.readAttribute(prop.callee)))
+    return ::mlir::failure();
+  return ::mlir::success();
+}
+
+void CallOp::writeProperties(::mlir::DialectBytecodeWriter &writer) {
+  auto &prop = getProperties(); (void)prop;
+  writer.writeAttribute(prop.callee);
+}
+
+::llvm::StringRef CallOp::getCallee() {
+  auto attr = getCalleeAttr();
+  return attr.getValue();
+}
+
+void CallOp::setCallee(::llvm::StringRef attrValue) {
+  getProperties().callee = ::mlir::Builder((*this)->getContext()).getStringAttr(attrValue);
+}
+
+void CallOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, ::mlir::StringAttr callee) {
+  odsState.getOrAddProperties<Properties>().callee = callee;
+  odsState.addTypes(resultType0);
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, ::mlir::StringAttr callee) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(callee)>(callee));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, ::mlir::StringAttr callee) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(callee)>(callee));
+}
+
+void CallOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee) {
+  odsState.getOrAddProperties<Properties>().callee = callee;
+  assert(resultTypes.size() == 1u && "mismatched number of results");
+  odsState.addTypes(resultTypes);
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(callee)>(callee));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::StringAttr callee) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(callee)>(callee));
+}
+
+void CallOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::Type resultType0, ::llvm::StringRef callee) {
+  odsState.getOrAddProperties<Properties>().callee = odsBuilder.getStringAttr(callee);
+  odsState.addTypes(resultType0);
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::Type resultType0, ::llvm::StringRef callee) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(callee)>(callee));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Type resultType0, ::llvm::StringRef callee) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultType0)>(resultType0), std::forward<decltype(callee)>(callee));
+}
+
+void CallOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee) {
+  odsState.getOrAddProperties<Properties>().callee = odsBuilder.getStringAttr(callee);
+  assert(resultTypes.size() == 1u && "mismatched number of results");
+  odsState.addTypes(resultTypes);
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(callee)>(callee));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::llvm::StringRef callee) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(callee)>(callee));
+}
+
+void CallOp::build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  assert(operands.size() == 0u && "mismatched number of parameters");
+  odsState.addOperands(operands);
+  odsState.addAttributes(attributes);
+  assert(resultTypes.size() == 1u && "mismatched number of return types");
+  odsState.addTypes(resultTypes);
+
+  if (!attributes.empty()) {
+    ::mlir::OpaqueProperties properties =
+      &odsState.getOrAddProperties<CallOp::Properties>();
+    std::optional<::mlir::RegisteredOperationName> info =
+      odsState.name.getRegisteredInfo();
+    if (failed(info->setOpPropertiesFromAttribute(odsState.name, properties,
+        odsState.attributes.getDictionary(odsState.getContext()), nullptr)))
+      ::llvm::report_fatal_error("Property conversion failed.");
+  }
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(attributes)>(attributes));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, ::llvm::ArrayRef<::mlir::NamedAttribute> attributes) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(attributes)>(attributes));
+}
+
+void CallOp::build(::mlir::OpBuilder &, ::mlir::OperationState &odsState, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  assert(operands.size() == 0u && "mismatched number of parameters");
+  odsState.addOperands(operands);
+  odsState.useProperties(const_cast<Properties&>(properties));
+  odsState.addAttributes(discardableAttributes);
+  assert(resultTypes.size() == 1u && "mismatched number of return types");
+  odsState.addTypes(resultTypes);
+}
+
+CallOp CallOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(properties)>(properties), std::forward<decltype(discardableAttributes)>(discardableAttributes));
+  auto __res__ = ::llvm::dyn_cast<CallOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+CallOp CallOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes) {
+  return create(builder, builder.getLoc(), std::forward<decltype(resultTypes)>(resultTypes), std::forward<decltype(operands)>(operands), std::forward<decltype(properties)>(properties), std::forward<decltype(discardableAttributes)>(discardableAttributes));
+}
+
+::llvm::LogicalResult CallOp::verifyInvariantsImpl() {
+  auto tblgen_callee = getProperties().callee; (void)tblgen_callee;
+  if (!tblgen_callee) return emitOpError("requires attribute 'callee'");
+
+  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(*this, tblgen_callee, "callee")))
+    return ::mlir::failure();
+  {
+    unsigned index = 0; (void)index;
+    auto valueGroup0 = getODSResults(0);
+
+    for (auto v : valueGroup0) {
+      if (::mlir::failed(__mlir_ods_local_type_constraint_ToyOps1(*this, v.getType(), "result", index++)))
+        return ::mlir::failure();
+    }
+  }
+  return ::mlir::success();
+}
+
+::llvm::LogicalResult CallOp::verifyInvariants() {
+  return verifyInvariantsImpl();
+}
+
+::llvm::LogicalResult CallOp::setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
+  ::mlir::DictionaryAttr dict = ::llvm::dyn_cast<::mlir::DictionaryAttr>(attr);
+  if (!dict) {
+    emitError() << "expected DictionaryAttr to set properties";
+    return ::mlir::failure();
+  }
+  // keep track of used keys in the input dictionary to be able to error out
+  // if there are some unknown ones.
+  ::mlir::DenseSet<::mlir::StringAttr> usedKeys;
+  ::mlir::MLIRContext *ctx = dict.getContext();
+  (void)ctx;
+  {
+
+    auto &propStorage = prop.callee;
+    auto calleeAttrName = ::mlir::StringAttr::get(ctx, "callee");
+    auto attr = dict.get(calleeAttrName);
+    usedKeys.insert(calleeAttrName);
+    if (attr || /*isRequired=*/true) {
+      if (!attr) {
+        emitError() << "expected key entry for callee in DictionaryAttr to set "
+                   "Properties.";
+        return ::mlir::failure();
+      }
+      auto convertedAttr = ::llvm::dyn_cast<std::remove_reference_t<decltype(propStorage)>>(attr);
+      if (convertedAttr) {
+        propStorage = convertedAttr;
+      } else {
+        emitError() << "Invalid attribute `callee` in property conversion: " << attr;
+        return ::mlir::failure();
+      }
+    }
+  }
+
+  for (::mlir::NamedAttribute attr : dict) {
+    if (!usedKeys.contains(attr.getName()))
+      return emitError() << "unknown key '" << attr.getName() <<
+          "' when parsing properties dictionary";
+  }
+  return ::mlir::success();
+}
+
+
+} // namespace toy
+MLIR_DEFINE_EXPLICIT_TYPE_ID(::toy::CallOp)
+
+namespace toy {
+
+
+//===----------------------------------------------------------------------===//
 // ::toy::ConstantOp definitions
 //===----------------------------------------------------------------------===//
 
@@ -360,7 +670,7 @@ void ConstantOp::populateInherentAttrs(::mlir::MLIRContext *ctx, const Propertie
 ::llvm::LogicalResult ConstantOp::verifyInherentAttrs(::mlir::OperationName opName, ::mlir::NamedAttrList &attrs, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
     {
       ::mlir::Attribute attr = attrs.get(getValueAttrName(opName));
-      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(attr, "value", emitError)))
+      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(attr, "value", emitError)))
         return ::mlir::failure();
     }
     return ::mlir::success();
@@ -512,7 +822,7 @@ ConstantOp ConstantOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::Typ
   auto tblgen_value = getProperties().value; (void)tblgen_value;
   if (!tblgen_value) return emitOpError("requires attribute 'value'");
 
-  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(*this, tblgen_value, "value")))
+  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(*this, tblgen_value, "value")))
     return ::mlir::failure();
   {
     unsigned index = 0; (void)index;
@@ -859,7 +1169,7 @@ void FuncOp::populateInherentAttrs(::mlir::MLIRContext *ctx, const Properties &p
 ::llvm::LogicalResult FuncOp::verifyInherentAttrs(::mlir::OperationName opName, ::mlir::NamedAttrList &attrs, llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
     {
       ::mlir::Attribute attr = attrs.get(getSymNameAttrName(opName));
-      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(attr, "sym_name", emitError)))
+      if (attr && ::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(attr, "sym_name", emitError)))
         return ::mlir::failure();
     }
     return ::mlir::success();
@@ -1017,7 +1327,7 @@ FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange r
   auto tblgen_sym_name = getProperties().sym_name; (void)tblgen_sym_name;
   if (!tblgen_sym_name) return emitOpError("requires attribute 'sym_name'");
 
-  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps2(*this, tblgen_sym_name, "sym_name")))
+  if (::mlir::failed(__mlir_ods_local_attr_constraint_ToyOps1(*this, tblgen_sym_name, "sym_name")))
     return ::mlir::failure();
   {
     unsigned index = 0; (void)index;
