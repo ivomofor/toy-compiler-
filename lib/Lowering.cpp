@@ -33,51 +33,42 @@ namespace toy {
     mlir::ModuleOp module,
     const FunctionDecl &function) {
 
-        std::cerr << "DEBUG 1: lowering function: "
-                  << function.name << "\n";
-
         symbolTable.clear();
 
-        std::cerr << "DEBUG 2: creating toy.func\n";
+        llvm::SmallVector<mlir::Attribute> parameters;
 
-        auto func = toy::FuncOp::create(
-            builder,
-            builder.getUnknownLoc(),
-            builder.getStringAttr(function.name));
+        for (const auto &parameter : function.parameters) {
+            parameters.push_back(
+                builder.getStringAttr(parameter));
+        }
 
-        std::cerr << "DEBUG 3: toy.func created\n";
+        auto parameterAttr =
+            builder.getArrayAttr(parameters);
+
+        auto func =
+            toy::FuncOp::create(
+                builder,
+                builder.getUnknownLoc(),
+                builder.getStringAttr(function.name),
+                parameterAttr);
 
         auto &body = func.getBody();
 
-        std::cerr << "DEBUG 4: got body\n";
-
-        body.push_back(new mlir::Block());
-
-        std::cerr << "DEBUG 5: added block\n";
-
-        auto *entryBlock = &body.front();
+        auto *entryBlock =
+            builder.createBlock(&body);
 
         builder.setInsertionPointToEnd(entryBlock);
 
-        std::cerr << "DEBUG 6: insertion point set\n";
-
         for (const auto &statement : function.body) {
-
-            std::cerr << "DEBUG 7: lowering statement\n";
-
             lowerStatement(*statement);
-
-            std::cerr << "DEBUG 8: statement lowered\n";
         }
-
-        std::cerr << "DEBUG 9: all statements lowered\n";
 
         module.push_back(func);
 
-        std::cerr << "DEBUG 10: function added to module\n";
-
-        if (function.body.empty())
-            throw std::runtime_error("Function contains no body");
+        if (function.body.empty()) {
+            throw std::runtime_error(
+                "Function contains no body");
+        }
     }
     /*
     void Lowering::lowerFunction(mlir::ModuleOp module,const FunctionDecl &function) {
@@ -162,26 +153,6 @@ namespace toy {
                 default:
                     throw std::runtime_error("Unsupported binary operator");
             }
-        }
-
-        if (expression.getKind() == ASTNodeKind::CallExpression) {
-            auto *call = static_cast<const CallExpression *>(&expression);
-
-            std::cerr << "DEBUG: lowering call to " << call->callee << "\n";
-
-            auto callee = builder.getStringAttr(call->callee);
-
-            std::cerr << "DEBUG: creating toy.call\n";
-
-            auto callOp = toy::CallOp::create(
-                builder,
-                mlir::UnknownLoc::get(&context),
-                builder.getI32Type(),
-                callee);
-
-            std::cerr << "DEBUG: toy.call created\n";
-
-            return callOp.getResult();
         }
 
         if (expression.getKind() == ASTNodeKind::VariableReference) {

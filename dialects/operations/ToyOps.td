@@ -37,28 +37,15 @@ def Toy_ReturnOp : Toy_Op<"return"> {
   let traits = [Terminator];
 }
 
-def Toy_FuncOp : Toy_Op<"func"> {
-    let summary = "Toy function operation";
+def Toy_FuncOp : Toy_Op<"fun"> {
+  let summary = "Toy function operation";
 
-    let arguments = (ins
-        StrAttr:$sym_name
-    );
+  let arguments = (ins
+    StrAttr:$sym_name,
+    ArrayAttr:$parameters
+  );
 
-    let results = (outs);
+  let results = (outs);
 
-    let regions = (region AnyRegion:$body);
+  let regions = (region AnyRegion:$body);
 }
-
-def Toy_CallOp : Toy_Op<"call"> {
-    let summary = "Call a Toy function";
-
-    let arguments = (ins
-        StrAttr:$callee
-    );
-
-    let results = (outs I32);
-}
-
-
-
-

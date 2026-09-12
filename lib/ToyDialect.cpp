@@ -17,8 +17,7 @@ namespace toy {
             MulOp,
             DivOp,
             ReturnOp,
-            FuncOp,
-            CallOp
+            FuncOp
         >();
     }
 
