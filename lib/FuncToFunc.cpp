@@ -16,26 +16,44 @@ namespace toy {
         public:
             using mlir::OpRewritePattern<toy::FuncOp>::OpRewritePattern;
 
-            mlir::LogicalResult matchAndRewrite(toy::FuncOp op, mlir::PatternRewriter &rewriter) const override {
+            mlir::LogicalResult matchAndRewrite(
+                toy::FuncOp op,
+                mlir::PatternRewriter &rewriter) const override {
 
                 auto name = op.getSymName();
 
                 auto i32Type = rewriter.getI32Type();
-                auto funcType = rewriter.getFunctionType({}, i32Type);
-                auto newFunc = mlir::func::FuncOp::create(rewriter , op.getLoc(), name, funcType);
-                //rewriter.inlineRegionBefore(op.getBody(), newFunc.getBody(), newFunc.getBody().end());
-                //auto &oldBlock = op.getBody().front();
-                //auto &newBlock = newFunc.getBody().front();
-                //rewriter.mergeBlocks(&oldBlock, &newBlock);
+
+                llvm::SmallVector<mlir::Type> inputTypes;
+
+                for (auto parameter : op.getParameters()) {
+                    inputTypes.push_back(i32Type);
+                }
+
+                auto funcType =
+                    rewriter.getFunctionType(
+                        inputTypes,
+                        i32Type);
+
+                auto newFunc =
+                    mlir::func::FuncOp::create(
+                        rewriter,
+                        op.getLoc(),
+                        name,
+                        funcType);
+
                 newFunc.getBody().takeBody(op.getBody());
+
                 rewriter.replaceOp(op, newFunc);
 
                 return mlir::success();
             }
         };
 
-
-        class FuncToFuncPass : public mlir::PassWrapper<FuncToFuncPass, mlir::OperationPass<mlir::ModuleOp>> {
+        class FuncToFuncPass
+            : public mlir::PassWrapper<
+                  FuncToFuncPass,
+                  mlir::OperationPass<mlir::ModuleOp>> {
 
         public:
             void runOnOperation() override {
@@ -43,16 +61,19 @@ namespace toy {
 
                 patterns.add<FuncToFuncPattern>(&getContext());
 
-                if (mlir::failed(mlir::applyPatternsGreedily(getOperation(), std::move(patterns)))) {
+                if (mlir::failed(
+                        mlir::applyPatternsGreedily(
+                            getOperation(),
+                            std::move(patterns)))) {
                     signalPassFailure();
-                }
+                            }
             }
         };
 
-    } // namespace
+    }
 
     std::unique_ptr<mlir::Pass> createFuncToFuncPass() {
         return std::make_unique<FuncToFuncPass>();
     }
 
-} // namespace toy
+}

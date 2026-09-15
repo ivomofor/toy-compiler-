@@ -57,6 +57,15 @@ namespace toy {
         auto *entryBlock =
             builder.createBlock(&body);
 
+        for (const auto &parameter : function.parameters) {
+            auto argument =
+                entryBlock->addArgument(
+                    builder.getI32Type(),
+                    builder.getUnknownLoc());
+
+            symbolTable[parameter] = argument;
+        }
+
         builder.setInsertionPointToEnd(entryBlock);
 
         for (const auto &statement : function.body) {
@@ -156,21 +165,26 @@ namespace toy {
         }
 
         if (expression.getKind() == ASTNodeKind::VariableReference) {
-            auto *variable = static_cast<const VariableReference *>(&expression);
+            auto *variable =
+                static_cast<const VariableReference *>(&expression);
 
-            auto it = symbolTable.find(variable->name);
+            auto it =
+                symbolTable.find(variable->name);
 
             if (it == symbolTable.end()) {
                 throw std::runtime_error(
-                    "Undefined variable: " + variable->name);
+                    "Undefined variable: " +
+                    variable->name);
             }
 
-            auto location = builder.getUnknownLoc();
+            if (llvm::isa<mlir::MemRefType>(it->second.getType())) {
+                return mlir::memref::LoadOp::create(
+                    builder,
+                    builder.getUnknownLoc(),
+                    it->second);
+            }
 
-            return mlir::memref::LoadOp::create(
-                builder,
-                location,
-                it->second);
+            return it->second;
         }
         throw std::runtime_error("Unsupported expression in lowering");
     }
