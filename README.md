@@ -813,8 +813,8 @@ The current custom-dialect roadmap includes:
 * |x| `toy.div`
 * |x| `toy.return`
 * |x| `toy.func`
-* | | `toy.call`
-* | | Function arguments
+* |x| `toy.call`
+* |x | Function arguments
 * | | `toy.print`
 * | | Operation verification
 * | | Operation builders
