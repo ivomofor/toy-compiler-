@@ -192,57 +192,45 @@ namespace toy {
     void Lowering::lowerStatement(const Statement &statement) {
 
         if (statement.getKind() == ASTNodeKind::VariableDecl) {
-            auto *variableDecl =
-                static_cast<const VariableDecl *>(&statement);
-
+            auto *variableDecl = static_cast<const VariableDecl *>(&statement);
             auto location = builder.getUnknownLoc();
             auto i32Type = builder.getI32Type();
             auto memrefType = mlir::MemRefType::get({}, i32Type);
-
-            auto memory =
-                mlir::memref::AllocaOp::create(
-                    builder,
-                    location,
-                    memrefType);
-
-            mlir::Value value =
-                lowerExpression(*variableDecl->initializer);
-
-            mlir::memref::StoreOp::create(
-                builder,
-                location,
-                value,
-                memory);
-
+            auto memory = mlir::memref::AllocaOp::create(builder, location, memrefType);
+            mlir::Value value = lowerExpression(*variableDecl->initializer);
+            mlir::memref::StoreOp::create(builder, location, value, memory);
             symbolTable[variableDecl->name] = memory;
-
             return;
         }
 
         if (statement.getKind() == ASTNodeKind::IfStmt) {
             auto *ifStmt = static_cast<const IfStmt *>(&statement);
-
             lowerIfStatement(*ifStmt);
             return;
         }
 
-      
         if (statement.getKind() == ASTNodeKind::WhileStmt) {
             auto *whileStmt = static_cast<const WhileStmt *>(&statement);
             lowerWhileStatement(*whileStmt);
             return;
         }
 
+        if (statement.getKind() == ASTNodeKind::PrintStmt) {
+            auto *printStmt = static_cast<const PrintStmt *>(&statement);
+            mlir::Value value = lowerExpression(*printStmt->value);
+            if (!value)
+                throw std::runtime_error("Failed to lower print expression");
+
+            toy::PrintOp::create(builder,mlir::UnknownLoc::get(&context),value);
+            return;
+        }
+
         if (statement.getKind() == ASTNodeKind::ReturnStmt) {
             auto *returnStmt = static_cast<const ReturnStmt *>(&statement);
-
             mlir::Value value =lowerExpression(*returnStmt->value);
-
             if (!value)
                 throw std::runtime_error("Failed to lower return expression");
-
             toy::ReturnOp::create(builder, mlir::UnknownLoc::get(&context), value);
-
             return;
         }
         throw std::runtime_error("Unsupported statement in lowering");
@@ -263,15 +251,11 @@ namespace toy {
     void Lowering::lowerWhileStatement(const WhileStmt &stmt) {
 
         auto whileOp = mlir::scf::WhileOp::create(builder,builder.getUnknownLoc(),mlir::TypeRange{},mlir::ValueRange{});
-
         auto &beforeRegion = whileOp.getBefore();
         auto &afterRegion  = whileOp.getAfter();
-
         builder.createBlock(&beforeRegion);
         builder.setInsertionPointToStart(&beforeRegion.front());
-
         auto condition = lowerExpression(*stmt.condition);
-
         mlir::scf::ConditionOp::create(builder,builder.getUnknownLoc(),condition,mlir::ValueRange{});
         builder.createBlock(&afterRegion);
         builder.setInsertionPointToStart(&afterRegion.front());

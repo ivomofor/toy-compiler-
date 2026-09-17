@@ -36,6 +36,8 @@ namespace toy {
             return {TokenKind::If, text};
         if (text == "while")
             return {TokenKind::While, text};
+        if (text == "print")
+            return {TokenKind::Print, text};
         return {TokenKind::Identifier, text};
     }
 

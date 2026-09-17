@@ -49,3 +49,9 @@ def Toy_FuncOp : Toy_Op<"fun"> {
 
   let regions = (region AnyRegion:$body);
 }
+
+def Toy_PrintOp : Toy_Op<"print"> {
+  let summary = "Print a Toy integer";
+  let arguments = (ins I32:$value);
+  let results = (outs);
+}

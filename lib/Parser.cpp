@@ -144,6 +144,10 @@ namespace toy {
             return std::make_unique<ReturnStmt>(std::move(value));
         }
 
+        if (currentToken.kind == TokenKind::Print) {
+            return parsePrintStatement();
+        }
+        
         if (currentToken.kind == TokenKind::If) {
             return parseIfStatement();
         }
@@ -207,6 +211,17 @@ namespace toy {
         match(TokenKind::RBrace);
 
         return std::make_unique<WhileStmt>(std::move(condition),std::move(body));
+    }
+
+    std::unique_ptr<Statement> Parser::parsePrintStatement() {
+
+        match(TokenKind::Print);
+
+        auto value = parseExpression();
+
+        match(TokenKind::Semicolon);
+
+        return std::make_unique<PrintStmt>(std::move(value));
     }
 
     std::unique_ptr<FunctionDecl> Parser::parseFunction() {

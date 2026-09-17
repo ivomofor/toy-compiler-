@@ -11,6 +11,7 @@ namespace toy {
         Program,
         FunctionDecl,
         ReturnStmt,
+        PrintStmt,
         VariableDecl,
         IfStmt,
         WhileStmt,
@@ -77,6 +78,16 @@ namespace toy {
 
         std::unique_ptr<Expression> value;
     };
+
+    class PrintStmt : public Statement {
+    public:
+        explicit PrintStmt(std::unique_ptr<Expression> value)
+            : Statement(ASTNodeKind::PrintStmt),
+              value(std::move(value)) {}
+
+        std::unique_ptr<Expression> value;
+    };
+    
     class VariableDecl : public Statement {
     public:
         VariableDecl(std::string name, std::unique_ptr<Expression> initializer)

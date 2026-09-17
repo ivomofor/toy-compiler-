@@ -103,6 +103,17 @@ namespace toy {
             printExpression(*returnStmt->value, indent + 2);
             return;
         }
+
+        if (statement.getKind() == ASTNodeKind::PrintStmt) {
+            auto *printStmt =
+                static_cast<const PrintStmt *>(&statement);
+
+            printIndent(indent);
+            std::cout << "Print\n";
+
+            printExpression(*printStmt->value, indent + 2);
+            return;
+        }
     }
 
    

@@ -17,6 +17,7 @@ enum class TokenKind {
     Var,
     If,
     While,
+    Print,
 
     LParen,
     RParen,
