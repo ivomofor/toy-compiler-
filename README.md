@@ -815,7 +815,7 @@ The current custom-dialect roadmap includes:
 * |x| `toy.func`
 * |-| `toy.call`
 * |x | Function arguments
-* | | `toy.print`
+* |x| `toy.print`
 * | | Operation verification
 * | | Operation builders
 * | | Operation traits
