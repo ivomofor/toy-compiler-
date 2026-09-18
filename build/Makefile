@@ -466,6 +466,30 @@ lib/Parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.s
 .PHONY : lib/Parser.cpp.s
 
+lib/PrintToStandard.o: lib/PrintToStandard.cpp.o
+.PHONY : lib/PrintToStandard.o
+
+# target to build an object file
+lib/PrintToStandard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o
+.PHONY : lib/PrintToStandard.cpp.o
+
+lib/PrintToStandard.i: lib/PrintToStandard.cpp.i
+.PHONY : lib/PrintToStandard.i
+
+# target to preprocess a source file
+lib/PrintToStandard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.i
+.PHONY : lib/PrintToStandard.cpp.i
+
+lib/PrintToStandard.s: lib/PrintToStandard.cpp.s
+.PHONY : lib/PrintToStandard.s
+
+# target to generate assembly for a file
+lib/PrintToStandard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.s
+.PHONY : lib/PrintToStandard.cpp.s
+
 lib/ReturnToFunc.o: lib/ReturnToFunc.cpp.o
 .PHONY : lib/ReturnToFunc.o
 
@@ -629,6 +653,9 @@ help:
 	@echo "... lib/Parser.o"
 	@echo "... lib/Parser.i"
 	@echo "... lib/Parser.s"
+	@echo "... lib/PrintToStandard.o"
+	@echo "... lib/PrintToStandard.i"
+	@echo "... lib/PrintToStandard.s"
 	@echo "... lib/ReturnToFunc.o"
 	@echo "... lib/ReturnToFunc.i"
 	@echo "... lib/ReturnToFunc.s"

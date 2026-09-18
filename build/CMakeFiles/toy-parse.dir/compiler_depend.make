@@ -304,6 +304,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
   /home/shevo/project/toy-compiler-/include/toy/Lexer.h \
   /home/shevo/project/toy-compiler-/include/toy/Lowering.h \
   /home/shevo/project/toy-compiler-/include/toy/Parser.h \
+  /home/shevo/project/toy-compiler-/include/toy/PrintToStandard.h \
   /home/shevo/project/toy-compiler-/include/toy/ReturnToFunc.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -688,6 +689,8 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/MemOpInterfaces.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APFloat.h:
@@ -917,8 +920,6 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/LLVMIR/LLVMOpsEnums.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/Comdat.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ArrayRef.h:
 
@@ -1462,6 +1463,18 @@ ToyDialect.h.inc:
 
 /usr/include/assert.h:
 
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/ilist_node_base.h:
+
+/home/shevo/project/toy-compiler-/include/toy/PrintToStandard.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
+
 /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h:
 
 /usr/include/alloca.h:
@@ -1611,14 +1624,6 @@ ToyOps.h.inc:
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/wchar.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/raw_ostream.h:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/DeviceMappingInterface.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h:
 
@@ -1821,5 +1826,3 @@ ToyOps.h.inc:
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:

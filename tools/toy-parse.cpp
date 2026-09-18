@@ -6,6 +6,7 @@
 #include "toy/ConstantToArith.h"
 #include "toy/FuncToFunc.h"
 #include "toy/ReturnToFunc.h"
+#include "toy/PrintToStandard.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -112,6 +113,7 @@ int main(int argc, char **argv) {
     */
     pm.addPass(toy::createFuncToFuncPass());
     pm.addPass(toy::createConstantToArithPass());
+    pm.addPass(toy::createPrintToStandardPass());
     pm.addPass(mlir::createCanonicalizerPass());
     pm.addPass(toy::createReturnToFuncPass());
 

@@ -73,6 +73,7 @@ add_library(ToyCompiler
         lib/ConstantToArith.cpp
         lib/ReturnToFunc.cpp
         lib/FuncToFunc.cpp
+        lib/PrintToStandard.cpp
 )
 
 set_source_files_properties(

@@ -305,6 +305,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o
  /home/shevo/project/toy-compiler-/include/toy/Lexer.h
  /home/shevo/project/toy-compiler-/include/toy/Lowering.h
  /home/shevo/project/toy-compiler-/include/toy/Parser.h
+ /home/shevo/project/toy-compiler-/include/toy/PrintToStandard.h
  /home/shevo/project/toy-compiler-/include/toy/ReturnToFunc.h
  /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h
  /home/shevo/project/toy-compiler-/include/toy/ToyOps.h

@@ -423,6 +423,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /usr/include/c++/13/atomic \
  /home/shevo/project/toy-compiler-/include/toy/FuncToFunc.h \
  /home/shevo/project/toy-compiler-/include/toy/ReturnToFunc.h \
+ /home/shevo/project/toy-compiler-/include/toy/PrintToStandard.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/SCF/IR/SCF.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/Utils/Utils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Matchers.h \

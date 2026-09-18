@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o.d"
+  "CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o"
+  "CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o"

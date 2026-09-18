@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shevo/project/toy-compiler-/lib/Lexer.cpp" "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Lexer.cpp.o.d"
   "/home/shevo/project/toy-compiler-/lib/Lowering.cpp" "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o.d"
   "/home/shevo/project/toy-compiler-/lib/Parser.cpp" "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/Parser.cpp.o.d"
+  "/home/shevo/project/toy-compiler-/lib/PrintToStandard.cpp" "CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o.d"
   "/home/shevo/project/toy-compiler-/lib/ReturnToFunc.cpp" "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o.d"
   "/home/shevo/project/toy-compiler-/lib/ToyDialect.cpp" "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d"
   "/home/shevo/project/toy-compiler-/lib/ToyOps.cpp" "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o" "gcc" "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o.d"
