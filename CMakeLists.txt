@@ -76,6 +76,10 @@ add_library(ToyCompiler
         lib/PrintToStandard.cpp
 )
 
+add_library(ToyRuntime
+        runtime/toy_runtime.cpp
+)
+
 set_source_files_properties(
         lib/ToyDialect.cpp
         lib/ConstantToArith.cpp

@@ -79,6 +79,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ToyDialectIncGen.dir/DependInfo.cmake"
   "CMakeFiles/ToyOpsIncGen.dir/DependInfo.cmake"
   "CMakeFiles/ToyCompiler.dir/DependInfo.cmake"
+  "CMakeFiles/ToyRuntime.dir/DependInfo.cmake"
   "CMakeFiles/toy-lex.dir/DependInfo.cmake"
   "CMakeFiles/toy-parse.dir/DependInfo.cmake"
   )

@@ -273,6 +273,19 @@ ToyCompiler/fast:
 .PHONY : ToyCompiler/fast
 
 #=============================================================================
+# Target rules for targets named ToyRuntime
+
+# Build rule for target.
+ToyRuntime: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ToyRuntime
+.PHONY : ToyRuntime
+
+# fast build rule for target.
+ToyRuntime/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyRuntime.dir/build.make CMakeFiles/ToyRuntime.dir/build
+.PHONY : ToyRuntime/fast
+
+#=============================================================================
 # Target rules for targets named toy-lex
 
 # Build rule for target.
@@ -562,6 +575,30 @@ lib/ToyOps.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.s
 .PHONY : lib/ToyOps.cpp.s
 
+runtime/toy_runtime.o: runtime/toy_runtime.cpp.o
+.PHONY : runtime/toy_runtime.o
+
+# target to build an object file
+runtime/toy_runtime.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyRuntime.dir/build.make CMakeFiles/ToyRuntime.dir/runtime/toy_runtime.cpp.o
+.PHONY : runtime/toy_runtime.cpp.o
+
+runtime/toy_runtime.i: runtime/toy_runtime.cpp.i
+.PHONY : runtime/toy_runtime.i
+
+# target to preprocess a source file
+runtime/toy_runtime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyRuntime.dir/build.make CMakeFiles/ToyRuntime.dir/runtime/toy_runtime.cpp.i
+.PHONY : runtime/toy_runtime.cpp.i
+
+runtime/toy_runtime.s: runtime/toy_runtime.cpp.s
+.PHONY : runtime/toy_runtime.s
+
+# target to generate assembly for a file
+runtime/toy_runtime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyRuntime.dir/build.make CMakeFiles/ToyRuntime.dir/runtime/toy_runtime.cpp.s
+.PHONY : runtime/toy_runtime.cpp.s
+
 tools/toy-lex.o: tools/toy-lex.cpp.o
 .PHONY : tools/toy-lex.o
 
@@ -630,6 +667,7 @@ help:
 	@echo "... target_parser_gen"
 	@echo "... vt_gen"
 	@echo "... ToyCompiler"
+	@echo "... ToyRuntime"
 	@echo "... toy-lex"
 	@echo "... toy-parse"
 	@echo "... lib/AST.o"
@@ -665,6 +703,9 @@ help:
 	@echo "... lib/ToyOps.o"
 	@echo "... lib/ToyOps.i"
 	@echo "... lib/ToyOps.s"
+	@echo "... runtime/toy_runtime.o"
+	@echo "... runtime/toy_runtime.i"
+	@echo "... runtime/toy_runtime.s"
 	@echo "... tools/toy-lex.o"
 	@echo "... tools/toy-lex.i"
 	@echo "... tools/toy-lex.s"
