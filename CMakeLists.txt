@@ -12,6 +12,8 @@ add_compile_options(
 find_package(LLVM REQUIRED CONFIG)
 find_package(MLIR REQUIRED CONFIG)
 
+llvm_map_components_to_libnames(LLVM_TARGET_LIBS native)
+
 list(APPEND CMAKE_MODULE_PATH
     "${LLVM_CMAKE_DIR}"
     "${MLIR_CMAKE_DIR}"
@@ -128,6 +130,7 @@ target_link_libraries(toy-parse
         MLIRPass
         MLIRRewrite
         MLIRTransforms
+        ${LLVM_TARGET_LIBS}
         MLIRTargetLLVMIRExport
         MLIRLLVMToLLVMIRTranslation
         MLIRToLLVMIRTranslationRegistration

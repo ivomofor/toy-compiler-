@@ -34,6 +34,10 @@
 #include "llvm/Support/raw_ostream.h"
 
 
+#include "llvm/MC/TargetRegistry.h"
+#include "llvm/Support/TargetSelect.h"
+#include "llvm/Target/TargetMachine.h"
+
 #include "mlir/Support/LogicalResult.h"
 
 #include <fstream>
@@ -41,7 +45,12 @@
 #include <iterator>
 #include <string>
 
+#include <optional>
+
 int main(int argc, char **argv) {
+
+    llvm::InitializeNativeTarget();
+    llvm::InitializeNativeTargetAsmPrinter();
 
     if (argc != 2) {
         std::cerr << "Usage: toy-parse <file.toy>\n";
@@ -161,9 +170,48 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    llvm::Triple targetTriple("x86_64-unknown-linux-gnu");
+
+    llvmModule->setTargetTriple(targetTriple);
+
+    std::string error;
+
+    const llvm::Target *llvmTarget =
+        llvm::TargetRegistry::lookupTarget(
+            targetTriple,
+            error);
+
+    if (!llvmTarget) {
+        std::cerr << "Failed to lookup target: "
+                  << error << "\n";
+        return 1;
+    }
+
+    llvm::TargetOptions targetOptions;
+
+    auto targetMachine =
+        std::unique_ptr<llvm::TargetMachine>(
+            llvmTarget->createTargetMachine(
+                targetTriple,
+                "generic",
+                "",
+                targetOptions,
+                std::nullopt));
+
+    if (!targetMachine) {
+        std::cerr << "Failed to create target machine\n";
+        return 1;
+    }
+
+    llvmModule->setDataLayout(
+        targetMachine->createDataLayout());
+
+
+
     llvmModule->print(llvm::outs(),nullptr);
 
     module.dump();
+
 
     return 0;
 }
