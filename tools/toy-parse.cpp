@@ -32,11 +32,11 @@
 #include "llvm/IR/Module.h"
 #include "llvm/IR/LLVMContext.h"
 #include "llvm/Support/raw_ostream.h"
-
-
 #include "llvm/MC/TargetRegistry.h"
 #include "llvm/Support/TargetSelect.h"
 #include "llvm/Target/TargetMachine.h"
+#include "llvm/IR/LegacyPassManager.h"
+#include "llvm/Support/FileSystem.h"
 
 #include "mlir/Support/LogicalResult.h"
 
@@ -206,7 +206,33 @@ int main(int argc, char **argv) {
     llvmModule->setDataLayout(
         targetMachine->createDataLayout());
 
+    std::error_code EC;
 
+    llvm::raw_fd_ostream dest(
+        "build/toy_program.o",
+        EC,
+        llvm::sys::fs::OF_None);
+
+    if (EC) {
+        std::cerr << "Could not open object file: "
+                  << EC.message() << "\n";
+        return 1;
+    }
+
+    llvm::legacy::PassManager pass;
+
+    if (targetMachine->addPassesToEmitFile(
+        pass,
+        dest,
+        nullptr,
+        llvm::CodeGenFileType::ObjectFile)) {
+
+        std::cerr << "TargetMachine cannot emit an object file\n";
+        return 1;
+        }
+
+    pass.run(*llvmModule);
+    dest.flush();
 
     llvmModule->print(llvm::outs(),nullptr);
 

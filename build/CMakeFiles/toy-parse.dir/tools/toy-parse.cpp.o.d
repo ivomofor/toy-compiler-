@@ -582,6 +582,15 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/SystemLibraries.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/MC/MCTargetOptions.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compression.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/IR/LegacyPassManager.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/FileSystem.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Chrono.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/FormatProviders.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/FormatVariadicDetails.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/NativeFormatting.h \
+ /usr/include/c++/13/chrono \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/FileSystem/UniqueID.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/MD5.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LogicalResult.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
