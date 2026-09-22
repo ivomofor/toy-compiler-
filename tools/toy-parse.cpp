@@ -44,7 +44,7 @@
 #include <iostream>
 #include <iterator>
 #include <string>
-
+#include <cstdlib>
 #include <optional>
 
 int main(int argc, char **argv) {
@@ -233,6 +233,17 @@ int main(int argc, char **argv) {
 
     pass.run(*llvmModule);
     dest.flush();
+
+    int linkResult =
+    std::system(
+        "clang++ build/toy_program.o "
+        "build/libToyRuntime.a "
+        "-o build/toy_program");
+
+    if (linkResult != 0) {
+        std::cerr << "Failed to link executable\n";
+        return 1;
+    }
 
     llvmModule->print(llvm::outs(),nullptr);
 
