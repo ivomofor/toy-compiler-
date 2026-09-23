@@ -19,19 +19,33 @@ int main() {
             builder.getUnknownLoc());
 
     auto function =
-        toy::FuncOp::create(
-            builder,
-            builder.getUnknownLoc(),
-            builder.getStringAttr("broken"),
-            builder.getArrayAttr({}));
+    toy::FuncOp::create(
+        builder,
+        builder.getUnknownLoc(),
+        builder.getStringAttr("test"),
+        builder.getArrayAttr({
+            builder.getStringAttr("a"),
+            builder.getStringAttr("b")
+        }));
+
+    auto *entryBlock =
+    builder.createBlock(&function.getBody());
+
+    entryBlock->addArgument(
+        builder.getI32Type(),
+        builder.getUnknownLoc());
+
+    entryBlock->addArgument(
+        builder.getI32Type(),
+        builder.getUnknownLoc());
 
     module.push_back(function);
 
-    if (mlir::failed(function.verify())) {
-        std::cout << "Verification failed as expected\n";
+    if (mlir::succeeded(function.verify())) {
+        std::cout << "Verification succeeded as expected\n";
         return 0;
     }
 
-    std::cout << "Verification unexpectedly succeeded\n";
+    std::cout << "Verification failed unexpectedly\n";
     return 1;
 }
