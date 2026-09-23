@@ -48,6 +48,9 @@ def Toy_FuncOp : Toy_Op<"fun"> {
   let results = (outs);
 
   let regions = (region AnyRegion:$body);
+
+  let hasVerifier = 1;
+
 }
 
 def Toy_PrintOp : Toy_Op<"print"> {

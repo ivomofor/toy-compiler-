@@ -311,6 +311,19 @@ toy-parse/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/build
 .PHONY : toy-parse/fast
 
+#=============================================================================
+# Target rules for targets named toy-verify
+
+# Build rule for target.
+toy-verify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 toy-verify
+.PHONY : toy-verify
+
+# fast build rule for target.
+toy-verify/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/build
+.PHONY : toy-verify/fast
+
 lib/AST.o: lib/AST.cpp.o
 .PHONY : lib/AST.o
 
@@ -647,6 +660,30 @@ tools/toy-parse.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.s
 .PHONY : tools/toy-parse.cpp.s
 
+tools/toy-verify.o: tools/toy-verify.cpp.o
+.PHONY : tools/toy-verify.o
+
+# target to build an object file
+tools/toy-verify.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/tools/toy-verify.cpp.o
+.PHONY : tools/toy-verify.cpp.o
+
+tools/toy-verify.i: tools/toy-verify.cpp.i
+.PHONY : tools/toy-verify.i
+
+# target to preprocess a source file
+tools/toy-verify.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/tools/toy-verify.cpp.i
+.PHONY : tools/toy-verify.cpp.i
+
+tools/toy-verify.s: tools/toy-verify.cpp.s
+.PHONY : tools/toy-verify.s
+
+# target to generate assembly for a file
+tools/toy-verify.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/tools/toy-verify.cpp.s
+.PHONY : tools/toy-verify.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -670,6 +707,7 @@ help:
 	@echo "... ToyRuntime"
 	@echo "... toy-lex"
 	@echo "... toy-parse"
+	@echo "... toy-verify"
 	@echo "... lib/AST.o"
 	@echo "... lib/AST.i"
 	@echo "... lib/AST.s"
@@ -712,6 +750,9 @@ help:
 	@echo "... tools/toy-parse.o"
 	@echo "... tools/toy-parse.i"
 	@echo "... tools/toy-parse.s"
+	@echo "... tools/toy-verify.o"
+	@echo "... tools/toy-verify.i"
+	@echo "... tools/toy-verify.s"
 .PHONY : help
 
 

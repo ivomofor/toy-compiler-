@@ -1111,7 +1111,9 @@ FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange r
 }
 
 ::llvm::LogicalResult FuncOp::verifyInvariants() {
-  return verifyInvariantsImpl();
+  if(::mlir::succeeded(verifyInvariantsImpl()) && ::mlir::succeeded(verify()))
+    return ::mlir::success();
+  return ::mlir::failure();
 }
 
 ::llvm::LogicalResult FuncOp::setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {

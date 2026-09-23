@@ -83,12 +83,12 @@ int main(int argc, char **argv) {
 
     mlir::MLIRContext context;
 
-    context.getOrLoadDialect<toy::ToyDialect>();
-    context.getOrLoadDialect<mlir::func::FuncDialect>();
-    context.getOrLoadDialect<mlir::arith::ArithDialect>();
-    context.getOrLoadDialect<mlir::scf::SCFDialect>();
-    context.getOrLoadDialect<mlir::memref::MemRefDialect>();
-    context.getOrLoadDialect<mlir::LLVM::LLVMDialect>();
+    context.loadDialect<toy::ToyDialect>();
+    context.loadDialect<mlir::func::FuncDialect>();
+    context.loadDialect<mlir::arith::ArithDialect>();
+    context.loadDialect<mlir::scf::SCFDialect>();
+    context.loadDialect<mlir::memref::MemRefDialect>();
+    context.loadDialect<mlir::LLVM::LLVMDialect>();
 
     mlir::registerBuiltinDialectTranslation(context);
     mlir::registerLLVMDialectTranslation(context);

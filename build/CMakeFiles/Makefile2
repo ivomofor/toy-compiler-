@@ -67,6 +67,7 @@ all: CMakeFiles/ToyCompiler.dir/all
 all: CMakeFiles/ToyRuntime.dir/all
 all: CMakeFiles/toy-lex.dir/all
 all: CMakeFiles/toy-parse.dir/all
+all: CMakeFiles/toy-verify.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -89,6 +90,7 @@ clean: CMakeFiles/ToyCompiler.dir/clean
 clean: CMakeFiles/ToyRuntime.dir/clean
 clean: CMakeFiles/toy-lex.dir/clean
 clean: CMakeFiles/toy-parse.dir/clean
+clean: CMakeFiles/toy-verify.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -481,6 +483,32 @@ toy-parse: CMakeFiles/toy-parse.dir/rule
 CMakeFiles/toy-parse.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-parse.dir/build.make CMakeFiles/toy-parse.dir/clean
 .PHONY : CMakeFiles/toy-parse.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/toy-verify.dir
+
+# All Build rule for target.
+CMakeFiles/toy-verify.dir/all: CMakeFiles/ToyCompiler.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=25,26 "Built target toy-verify"
+.PHONY : CMakeFiles/toy-verify.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/toy-verify.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/toy-verify.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shevo/project/toy-compiler-/build/CMakeFiles 0
+.PHONY : CMakeFiles/toy-verify.dir/rule
+
+# Convenience name for target.
+toy-verify: CMakeFiles/toy-verify.dir/rule
+.PHONY : toy-verify
+
+# clean rule for target.
+CMakeFiles/toy-verify.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/clean
+.PHONY : CMakeFiles/toy-verify.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

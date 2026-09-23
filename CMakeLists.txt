@@ -135,3 +135,13 @@ target_link_libraries(toy-parse
         MLIRLLVMToLLVMIRTranslation
         MLIRToLLVMIRTranslationRegistration
 )
+
+add_executable(toy-verify
+        tools/toy-verify.cpp
+)
+
+target_link_libraries(toy-verify
+        PRIVATE
+        ToyCompiler
+        MLIRIR
+)

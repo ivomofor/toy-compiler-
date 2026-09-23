@@ -5,3 +5,11 @@
 
 #define GET_OP_CLASSES
 #include "ToyOps.cpp.inc"
+
+mlir::LogicalResult toy::FuncOp::verify() {
+    if (getBody().empty()) {
+        return emitOpError("function must have a body");
+    }
+
+    return mlir::success();
+}
