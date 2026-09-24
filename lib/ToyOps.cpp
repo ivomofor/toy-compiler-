@@ -6,6 +6,23 @@
 #define GET_OP_CLASSES
 #include "ToyOps.cpp.inc"
 
+void toy::FuncOp::build(
+    mlir::OpBuilder &builder,
+    mlir::OperationState &state,
+    llvm::StringRef name,
+    llvm::ArrayRef<mlir::Attribute> parameters) {
+
+    state.addAttribute(
+        "sym_name",
+        builder.getStringAttr(name));
+
+    state.addAttribute(
+        "parameters",
+        builder.getArrayAttr(parameters));
+
+    state.addRegion();
+}
+
 mlir::LogicalResult toy::FuncOp::verify() {
     if (getBody().empty()) {
         return emitOpError("function must have a body");

@@ -958,6 +958,18 @@ void FuncOp::setSymName(::llvm::StringRef attrValue) {
   getProperties().sym_name = ::mlir::Builder((*this)->getContext()).getStringAttr(attrValue);
 }
 
+FuncOp FuncOp::create(::mlir::OpBuilder &builder, ::mlir::Location location, mlir::StringRef name, mlir::ArrayRef<mlir::Attribute> parameters) {
+  ::mlir::OperationState __state__(location, getOperationName());
+  build(builder, __state__, std::forward<decltype(name)>(name), std::forward<decltype(parameters)>(parameters));
+  auto __res__ = ::llvm::dyn_cast<FuncOp>(builder.create(__state__));
+  assert(__res__ && "builder didn't return the right type");
+  return __res__;
+}
+
+FuncOp FuncOp::create(::mlir::ImplicitLocOpBuilder &builder, mlir::StringRef name, mlir::ArrayRef<mlir::Attribute> parameters) {
+  return create(builder, builder.getLoc(), std::forward<decltype(name)>(name), std::forward<decltype(parameters)>(parameters));
+}
+
 void FuncOp::build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::StringAttr sym_name, ::mlir::ArrayAttr parameters) {
   odsState.getOrAddProperties<Properties>().sym_name = sym_name;
   odsState.getOrAddProperties<Properties>().parameters = parameters;

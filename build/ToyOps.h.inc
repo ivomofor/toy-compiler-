@@ -830,6 +830,9 @@ public:
     getProperties().parameters = attr;
   }
 
+  static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, mlir::StringRef name, mlir::ArrayRef<mlir::Attribute> parameters);
+  static FuncOp create(::mlir::OpBuilder &builder, ::mlir::Location location, mlir::StringRef name, mlir::ArrayRef<mlir::Attribute> parameters);
+  static FuncOp create(::mlir::ImplicitLocOpBuilder &builder, mlir::StringRef name, mlir::ArrayRef<mlir::Attribute> parameters);
   static void build(::mlir::OpBuilder &odsBuilder, ::mlir::OperationState &odsState, ::mlir::StringAttr sym_name, ::mlir::ArrayAttr parameters);
   static FuncOp create(::mlir::OpBuilder &builder, ::mlir::Location location, ::mlir::StringAttr sym_name, ::mlir::ArrayAttr parameters);
   static FuncOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::StringAttr sym_name, ::mlir::ArrayAttr parameters);

@@ -49,6 +49,10 @@ def Toy_FuncOp : Toy_Op<"fun"> {
 
   let regions = (region AnyRegion:$body);
 
+  let builders = [
+    OpBuilder<(ins "mlir::StringRef":$name, "mlir::ArrayRef<mlir::Attribute>":$parameters)>
+  ];
+
   let hasVerifier = 1;
 
 }
