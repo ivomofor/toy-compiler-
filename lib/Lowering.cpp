@@ -42,15 +42,12 @@ namespace toy {
                 builder.getStringAttr(parameter));
         }
 
-        auto parameterAttr =
-            builder.getArrayAttr(parameters);
-
         auto func =
             toy::FuncOp::create(
                 builder,
                 builder.getUnknownLoc(),
-                builder.getStringAttr(function.name),
-                parameterAttr);
+                function.name,
+                parameters);
 
         auto &body = func.getBody();
 
