@@ -51,16 +51,11 @@ namespace toy {
 
         auto &body = func.getBody();
 
-        auto *entryBlock =
-            builder.createBlock(&body);
+        auto *entryBlock = &body.front();
 
-        for (const auto &parameter : function.parameters) {
-            auto argument =
-                entryBlock->addArgument(
-                    builder.getI32Type(),
-                    builder.getUnknownLoc());
-
-            symbolTable[parameter] = argument;
+        for (size_t i = 0; i < function.parameters.size(); ++i) {
+            symbolTable[function.parameters[i]] =
+                entryBlock->getArgument(i);
         }
 
         builder.setInsertionPointToEnd(entryBlock);
@@ -183,6 +178,7 @@ namespace toy {
 
             return it->second;
         }
+
         throw std::runtime_error("Unsupported expression in lowering");
     }
 

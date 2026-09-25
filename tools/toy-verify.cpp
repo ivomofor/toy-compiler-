@@ -1,3 +1,4 @@
+
 #include "toy/ToyDialect.h"
 #include "toy/ToyOps.h"
 
@@ -19,25 +20,14 @@ int main() {
             builder.getUnknownLoc());
 
     auto function =
-    toy::FuncOp::create(
-        builder,
-        builder.getUnknownLoc(),
-        builder.getStringAttr("test"),
-        builder.getArrayAttr({
-            builder.getStringAttr("a"),
-            builder.getStringAttr("b")
-        }));
-
-    auto *entryBlock =
-    builder.createBlock(&function.getBody());
-
-    entryBlock->addArgument(
-        builder.getI32Type(),
-        builder.getUnknownLoc());
-
-    entryBlock->addArgument(
-        builder.getI32Type(),
-        builder.getUnknownLoc());
+        toy::FuncOp::create(
+            builder,
+            builder.getUnknownLoc(),
+            "test",
+            {
+                builder.getStringAttr("a"),
+                builder.getStringAttr("b")
+            });
 
     module.push_back(function);
 

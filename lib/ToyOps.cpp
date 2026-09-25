@@ -20,7 +20,20 @@ void toy::FuncOp::build(
         "parameters",
         builder.getArrayAttr(parameters));
 
-    state.addRegion();
+    auto *region =
+        state.addRegion();
+
+    auto &entryBlock =
+    region->emplaceBlock();
+
+    auto i32Type =
+        builder.getI32Type();
+
+    for (auto parameter : parameters) {
+        entryBlock.addArgument(
+            i32Type,
+            builder.getUnknownLoc());
+    }
 }
 
 mlir::LogicalResult toy::FuncOp::verify() {
