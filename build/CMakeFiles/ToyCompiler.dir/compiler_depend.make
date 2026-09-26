@@ -571,6 +571,7 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: /home/shevo/project/toy-co
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/ConstantToArith.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -1032,6 +1033,7 @@ CMakeFiles/ToyCompiler.dir/lib/FuncToFunc.cpp.o: /home/shevo/project/toy-compile
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/FuncToFunc.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -1674,6 +1676,7 @@ CMakeFiles/ToyCompiler.dir/lib/Lowering.cpp.o: /home/shevo/project/toy-compiler-
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/AST.h \
   /home/shevo/project/toy-compiler-/include/toy/Lowering.h \
@@ -2327,6 +2330,7 @@ CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o: /home/shevo/project/toy-co
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/PrintToStandard.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -2787,6 +2791,7 @@ CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o: /home/shevo/project/toy-compi
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/GreedyPatternRewriteDriver.h \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/ReturnToFunc.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -3201,6 +3206,7 @@ CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o: /home/shevo/project/toy-compile
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   ToyDialect.cpp.inc \
   ToyDialect.h.inc \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -3604,6 +3610,7 @@ CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o: /home/shevo/project/toy-compiler-/l
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
+  ToyInterfaces.h.inc \
   ToyOps.cpp.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -4034,6 +4041,8 @@ ToyDialect.h.inc:
 /usr/include/assert.h:
 
 /home/shevo/project/toy-compiler-/include/toy/ConstantToArith.h:
+
+ToyInterfaces.h.inc:
 
 /home/shevo/project/toy-compiler-/lib/ToyOps.cpp:
 

@@ -350,6 +350,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+ /home/shevo/project/toy-compiler-/build/ToyInterfaces.h.inc \
  /home/shevo/project/toy-compiler-/build/ToyOps.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \

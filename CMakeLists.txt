@@ -52,6 +52,16 @@ set(TOY_OPS_TD
 
 set(LLVM_TARGET_DEFINITIONS ${TOY_OPS_TD})
 
+mlir_tablegen(ToyInterfaces.h.inc
+        -gen-op-interface-decls
+        -I ${PROJECT_SOURCE_DIR}
+)
+
+mlir_tablegen(ToyInterfaces.cpp.inc
+        -gen-op-interface-defs
+        -I ${PROJECT_SOURCE_DIR}
+)
+
 mlir_tablegen(ToyOps.h.inc
         -gen-op-decls
         -I ${PROJECT_SOURCE_DIR}

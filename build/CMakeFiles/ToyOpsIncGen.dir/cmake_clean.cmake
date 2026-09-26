@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyOpsIncGen"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
+  "ToyInterfaces.cpp.inc"
+  "ToyInterfaces.h.inc"
   "ToyOps.cpp.inc"
   "ToyOps.h.inc"
 )

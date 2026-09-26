@@ -11,8 +11,10 @@
 #include "mlir/IR/BuiltinAttributes.h"
 #include "mlir/Bytecode/BytecodeOpInterface.h"
 
+#define GET_OP_INTERFACE_DECLS
+#include "ToyInterfaces.h.inc"
+
 #define GET_OP_CLASSES
 #include "ToyOps.h.inc"
 
-#endif // TOY_COMPILER_TOYOPS_H
-
+#endif

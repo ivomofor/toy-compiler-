@@ -70,6 +70,10 @@ CMakeFiles/ToyOpsIncGen: ToyDialect.h.inc
 CMakeFiles/ToyOpsIncGen: ToyDialect.h.inc
 CMakeFiles/ToyOpsIncGen: ToyDialect.cpp.inc
 CMakeFiles/ToyOpsIncGen: ToyDialect.cpp.inc
+CMakeFiles/ToyOpsIncGen: ToyInterfaces.h.inc
+CMakeFiles/ToyOpsIncGen: ToyInterfaces.h.inc
+CMakeFiles/ToyOpsIncGen: ToyInterfaces.cpp.inc
+CMakeFiles/ToyOpsIncGen: ToyInterfaces.cpp.inc
 CMakeFiles/ToyOpsIncGen: ToyOps.h.inc
 CMakeFiles/ToyOpsIncGen: ToyOps.h.inc
 CMakeFiles/ToyOpsIncGen: ToyOps.cpp.inc
@@ -85,19 +89,31 @@ ToyDialect.h.inc: /home/shevo/project/toy-compiler-/dialects/ToyDialect.td
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ToyDialect.h.inc..."
 	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-dialect-decls -I /home/shevo/project/toy-compiler-/dialects -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/ToyDialect.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyDialect.h.inc
 
+ToyInterfaces.cpp.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyInterfaces.cpp.inc: /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building ToyInterfaces.cpp.inc..."
+	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-op-interface-defs -I /home/shevo/project/toy-compiler- -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyInterfaces.cpp.inc
+
+ToyInterfaces.h.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
+ToyInterfaces.h.inc: /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building ToyInterfaces.h.inc..."
+	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-op-interface-decls -I /home/shevo/project/toy-compiler- -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyInterfaces.h.inc
+
 ToyOps.cpp.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
 ToyOps.cpp.inc: /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building ToyOps.cpp.inc..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building ToyOps.cpp.inc..."
 	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-op-defs -I /home/shevo/project/toy-compiler- -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyOps.cpp.inc
 
 ToyOps.h.inc: /home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen
 ToyOps.h.inc: /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building ToyOps.h.inc..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/shevo/project/toy-compiler-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building ToyOps.h.inc..."
 	/home/shevo/LLVM-22.1.0-Linux-X64/bin/mlir-tblgen -gen-op-decls -I /home/shevo/project/toy-compiler- -I/home/shevo/project/toy-compiler- -I/home/shevo/LLVM-22.1.0-Linux-X64/include -I/home/shevo/LLVM-22.1.0-Linux-X64/include /home/shevo/project/toy-compiler-/dialects/operations/ToyOps.td --write-if-changed -o /home/shevo/project/toy-compiler-/build/ToyOps.h.inc
 
 ToyOpsIncGen: CMakeFiles/ToyOpsIncGen
 ToyOpsIncGen: ToyDialect.cpp.inc
 ToyOpsIncGen: ToyDialect.h.inc
+ToyOpsIncGen: ToyInterfaces.cpp.inc
+ToyOpsIncGen: ToyInterfaces.h.inc
 ToyOpsIncGen: ToyOps.cpp.inc
 ToyOpsIncGen: ToyOps.h.inc
 ToyOpsIncGen: CMakeFiles/ToyOpsIncGen.dir/build.make

@@ -3,5 +3,7 @@
 700e6080d9a9e3e4df9084ae327e786f CMakeFiles/ToyOpsIncGen
 6c928c051696ba25abebceca24b0c20a ToyDialect.cpp.inc
 e8965874faed65f72819d2e4f241371e ToyDialect.h.inc
+03fc23315c61e5cd92e4fbdc9becb196 ToyInterfaces.cpp.inc
+ee9bf311c3da103e8beac5a20cb3b7f1 ToyInterfaces.h.inc
 148e68490bf91970066fffd1675d81f5 ToyOps.cpp.inc
 53e40d7ae0e06abd26225112e159d7eb ToyOps.h.inc

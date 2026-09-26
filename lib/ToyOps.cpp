@@ -6,6 +6,10 @@
 #define GET_OP_CLASSES
 #include "ToyOps.cpp.inc"
 
+llvm::StringRef toy::AddOp::getToyName() {
+    return getOperationName();
+}
+
 void toy::FuncOp::build(
     mlir::OpBuilder &builder,
     mlir::OperationState &state,

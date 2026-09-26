@@ -384,6 +384,7 @@ CMakeFiles/ToyCompiler.dir/lib/ConstantToArith.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h \
  /usr/include/c++/13/atomic \
  /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
+ /home/shevo/project/toy-compiler-/build/ToyInterfaces.h.inc \
  /home/shevo/project/toy-compiler-/build/ToyOps.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \

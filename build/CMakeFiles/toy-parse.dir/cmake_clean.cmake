@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o.d"
   "ToyDialect.cpp.inc"
   "ToyDialect.h.inc"
+  "ToyInterfaces.cpp.inc"
+  "ToyInterfaces.h.inc"
   "ToyOps.cpp.inc"
   "ToyOps.h.inc"
   "toy-parse"

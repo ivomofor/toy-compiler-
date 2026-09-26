@@ -1,6 +1,18 @@
 include "mlir/IR/OpBase.td"
 include "dialects/ToyDialect.td"
 
+def Toy_ExampleInterface : OpInterface<"ExampleInterface"> {
+    let cppNamespace = "::toy";
+
+    let methods = [
+        InterfaceMethod<
+            "Get the Toy name of the operation",
+            "llvm::StringRef",
+            "getToyName"
+        >
+    ];
+}
+
 def Toy_ConstantOp : Toy_Op<"constant"> {
   let summary = "Toy constant operation";
   let arguments = (ins I32Attr:$value);
@@ -11,6 +23,12 @@ def Toy_AddOp : Toy_Op<"add"> {
   let summary = "Toy integer addition";
   let arguments = (ins I32:$lhs, I32:$rhs);
   let results = (outs I32);
+
+  let traits = [Toy_ExampleInterface];
+
+  let extraClassDeclaration = [{
+    llvm::StringRef getToyName();
+  }];
 }
 
 def Toy_SubOp : Toy_Op<"sub"> {

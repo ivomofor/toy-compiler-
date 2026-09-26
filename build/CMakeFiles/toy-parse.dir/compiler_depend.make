@@ -340,6 +340,7 @@ CMakeFiles/toy-parse.dir/tools/toy-parse.cpp.o: /home/shevo/project/toy-compiler
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/Passes.h.inc \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/ViewOpGraph.h \
   ToyDialect.h.inc \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/AST.h \
   /home/shevo/project/toy-compiler-/include/toy/ASTPrinter.h \
@@ -1659,6 +1660,8 @@ ToyDialect.h.inc:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Transforms/ViewOpGraph.h:
 
+ToyInterfaces.h.inc:
+
 /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/PointerIntPair.h:
 
 /home/shevo/project/toy-compiler-/include/toy/ConstantToArith.h:
@@ -1877,6 +1880,10 @@ ToyOps.h.inc:
 
 /usr/include/c++/13/cstdint:
 
+/usr/include/limits.h:
+
+/usr/include/c++/13/cstdlib:
+
 /usr/include/c++/13/ctime:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc:
@@ -1916,10 +1923,6 @@ ToyOps.h.inc:
 /usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
-
-/usr/include/c++/13/cstdlib:
-
-/usr/include/limits.h:
 
 /usr/include/c++/13/iosfwd:
 
