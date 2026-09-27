@@ -819,7 +819,7 @@ The current custom-dialect roadmap includes:
 * |x| Operation verification
 * |X| Operation builders
 * |X| Operation traits
-* | | Regions and blocks in custom operations
+* |x| Regions and blocks in custom operations
 * | | Completing the Toy dialect
 * | | Full Toy  Standard MLIR lowering
 
