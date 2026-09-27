@@ -31,6 +31,28 @@ int main() {
 
     module.push_back(function);
 
+    auto &entryBlock = function.getBody().front();
+
+    builder.setInsertionPointToEnd(&entryBlock);
+
+    auto add = toy::AddOp::create(
+        builder,
+        builder.getUnknownLoc(),
+        builder.getI32Type(),
+        entryBlock.getArgument(0),
+        entryBlock.getArgument(1));
+
+
+    auto interface =
+    mlir::dyn_cast<toy::ExampleInterface>(
+        add.getOperation());
+
+    if (interface) {
+        std::cout << "Interface name: "
+                  << interface.getToyName().str()
+                  << "\n";
+    }
+
     if (mlir::succeeded(function.verify())) {
         std::cout << "Verification succeeded as expected\n";
         return 0;

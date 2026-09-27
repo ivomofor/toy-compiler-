@@ -135,6 +135,7 @@ CMakeFiles/toy-verify.dir/tools/toy-verify.cpp.o: /home/shevo/project/toy-compil
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h \
   /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h \
   ToyDialect.h.inc \
+  ToyInterfaces.h.inc \
   ToyOps.h.inc \
   /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h \
   /home/shevo/project/toy-compiler-/include/toy/ToyOps.h \
@@ -695,6 +696,12 @@ CMakeFiles/toy-verify.dir/tools/toy-verify.cpp.o: /home/shevo/project/toy-compil
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmAttrInterface.h.inc:
 
+/usr/include/linux/errno.h:
+
+/usr/include/c++/13/debug/debug.h:
+
+/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/SideEffectInterfaces.h.inc:
@@ -1049,6 +1056,8 @@ ToyOps.h.inc:
 
 ToyDialect.h.inc:
 
+ToyInterfaces.h.inc:
+
 /usr/include/c++/13/array:
 
 /usr/include/c++/13/backward/auto_ptr.h:
@@ -1292,9 +1301,3 @@ ToyDialect.h.inc:
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/13/cwchar:
-
-/usr/include/linux/errno.h:
-
-/home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h:
-
-/usr/include/c++/13/debug/debug.h:

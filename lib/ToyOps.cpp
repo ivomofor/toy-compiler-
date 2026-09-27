@@ -6,6 +6,9 @@
 #define GET_OP_CLASSES
 #include "ToyOps.cpp.inc"
 
+#define GET_OP_INTERFACE_DEFS
+#include "ToyInterfaces.cpp.inc"
+
 llvm::StringRef toy::AddOp::getToyName() {
     return getOperationName();
 }
