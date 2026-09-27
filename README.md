@@ -816,9 +816,9 @@ The current custom-dialect roadmap includes:
 * |-| `toy.call`
 * |x | Function arguments
 * |x| `toy.print`
-* | | Operation verification
-* | | Operation builders
-* | | Operation traits
+* |x| Operation verification
+* |X| Operation builders
+* |X| Operation traits
 * | | Regions and blocks in custom operations
 * | | Completing the Toy dialect
 * | | Full Toy  Standard MLIR lowering
