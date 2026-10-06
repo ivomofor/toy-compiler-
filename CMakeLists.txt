@@ -86,6 +86,7 @@ add_library(ToyCompiler
         lib/ReturnToFunc.cpp
         lib/FuncToFunc.cpp
         lib/PrintToStandard.cpp
+        lib/TensorMatmulToLinalg.cpp
 )
 
 add_library(ToyRuntime

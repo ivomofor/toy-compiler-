@@ -16,6 +16,7 @@
 #include "mlir/Dialect/SCF/IR/SCF.h"
 #include "mlir/Dialect/MemRef/IR/MemRef.h"
 #include "mlir/Dialect/LLVMIR/LLVMDialect.h"
+#include "mlir/Dialect/Linalg/IR/Linalg.h"
 
 #include "mlir/Pass/PassManager.h"
 #include "mlir/Transforms/Passes.h"
@@ -89,6 +90,7 @@ int main(int argc, char **argv) {
     context.loadDialect<mlir::scf::SCFDialect>();
     context.loadDialect<mlir::memref::MemRefDialect>();
     context.loadDialect<mlir::LLVM::LLVMDialect>();
+    context.loadDialect<mlir::linalg::LinalgDialect>();
 
     mlir::registerBuiltinDialectTranslation(context);
     mlir::registerLLVMDialectTranslation(context);

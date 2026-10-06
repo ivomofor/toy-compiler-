@@ -80,3 +80,9 @@ def Toy_PrintOp : Toy_Op<"print"> {
   let arguments = (ins I32:$value);
   let results = (outs);
 }
+
+def Toy_TensorMatmulOp : Toy_Op<"tensor.matmul"> {
+   let summary = "Toy tensor matrix multiplication";
+   let arguments = (ins AnyRankedTensor:$lhs, AnyRankedTensor:$rhs );
+   let results = (outs AnyRankedTensor:$result );
+ }
