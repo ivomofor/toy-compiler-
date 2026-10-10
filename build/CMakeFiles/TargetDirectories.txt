@@ -14,5 +14,6 @@
 /home/shevo/project/toy-compiler-/build/CMakeFiles/toy-lex.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/toy-parse.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/toy-verify.dir
+/home/shevo/project/toy-compiler-/build/CMakeFiles/toy-matmul-test.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/edit_cache.dir
 /home/shevo/project/toy-compiler-/build/CMakeFiles/rebuild_cache.dir

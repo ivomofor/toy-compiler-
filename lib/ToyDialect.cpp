@@ -18,7 +18,8 @@ namespace toy {
             DivOp,
             ReturnOp,
             FuncOp,
-            PrintOp
+            PrintOp,
+            TensorMatmulOp
         >();
     }
 

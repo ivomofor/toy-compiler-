@@ -112,6 +112,7 @@ target_link_libraries(ToyCompiler
         MLIRIR
         MLIRFuncDialect
         MLIRArithDialect
+        MLIRLinalgDialect
         MLIRPass
         MLIRRewrite
         MLIRTransforms
@@ -155,4 +156,18 @@ target_link_libraries(toy-verify
         PRIVATE
         ToyCompiler
         MLIRIR
+)
+
+add_executable(toy-matmul-test
+        tools/toy-matmul-test.cpp
+)
+
+target_link_libraries(toy-matmul-test
+        PRIVATE
+        ToyCompiler
+        MLIRIR
+        MLIRParser
+        MLIRPass
+        MLIRTensorDialect
+        MLIRLinalgDialect
 )

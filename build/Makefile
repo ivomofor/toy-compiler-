@@ -324,6 +324,19 @@ toy-verify/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-verify.dir/build.make CMakeFiles/toy-verify.dir/build
 .PHONY : toy-verify/fast
 
+#=============================================================================
+# Target rules for targets named toy-matmul-test
+
+# Build rule for target.
+toy-matmul-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 toy-matmul-test
+.PHONY : toy-matmul-test
+
+# fast build rule for target.
+toy-matmul-test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-test.dir/build.make CMakeFiles/toy-matmul-test.dir/build
+.PHONY : toy-matmul-test/fast
+
 lib/AST.o: lib/AST.cpp.o
 .PHONY : lib/AST.o
 
@@ -540,6 +553,30 @@ lib/ReturnToFunc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.s
 .PHONY : lib/ReturnToFunc.cpp.s
 
+lib/TensorMatmulToLinalg.o: lib/TensorMatmulToLinalg.cpp.o
+.PHONY : lib/TensorMatmulToLinalg.o
+
+# target to build an object file
+lib/TensorMatmulToLinalg.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.o
+.PHONY : lib/TensorMatmulToLinalg.cpp.o
+
+lib/TensorMatmulToLinalg.i: lib/TensorMatmulToLinalg.cpp.i
+.PHONY : lib/TensorMatmulToLinalg.i
+
+# target to preprocess a source file
+lib/TensorMatmulToLinalg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.i
+.PHONY : lib/TensorMatmulToLinalg.cpp.i
+
+lib/TensorMatmulToLinalg.s: lib/TensorMatmulToLinalg.cpp.s
+.PHONY : lib/TensorMatmulToLinalg.s
+
+# target to generate assembly for a file
+lib/TensorMatmulToLinalg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ToyCompiler.dir/build.make CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.s
+.PHONY : lib/TensorMatmulToLinalg.cpp.s
+
 lib/ToyDialect.o: lib/ToyDialect.cpp.o
 .PHONY : lib/ToyDialect.o
 
@@ -636,6 +673,30 @@ tools/toy-lex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-lex.dir/build.make CMakeFiles/toy-lex.dir/tools/toy-lex.cpp.s
 .PHONY : tools/toy-lex.cpp.s
 
+tools/toy-matmul-test.o: tools/toy-matmul-test.cpp.o
+.PHONY : tools/toy-matmul-test.o
+
+# target to build an object file
+tools/toy-matmul-test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-test.dir/build.make CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o
+.PHONY : tools/toy-matmul-test.cpp.o
+
+tools/toy-matmul-test.i: tools/toy-matmul-test.cpp.i
+.PHONY : tools/toy-matmul-test.i
+
+# target to preprocess a source file
+tools/toy-matmul-test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-test.dir/build.make CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.i
+.PHONY : tools/toy-matmul-test.cpp.i
+
+tools/toy-matmul-test.s: tools/toy-matmul-test.cpp.s
+.PHONY : tools/toy-matmul-test.s
+
+# target to generate assembly for a file
+tools/toy-matmul-test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-test.dir/build.make CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.s
+.PHONY : tools/toy-matmul-test.cpp.s
+
 tools/toy-parse.o: tools/toy-parse.cpp.o
 .PHONY : tools/toy-parse.o
 
@@ -706,6 +767,7 @@ help:
 	@echo "... ToyCompiler"
 	@echo "... ToyRuntime"
 	@echo "... toy-lex"
+	@echo "... toy-matmul-test"
 	@echo "... toy-parse"
 	@echo "... toy-verify"
 	@echo "... lib/AST.o"
@@ -735,6 +797,9 @@ help:
 	@echo "... lib/ReturnToFunc.o"
 	@echo "... lib/ReturnToFunc.i"
 	@echo "... lib/ReturnToFunc.s"
+	@echo "... lib/TensorMatmulToLinalg.o"
+	@echo "... lib/TensorMatmulToLinalg.i"
+	@echo "... lib/TensorMatmulToLinalg.s"
 	@echo "... lib/ToyDialect.o"
 	@echo "... lib/ToyDialect.i"
 	@echo "... lib/ToyDialect.s"
@@ -747,6 +812,9 @@ help:
 	@echo "... tools/toy-lex.o"
 	@echo "... tools/toy-lex.i"
 	@echo "... tools/toy-lex.s"
+	@echo "... tools/toy-matmul-test.o"
+	@echo "... tools/toy-matmul-test.i"
+	@echo "... tools/toy-matmul-test.s"
 	@echo "... tools/toy-parse.o"
 	@echo "... tools/toy-parse.i"
 	@echo "... tools/toy-parse.s"

@@ -7,6 +7,7 @@
 #include "toy/FuncToFunc.h"
 #include "toy/ReturnToFunc.h"
 #include "toy/PrintToStandard.h"
+#include "toy/TensorMatmulToLinalg.h"
 
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/BuiltinOps.h"
@@ -116,17 +117,13 @@ int main(int argc, char **argv) {
     }
 
     mlir::PassManager pm(&context);
-    /*
-    pm.addPass(toy::createConstantToArithPass());
-    pm.addPass(mlir::createCanonicalizerPass());
-    pm.addPass(toy::createFuncToFuncPass());
-    pm.addPass(toy::createReturnToFuncPass());
-    */
     pm.addPass(toy::createFuncToFuncPass());
     pm.addPass(toy::createConstantToArithPass());
     pm.addPass(toy::createPrintToStandardPass());
     pm.addPass(mlir::createCanonicalizerPass());
     pm.addPass(toy::createReturnToFuncPass());
+    pm.addPass(toy::createFuncToFuncPass());
+    pm.addPass(toy::createTensorMatmulToLinalgPass());
 
     if (mlir::failed(pm.run(module))) {
         std::cerr << "Error: MLIR pass pipeline failed\n";

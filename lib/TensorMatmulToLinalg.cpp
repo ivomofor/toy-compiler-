@@ -6,10 +6,13 @@
 #include "toy/ToyOps.h"
 
 #include "mlir/Dialect/Linalg/IR/Linalg.h"
+#include "mlir/Dialect/Tensor/IR/Tensor.h"
 #include "mlir/IR/PatternMatch.h"
 #include "mlir/Pass/Pass.h"
+#include "mlir/Transforms/GreedyPatternRewriteDriver.h"
 
 namespace {
+
     class TensorMatmulToLinalgPattern
         : public mlir::OpRewritePattern<toy::TensorMatmulOp> {
     public:
@@ -19,11 +22,21 @@ namespace {
             toy::TensorMatmulOp op,
             mlir::PatternRewriter &rewriter) const override {
 
-            auto result = rewriter.create<mlir::linalg::MatmulOp>(
+            auto resultType = mlir::cast<mlir::RankedTensorType>(
+                op.getResult().getType());
+
+            auto output = mlir::tensor::EmptyOp::create(
+                rewriter,
+                op.getLoc(),
+                resultType.getShape(),
+                resultType.getElementType());
+
+            auto result = mlir::linalg::MatmulOp::create(
+                rewriter,
                 op.getLoc(),
                 op.getResult().getType(),
-                op.getLhs(),
-                op.getRhs());
+                {op.getLhs(), op.getRhs()},
+                {output});
 
             rewriter.replaceOp(op, result);
 
@@ -32,9 +45,9 @@ namespace {
     };
 
     struct TensorMatmulToLinalgPass
-       : public mlir::PassWrapper<
-             TensorMatmulToLinalgPass,
-             mlir::OperationPass<mlir::ModuleOp>> {
+        : public mlir::PassWrapper<
+              TensorMatmulToLinalgPass,
+              mlir::OperationPass<mlir::ModuleOp>> {
 
         void runOnOperation() override {
             mlir::RewritePatternSet patterns(&getContext());
@@ -51,7 +64,9 @@ namespace {
         }
     };
 
-    std::unique_ptr<mlir::Pass> toy::createTensorMatmulToLinalgPass() {
-        return std::make_unique<TensorMatmulToLinalgPass>();
-    }
+}
+
+std::unique_ptr<mlir::Pass>
+toy::createTensorMatmulToLinalgPass() {
+    return std::make_unique<TensorMatmulToLinalgPass>();
 }

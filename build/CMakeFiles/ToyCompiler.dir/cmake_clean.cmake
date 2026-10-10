@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ToyCompiler.dir/lib/PrintToStandard.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/ReturnToFunc.cpp.o.d"
+  "CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.o"
+  "CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o"
   "CMakeFiles/ToyCompiler.dir/lib/ToyDialect.cpp.o.d"
   "CMakeFiles/ToyCompiler.dir/lib/ToyOps.cpp.o"

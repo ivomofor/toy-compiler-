@@ -83,4 +83,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/toy-lex.dir/DependInfo.cmake"
   "CMakeFiles/toy-parse.dir/DependInfo.cmake"
   "CMakeFiles/toy-verify.dir/DependInfo.cmake"
+  "CMakeFiles/toy-matmul-test.dir/DependInfo.cmake"
   )
