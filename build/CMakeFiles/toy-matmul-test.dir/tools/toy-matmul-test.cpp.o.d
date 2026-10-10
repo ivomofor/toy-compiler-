@@ -345,7 +345,7 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h \
  /usr/include/c++/13/atomic \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h \
@@ -359,7 +359,18 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/Tensor.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PatternMatch.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolTable.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SetVector.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h \
@@ -371,14 +382,6 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/shared_mutex \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolInterfacesAttrInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PatternMatch.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OwningOpRef.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/RegionKindInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutInterfaces.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TypeSize.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DataLayoutAttrInterface.h.inc \
@@ -390,31 +393,20 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/PDLPatternMatch.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Config/mlir-config.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ControlFlowInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeUtilities.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallString.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/VectorInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringExtras.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/APSInt.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallString.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsEnums.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/Tensor.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h \
@@ -434,6 +426,7 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ImplicitLocOpBuilder.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeUtilities.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsEnums.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsAttrDefs.h.inc \
@@ -446,6 +439,13 @@ CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/RelayoutOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOps.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgRelayoutOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CallInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Verifier.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Parser/Parser.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AsmState.h \

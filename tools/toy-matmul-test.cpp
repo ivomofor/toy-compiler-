@@ -1,10 +1,10 @@
 #include "toy/ToyDialect.h"
 #include "toy/TensorMatmulToLinalg.h"
 
-#include "mlir/Dialect/Func/IR/FuncOps.h"
-#include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/Linalg/IR/Linalg.h"
 #include "mlir/Dialect/Tensor/IR/Tensor.h"
+#include "mlir/Dialect/Func/IR/FuncOps.h"
+#include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/IR/BuiltinOps.h"
 #include "mlir/IR/MLIRContext.h"
 #include "mlir/IR/Verifier.h"
@@ -42,11 +42,37 @@ int main() {
         return 1;
     }
 
+    bool foundToyMatmul = false;
+    bool foundLinalgMatmul = false;
+
+    module->walk([&](mlir::Operation *op) {
+        auto name = op->getName().getStringRef();
+
+        if (name == "toy.tensor.matmul") {
+            foundToyMatmul = true;
+        }
+
+        if (name == "linalg.matmul") {
+            foundLinalgMatmul = true;
+        }
+    });
+
+    if (foundToyMatmul) {
+        llvm::errs() << "Error: toy.tensor.matmul was not lowered\n";
+        return 1;
+    }
+
+    if (!foundLinalgMatmul) {
+        llvm::errs() << "Error: linalg.matmul was not generated\n";
+        return 1;
+    }
+
     if (mlir::failed(mlir::verify(*module))) {
         llvm::errs() << "Error: Transformed module failed verification\n";
         return 1;
     }
 
+    llvm::outs() << "Matmul lowering test passed\n";
     module->print(llvm::outs());
     llvm::outs() << "\n";
 
