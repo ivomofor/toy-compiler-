@@ -31,12 +31,25 @@ namespace {
                 resultType.getShape(),
                 resultType.getElementType());
 
+            auto zero = mlir::arith::ConstantOp::create(
+                rewriter,
+                op.getLoc(),
+                resultType.getElementType(),
+                rewriter.getFloatAttr(resultType.getElementType(), 0.0));
+
+            auto initializedOutput = mlir::linalg::FillOp::create(
+                rewriter,
+                op.getLoc(),
+                mlir::TypeRange{resultType},
+                mlir::ValueRange{zero},
+                mlir::ValueRange{output});
+
             auto result = mlir::linalg::MatmulOp::create(
                 rewriter,
                 op.getLoc(),
                 op.getResult().getType(),
                 {op.getLhs(), op.getRhs()},
-                {output});
+                {initializedOutput.getResult(0)});
 
             rewriter.replaceOp(op, result);
 
