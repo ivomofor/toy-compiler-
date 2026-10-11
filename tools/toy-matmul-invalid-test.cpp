@@ -24,22 +24,29 @@ int main() {
 
     mlir::ParserConfig config(&context);
 
-    auto module =
-        mlir::parseSourceFile<mlir::ModuleOp>(
-            "example/tensor_matmul_invalid.mlir",
-            config);
+    const char *files[] = {
+        "example/tensor_matmul_invalid.mlir",
+        "example/tensor_matmul_invalid_rank.mlir",
+        "example/tensor_matmul_invalid_types.mlir",
+        "example/tensor_matmul_invalid_result.mlir"
+    };
 
-    if (!module) {
-        llvm::outs() << "Invalid matmul correctly rejected\n";
-        return 1;
+    for (const char *file : files) {
+        auto module =
+            mlir::parseSourceFile<mlir::ModuleOp>(
+                file,
+                config);
+
+        if (module) {
+            llvm::errs()
+                << "Error: Invalid matmul unexpectedly passed: "
+                << file << "\n";
+            return 1;
+        }
+
+        llvm::outs() << "Invalid matmul correctly rejected: "
+                     << file << "\n";
     }
-
-    if (mlir::succeeded(mlir::verify(*module))) {
-        llvm::errs() << "Error: Invalid matmul unexpectedly passed verification\n";
-        return 1;
-    }
-
-    llvm::outs() << "Invalid matmul correctly rejected\n";
 
     return 0;
 }
