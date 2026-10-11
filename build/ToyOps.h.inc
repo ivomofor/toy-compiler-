@@ -1718,6 +1718,7 @@ public:
   static TensorMatmulOp create(::mlir::ImplicitLocOpBuilder &builder, ::mlir::TypeRange resultTypes, ::mlir::ValueRange operands, const Properties &properties, ::llvm::ArrayRef<::mlir::NamedAttribute> discardableAttributes = {});
   ::llvm::LogicalResult verifyInvariantsImpl();
   ::llvm::LogicalResult verifyInvariants();
+  ::llvm::LogicalResult verify();
   static ::llvm::LogicalResult setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError);
 public:
 };

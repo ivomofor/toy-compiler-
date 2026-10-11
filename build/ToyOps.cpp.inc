@@ -2092,7 +2092,9 @@ TensorMatmulOp TensorMatmulOp::create(::mlir::ImplicitLocOpBuilder &builder, ::m
 }
 
 ::llvm::LogicalResult TensorMatmulOp::verifyInvariants() {
-  return verifyInvariantsImpl();
+  if(::mlir::succeeded(verifyInvariantsImpl()) && ::mlir::succeeded(verify()))
+    return ::mlir::success();
+  return ::mlir::failure();
 }
 
 ::llvm::LogicalResult TensorMatmulOp::setPropertiesFromParsedAttr(Properties &prop, ::mlir::Attribute attr, ::llvm::function_ref<::mlir::InFlightDiagnostic()> emitError) {
