@@ -171,3 +171,14 @@ target_link_libraries(toy-matmul-test
         MLIRTensorDialect
         MLIRLinalgDialect
 )
+
+add_executable(toy-matmul-invalid-test
+        tools/toy-matmul-invalid-test.cpp
+)
+
+target_link_libraries(toy-matmul-invalid-test
+        PRIVATE
+        ToyCompiler
+        MLIRIR
+        MLIRParser
+)
