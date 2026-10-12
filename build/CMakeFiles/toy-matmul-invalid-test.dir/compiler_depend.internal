@@ -31,6 +31,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallString.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVector.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SmallVectorExtras.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringExtras.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMapEntry.h
@@ -54,6 +55,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Allocator.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/AllocatorBase.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Casting.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CommandLine.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Compiler.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/DataTypes.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ErrorHandling.h
@@ -64,6 +66,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/ReverseIteration.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SwapByteOrder.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Threading.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h
@@ -86,6 +89,16 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOpsDialect.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgInterfaces.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgInterfaces.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOps.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsAttrDefs.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsDialect.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsEnums.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgRelayoutOps.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/RelayoutOpInterface.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/Tensor.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/TensorOps.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/TensorOpsDialect.h.inc
@@ -93,6 +106,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StructuredOpsUtils.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Action.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineExpr.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AffineMap.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AsmState.h
@@ -106,6 +120,8 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributeInterfaces.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinAttributes.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinLocationAttributes.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinOps.h.inc
@@ -119,6 +135,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectInterface.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/DialectRegistry.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ImplicitLocOpBuilder.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Location.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/MLIRContext.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h
@@ -144,6 +161,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeSupport.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/TypeUtilities.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Types.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Unit.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/UseDefLists.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Value.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h
@@ -163,6 +181,8 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/FunctionInterfaces.h.inc
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/IndexingMapOpInterface.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/IndexingMapOpInterface.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferIntRangeInterface.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/InferTypeOpInterface.h
@@ -180,14 +200,23 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/ViewLikeInterface.h.inc
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Parser/Parser.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/AnalysisManager.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/Pass.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassManager.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassOptions.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/ADTExtras.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/CyclicReplacerCache.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/InterfaceSupport.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/LLVM.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/RawOstreamExtras.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/StorageUniquer.h
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/Timing.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/TypeID.h
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/WalkResult.h
  /home/shevo/project/toy-compiler-/build/ToyDialect.h.inc
+ /home/shevo/project/toy-compiler-/include/toy/TensorMatmulToLinalg.h
  /home/shevo/project/toy-compiler-/include/toy/ToyDialect.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -195,6 +224,7 @@ CMakeFiles/toy-matmul-invalid-test.dir/tools/toy-matmul-invalid-test.cpp.o
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit

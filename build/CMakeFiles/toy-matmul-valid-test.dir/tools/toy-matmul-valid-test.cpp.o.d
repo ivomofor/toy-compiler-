@@ -329,6 +329,22 @@ CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ValueRange.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/TrailingObjects.h \
  /home/shevo/project/toy-compiler-/build/ToyDialect.h.inc \
+ /home/shevo/project/toy-compiler-/include/toy/TensorMatmulToLinalg.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/Pass.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Action.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Unit.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMapEntry.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/AnalysisManager.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassInstrumentation.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassRegistry.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassOptions.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/CommandLine.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/StringSaver.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/Statistic.h \
+ /usr/include/c++/13/atomic \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Func/IR/FuncOps.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeImplementation.h \
@@ -340,16 +356,12 @@ CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinTypeConstraints.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpDefinition.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ODSSupport.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Operation.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Region.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/SMLoc.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/OpAsmOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Builders.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/SymbolTable.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/SetVector.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMap.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/ADT/StringMapEntry.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/RWMutex.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/llvm/Support/Threading.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/chrono.h \
@@ -418,8 +430,26 @@ CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/TilingInterface.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/TensorOpsDialect.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/TensorOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/BuiltinDialect.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/ImplicitLocOpBuilder.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsDialect.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsEnums.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOpsAttrDefs.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgInterfaces.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/IndexingMapOpInterface.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/IndexingMapOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/RawOstreamExtras.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgInterfaces.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/RelayoutOpInterface.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/LinalgRelayoutOps.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/Verifier.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Parser/Parser.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/AsmState.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeReaderConfig.h \
- /usr/include/c++/13/variant
+ /usr/include/c++/13/variant \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Pass/PassManager.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Support/Timing.h
