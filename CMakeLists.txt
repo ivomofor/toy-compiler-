@@ -182,3 +182,14 @@ target_link_libraries(toy-matmul-invalid-test
         MLIRIR
         MLIRParser
 )
+
+add_executable(toy-matmul-valid-test
+        tools/toy-matmul-valid-test.cpp
+)
+
+target_link_libraries(toy-matmul-valid-test
+        PRIVATE
+        ToyCompiler
+        MLIRIR
+        MLIRParser
+)

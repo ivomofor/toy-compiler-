@@ -350,6 +350,19 @@ toy-matmul-invalid-test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-invalid-test.dir/build.make CMakeFiles/toy-matmul-invalid-test.dir/build
 .PHONY : toy-matmul-invalid-test/fast
 
+#=============================================================================
+# Target rules for targets named toy-matmul-valid-test
+
+# Build rule for target.
+toy-matmul-valid-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 toy-matmul-valid-test
+.PHONY : toy-matmul-valid-test
+
+# fast build rule for target.
+toy-matmul-valid-test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-valid-test.dir/build.make CMakeFiles/toy-matmul-valid-test.dir/build
+.PHONY : toy-matmul-valid-test/fast
+
 lib/AST.o: lib/AST.cpp.o
 .PHONY : lib/AST.o
 
@@ -734,6 +747,30 @@ tools/toy-matmul-test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-test.dir/build.make CMakeFiles/toy-matmul-test.dir/tools/toy-matmul-test.cpp.s
 .PHONY : tools/toy-matmul-test.cpp.s
 
+tools/toy-matmul-valid-test.o: tools/toy-matmul-valid-test.cpp.o
+.PHONY : tools/toy-matmul-valid-test.o
+
+# target to build an object file
+tools/toy-matmul-valid-test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-valid-test.dir/build.make CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.o
+.PHONY : tools/toy-matmul-valid-test.cpp.o
+
+tools/toy-matmul-valid-test.i: tools/toy-matmul-valid-test.cpp.i
+.PHONY : tools/toy-matmul-valid-test.i
+
+# target to preprocess a source file
+tools/toy-matmul-valid-test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-valid-test.dir/build.make CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.i
+.PHONY : tools/toy-matmul-valid-test.cpp.i
+
+tools/toy-matmul-valid-test.s: tools/toy-matmul-valid-test.cpp.s
+.PHONY : tools/toy-matmul-valid-test.s
+
+# target to generate assembly for a file
+tools/toy-matmul-valid-test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/toy-matmul-valid-test.dir/build.make CMakeFiles/toy-matmul-valid-test.dir/tools/toy-matmul-valid-test.cpp.s
+.PHONY : tools/toy-matmul-valid-test.cpp.s
+
 tools/toy-parse.o: tools/toy-parse.cpp.o
 .PHONY : tools/toy-parse.o
 
@@ -806,6 +843,7 @@ help:
 	@echo "... toy-lex"
 	@echo "... toy-matmul-invalid-test"
 	@echo "... toy-matmul-test"
+	@echo "... toy-matmul-valid-test"
 	@echo "... toy-parse"
 	@echo "... toy-verify"
 	@echo "... lib/AST.o"
@@ -856,6 +894,9 @@ help:
 	@echo "... tools/toy-matmul-test.o"
 	@echo "... tools/toy-matmul-test.i"
 	@echo "... tools/toy-matmul-test.s"
+	@echo "... tools/toy-matmul-valid-test.o"
+	@echo "... tools/toy-matmul-valid-test.i"
+	@echo "... tools/toy-matmul-valid-test.s"
 	@echo "... tools/toy-parse.o"
 	@echo "... tools/toy-parse.i"
 	@echo "... tools/toy-parse.s"
