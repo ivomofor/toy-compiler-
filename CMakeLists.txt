@@ -192,4 +192,7 @@ target_link_libraries(toy-matmul-valid-test
         ToyCompiler
         MLIRIR
         MLIRParser
+        MLIRPass
+        MLIRTensorDialect
+        MLIRLinalgDialect
 )
