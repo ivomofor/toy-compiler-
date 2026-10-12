@@ -25,4 +25,14 @@ module {
         : (tensor<4x2xf32>, tensor<2x3xf32>) -> tensor<4x3xf32>
     return %result : tensor<4x3xf32>
   }
+
+  func.func @matmul_dynamic(
+      %lhs: tensor<?x3xf32>,
+      %rhs: tensor<3x?xf32>
+  ) -> tensor<?x?xf32> {
+      %result = "toy.tensor.matmul"(%lhs, %rhs)
+          : (tensor<?x3xf32>, tensor<3x?xf32>) -> tensor<?x?xf32>
+      return %result : tensor<?x?xf32>
+  }
 }
+

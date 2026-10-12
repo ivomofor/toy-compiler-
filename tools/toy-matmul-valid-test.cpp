@@ -15,6 +15,7 @@
 #include "mlir/Parser/Parser.h"
 #include "mlir/Pass/PassManager.h"
 
+#include "llvm/ADT/ArrayRef.h"
 #include "llvm/Support/raw_ostream.h"
 
 int main() {
@@ -57,6 +58,7 @@ int main() {
     bool found2x2 = false;
     bool found2x4 = false;
     bool found4x3 = false;
+    bool foundDynamicShape = false;
 
     module->walk([&](mlir::Operation *op) {
         auto name = op->getName().getStringRef();
@@ -71,19 +73,25 @@ int main() {
             auto resultType = mlir::cast<mlir::RankedTensorType>(
                 op->getResult(0).getType());
 
-            if (resultType.getShape() ==
-                llvm::ArrayRef<int64_t>({2, 2})) {
+            auto shape = resultType.getShape();
+
+            if (shape == llvm::ArrayRef<int64_t>({2, 2})) {
                 found2x2 = true;
             }
 
-            if (resultType.getShape() ==
-                llvm::ArrayRef<int64_t>({2, 4})) {
+            if (shape == llvm::ArrayRef<int64_t>({2, 4})) {
                 found2x4 = true;
             }
 
-            if (resultType.getShape() ==
-                llvm::ArrayRef<int64_t>({4, 3})) {
+            if (shape == llvm::ArrayRef<int64_t>({4, 3})) {
                 found4x3 = true;
+            }
+
+            if (shape == llvm::ArrayRef<int64_t>({
+                    mlir::ShapedType::kDynamic,
+                    mlir::ShapedType::kDynamic
+                })) {
+                foundDynamicShape = true;
             }
         }
     });
@@ -93,13 +101,18 @@ int main() {
         return 1;
     }
 
-    if (linalgMatmulCount != 3) {
-        llvm::errs() << "Error: Expected three linalg.matmul operations\n";
+    if (linalgMatmulCount != 4) {
+        llvm::errs() << "Error: Expected four linalg.matmul operations\n";
         return 1;
     }
 
     if (!found2x2 || !found2x4 || !found4x3) {
-        llvm::errs() << "Error: Expected result shapes were not all found\n";
+        llvm::errs() << "Error: Expected static result shapes were not all found\n";
+        return 1;
+    }
+
+    if (!foundDynamicShape) {
+        llvm::errs() << "Error: Expected dynamic result shape was not found\n";
         return 1;
     }
 

@@ -360,9 +360,6 @@ CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Bytecode/BytecodeOpInterface.h.inc \
  /home/shevo/project/toy-compiler-/build/ToyInterfaces.h.inc \
  /home/shevo/project/toy-compiler-/build/ToyOps.h.inc \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/Tensor.h \
- /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/Arith.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/CastInterfaces.h.inc \
@@ -408,6 +405,9 @@ CMakeFiles/ToyCompiler.dir/lib/TensorMatmulToLinalg.cpp.o: \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsAttributes.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOpsInterfaces.h.inc \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Arith/IR/ArithOps.h.inc \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Linalg/IR/Linalg.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Tensor/IR/Tensor.h \
+ /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/ReshapeOpsUtils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Dialect/Utils/StaticValueUtils.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/Interfaces/DestinationStyleOpInterface.h \
  /home/shevo/LLVM-22.1.0-Linux-X64/include/mlir/IR/IRMapping.h \
