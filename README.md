@@ -1,8 +1,8 @@
 # Toy Compiler — Building a Compiler with MLIR
 
-A small programming-language compiler written in **C++17** to learn compiler construction through hands-on work with **LLVM and MLIR**.
+A small programming language compiler written in **C++17** to learn compiler construction through hands on work with **LLVM and MLIR**.
 
-This project follows a Toy program from source code through lexical analysis, parsing, an Abstract Syntax Tree (AST), a custom MLIR dialect, transformation passes, and lower-level intermediate representations. It is an educational project for understanding how compiler frontends, MLIR dialects, rewrite patterns, and lowering pipelines fit together.
+This project follows a Toy program from source code through lexical analysis, parsing, an Abstract Syntax Tree (AST), a custom MLIR dialect, transformation passes, and lower level intermediate representations. It is an educational project for understanding how compiler frontends, MLIR dialects, rewrite patterns, and lowering pipelines fit together.
 
 ## Compiler pipeline
 
@@ -36,7 +36,7 @@ fun main() {
 }
 ```
 
-The frontend tokenizes and parses the program, builds an AST, and lowers it to the custom Toy dialect. Transformation passes demonstrate how Toy-specific operations can be replaced with standard MLIR operations. A simple return-value program can ultimately be represented in LLVM IR in a form similar to:
+The frontend tokenizes and parses the program, builds an AST, and lowers it to the custom Toy dialect. Transformation passes demonstrate how Toy specific operations can be replaced with standard MLIR operations. A simple return-value program can ultimately be represented in LLVM IR in a form similar to:
 
 ```llvm
 define i32 @main() {
@@ -47,12 +47,12 @@ define i32 @main() {
 ## Implemented areas
 
 ### Frontend
-- Hand-written lexer and recursive-descent parser.
+- Hand written lexer and recursive descent parser.
 - AST nodes and an AST printer.
 - Integer literals and arithmetic expressions with operator precedence.
 - Variable declarations and references.
 - Function declarations and parameters.
-- Return statements and function-call parsing.
+- Return statements and function call parsing.
 - Conditional and loop constructs as they are introduced.
 - A standalone `toy-lex` tool for inspecting tokens.
 
@@ -66,7 +66,7 @@ The custom `toy` dialect is described using MLIR TableGen. Operations include:
 - `toy.print` — print a Toy integer.
 - `toy.tensor.matmul` — tensor matrix multiplication.
 
-The project also explores TableGen-generated operations, custom builders, verification, operation interfaces, regions, blocks, and SSA values.
+The project also explores TableGen generated operations, custom builders, verification, operation interfaces, regions, blocks, and SSA values.
 
 ### MLIR transformations
 Passes demonstrate lowering custom operations to standard MLIR operations:
@@ -75,12 +75,12 @@ Passes demonstrate lowering custom operations to standard MLIR operations:
 - `toy.return` to `func.return`.
 - `toy.fun` to `func.func`.
 - `toy.print` to a call to the Toy runtime print function.
-- `toy.tensor.matmul` to Linalg matrix-multiplication operations.
+- `toy.tensor.matmul` to Linalg matrix multiplication operations.
 
 The rewrite work uses concepts including `OpRewritePattern`, `PatternRewriter`, `RewritePatternSet`, and greedy pattern application.
 
 ### Tensor and Linalg
-The tensor work explores tensor value semantics versus memory-oriented `memref` values and lowers the custom matrix-multiplication operation to structured Linalg operations. The current lowering creates an output tensor with `tensor.empty`, initializes it to zero with `linalg.fill`, and passes it to `linalg.matmul`. It supports tested static and dynamic output dimensions and includes tests for valid and invalid shapes and types.
+The tensor work explores tensor value semantics versus memory-oriented `memref` values and lowers the custom matrix multiplication operation to structured Linalg operations. The current lowering creates an output tensor with `tensor.empty`, initializes it to zero with `linalg.fill`, and passes it to `linalg.matmul`. It supports tested static and dynamic output dimensions and includes tests for valid and invalid shapes and types.
 
 These tests validate IR construction and lowering; they do not, by themselves, demonstrate runtime numerical execution of the generated matrix multiplication.
 
@@ -98,26 +98,26 @@ The project requires an LLVM/MLIR development installation compatible with the A
 
 ```text
 toy-compiler-/
-├── CMakeLists.txt
-├── dialects/
-│   ├── ToyDialect.td
-│   └── operations/ToyOps.td
-├── include/toy/       # Frontend, dialect, and pass headers
-├── lib/               # Frontend, dialect, and lowering implementations
-├── runtime/
-│   └── toy_runtime.cpp
-├── tools/
-│   ├── toy-lex.cpp
-│   ├── toy-parse.cpp
-│   ├── toy-verify.cpp
-│   ├── toy-matmul-test.cpp
-│   ├── toy-matmul-invalid-test.cpp
-│   └── toy-matmul-valid-test.cpp
-└── example/
-    └── simple.toy
+── CMakeLists.txt
+── dialects/
+   ── ToyDialect.td
+   ── operations/ToyOps.td
+── include/toy/       # Frontend, dialect, and pass headers
+── lib/               # Frontend, dialect, and lowering implementations
+── runtime/
+   ── toy_runtime.cpp
+── tools/
+   ── toy-lex.cpp
+   ── toy-parse.cpp
+   ── toy-verify.cpp
+   ── toy-matmul-test.cpp
+   ── toy-matmul-invalid-test.cpp
+   ── toy-matmul-valid-test.cpp
+── example/
+    ── simple.toy
 ```
 
-This is a simplified overview; some headers and supporting files are omitted. TableGen-generated files are created during the build and should not be edited manually.
+This is a simplified overview; some headers and supporting files are omitted. TableGen generated files are created during the build and should not be edited manually.
 
 ## Build
 
@@ -178,7 +178,7 @@ The aim is to understand compiler engineering by implementing and testing each s
 
 ## About
 
-I am a Computer Science graduate building practical experience in compiler engineering, C++, LLVM, and MLIR. This repository documents my hands-on learning in intermediate-representation design, dialect development, and compiler lowering.
+I am a Computer Science graduate building practical experience in compiler engineering, C++, LLVM, and MLIR. This repository documents my hands on learning in intermediate representation design, dialect development, and compiler lowering.
 
 ## License
 
